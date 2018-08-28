@@ -18,28 +18,36 @@ and open the template in the editor.
                     <legend>Cadastro de Usuário</legend>
                     
                 <p>Nome Completo:</p>
-                <input type="text" name="nomeCompleto" size="30" maxlength="50" placeholder="Insira seu nome" >
+                <input type="text" name="nomeCompleto" size="30" maxlength="50" placeholder="Insira seu nome" required>
               
                 <p>Senha:</p>
-                <input type="password" name="senha" size="15" maxlength="20" placeholder="Insira sua senha" >
+                <input type="password" name="senha" size="15" maxlength="20" placeholder="Insira sua senha" required>
                 <br>
                 <br>
                 
                 <p>Sexo:</p>
-                <input type="radio" name="sexo" value="M"> Masculino
+                <input type="radio" name="sexo" value="M"> Masculino <BR>
                 <input type="radio" name="sexo" value="F"> Feminino
+                <br>
+                <br>
+
+                
+                <p>Data de Nascimento:</p>
+                <input type="date" size="10" name="dtNascimento" >
                 <br>
                 
                 <p>Esportes Favoritos:</p>
-                <input type="checkbox" name="volei" value="volei"> Volei
-                <input type="checkbox" name="basquete" value="basquete"> Basquete
+                <input type="checkbox" name="esporte[]" value="volei"> Volei <BR>
+                <input type="checkbox" name="esporte[]" value="basquete"> Basquete <BR>
+                <input type="checkbox" name="esporte[]" value="futsal"> Futsal <BR>
            
-                <br><br>
                                 
                 <p>Selecione a Cidade:</p>
                 <select name="cidade">
+                    <option value=""></option>
                     <option value="belem">Belém</option>
                     <option value="ananindeua">Ananindeua</option>
+                    <option value="castanhal">Castanhal</option>
                 </select>
                 
                 
