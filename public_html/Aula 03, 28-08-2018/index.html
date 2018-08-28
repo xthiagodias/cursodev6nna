@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exemplo Forms</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div>
+            <form action="cadastroSucesso.html" method="post">
+                <fieldset> 
+                    <legend>Cadastro de Usuário</legend>
+                    
+                <p>Nome Completo:</p>
+                <input type="text" name="nomeCompleto" size="30" maxlength="50" placeholder="Insira seu nome" >
+              
+                <p>Senha:</p>
+                <input type="password" name="senha" size="15" maxlength="20" placeholder="Insira sua senha" >
+                <br>
+                <br>
+                
+                <p>Sexo:</p>
+                <input type="radio" name="sexo" value="M"> Masculino
+                <input type="radio" name="sexo" value="F"> Feminino
+                <br>
+                
+                <p>Esportes Favoritos:</p>
+                <input type="checkbox" name="volei" value="volei"> Volei
+                <input type="checkbox" name="basquete" value="basquete"> Basquete
+           
+                <br><br>
+                                
+                <p>Selecione a Cidade:</p>
+                <select name="cidade">
+                    <option value="belem">Belém</option>
+                    <option value="ananindeua">Ananindeua</option>
+                </select>
+                
+                
+                <br><br>
+                <p>Campo de Observações:</p>
+                <textarea cols="30" rows="5" placeholder="Insira as observações" name="observacoes"></textarea>
+                
+                
+                <br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+                <input type="hidden" name="acao" value="cadastrarPessoa">
+                <input type="button" value="Botão de Exemplo">
+               
+                
+                
+                
+               </fieldset>    
+            </form>
+            
+            
+            
+        </div>
+    </body>
+</html>
