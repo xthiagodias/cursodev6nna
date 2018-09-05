@@ -1,98 +1,98 @@
 @charset "ISO-8859-1";
 
 body {
-    
+
     background-color: white;
 }
 
 
 p {
-    
+
     color: red;
-    
+
 }
 
 .textoInterno {
-    
+
     font-size: 12px; color: blue;
 }
 
 #textExterno {
-    
+
     font-family: Arial;
     font-weight: bold;
-    
+
 }
 
 
 #divTopo { 
 
     width: 90%;
-               
+
 }
 
 h2 {
-    
+
     padding-top: 40px;
-    
+
 }
 
 .dadospessoas {
-    
+
     background-color: lightblue;
     border-style: dashed;
-    
+
 }
 
 .dadospessoas legend {
-   
+
     background-color: lightblue;
-    
+
 }
 
 .dadosprof {
-    
+
     background-color: lightcoral;
     border-style: dashed;
 }
 
 .dadosprof legend {
-   
+
     background-color: lightcoral;
-    
+
 }
 
 .acoes {
-    
+
     background-color: lightgreen;
     border-style: dashed; color: black;
 }
 
 .acoes legend {
-    
+
     background-color: lightgreen;
 }
 
 #curriculo {
-    
+
     background-color: khaki;
 }
 
 #edits {
-    
+
     background-color: khaki;
 }
 
 #bt1 {
-    
-  font-size: 20px;
-  background-color: green;  
+
+    font-size: 20px;
+    background-color: green;  
 }
 
 
 #bt2 {
-    
-  font-size: 20px;
-  background-color: orange;  
-    
+
+    font-size: 20px;
+    background-color: orange;  
+
 }
