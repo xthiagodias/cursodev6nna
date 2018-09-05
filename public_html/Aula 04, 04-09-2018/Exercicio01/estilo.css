@@ -65,7 +65,7 @@ h2 {
 .acoes {
     
     background-color: lightgreen;
-    border-style: dashed;
+    border-style: dashed; color: black;
 }
 
 .acoes legend {
