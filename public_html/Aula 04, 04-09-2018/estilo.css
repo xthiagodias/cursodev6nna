@@ -27,10 +27,24 @@ p {
     color: green;
 }
 
-.conteudos {
+.conteudos, .perfil {
     
     color: gray;
     
 }
 
+
+.conteudos p {
+    
+    color: green;
+}
+
+#teste {
+    font-size: 20px;
+    font-family: Arial;
+    border: solid 1px #333; 
+    margin: 50px;
+    padding: 20px;
+    
+}
 

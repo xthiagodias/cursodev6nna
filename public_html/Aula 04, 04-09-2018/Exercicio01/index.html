@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Exercicio utilizando CSS</title>
+        <link href="estilo.css" rel="stylesheet" >
+        <meta charset="UTF-8">
+    </head>
+    <body>
+
+    <center><h2>Formulário de Cadastro</h2></center>
+
+   <!-- <div id="divTopo" class="dadospessoas"> -->
+        <form action="" method="post">
+            <fieldset id="divTopo" class="dadospessoas"> 
+
+                <legend>Dados Pessoais</legend> 
+                <p><b>Nome:</b>   <input class="textoInterno" id="edits" type="text" name="nome" size="21" autofocus="" required="" ></p>
+                <p><b>E-mail:</b> <input class="textoInterno" id="edits" type="email" name="email" size="20" required="" ></p>
+                <p><b>Cidade:</b> <input class="textoInterno" id="edits" type="text" name="cidade" size="20"  required="" ></p>
+                <p><b>Estado:</b>
+                    <select id="edits" name="cidade">
+                        <option value="Escolha...">Escolha...</option>
+                        <option value="PA">PA</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="BA">BA</option>
+                    </select></p>
+            </fieldset>   
+
+   <!-- </div> -->
+    <BR>  
+  <!--   <div id="divTopo" class="dadosprof"> -->
+
+        <fieldset id="divTopo" class="dadosprof"> 
+            <legend>Dados Profissionais</legend> 
+            <p><b>Cargo pretendido:</b></p>
+            <input type="radio" name="cargo" value="analistaDeSistemas" required="" > Analista de sistemas
+            <input type="radio" name="cargo" value="analistaBancodeDados" required="" > Analista de banco de dados
+            <input type="radio" name="cargo" value="analistaDeSuporte" required="" > Analista de suporte
+
+            <p><b>Cargo pretendido:</b></p>
+            <input type="checkbox" name="Java" required="" > Java
+            <input type="checkbox" name="Htmlcss" required="" > HTML, CSS
+            <input type="checkbox" name="Javascript" required="" > JavaScript
+            <input type="checkbox" name="Sql" required="" > SQL
+
+            <p><b>Mini currículo:</b></p>
+            <textarea class="textoInterno" id="curriculo" cols="60" rows="5" placeholder="Insira as observações" name="observacoes"></textarea>
+        </fieldset>   
+
+   <!-- </div>-->
+    <BR>        
+   <!-- <div id="divTopo" class="acoes"> -->
+        <fieldset id="divTopo" class="acoes"> 
+            <legend>Ações</legend> 
+            <center><input type="submit" id="bt1" name="btEnviar" value="Enviar" >
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" id="bt2" name="btLimpar" value="Limpar"></center>
+
+        </fieldset>  
+   <!-- </div> -->
+
+
+
+</body>
+</html>
