@@ -1,9 +1,17 @@
+@charset "ISO-8859-1";
+
 body {
     
-    background-color: darkslategray;
+    background-color: #333;
 }
 
-h2 {
+h1 {
+    
+    color: gold;
+    
+}
+
+h3 {
     
     color: gold;
     
@@ -17,5 +25,34 @@ h2 {
     border-bottom-width: thin;
     border-style: dashed;
     background-color: black;
+    
+}
+
+p {
+    
+    color: white;
+    
+}
+
+
+ol {
+    
+    color: white;
+    
+}
+
+
+
+#bord {
+    
+    border-style: solid;
+    background-color: darkturquoise;
+    width: 90%;
+    
+}
+
+a {
+    
+    color: gold;
     
 }
