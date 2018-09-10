@@ -1,0 +1,37 @@
+body {
+    
+    background-color: #f1f1f1;
+    
+}
+
+
+h3 {
+    
+    color: red;
+    
+}
+
+table {
+    
+    font-size: 16pt;
+    font-family: "Tahoma", Times, serif;
+    
+}
+
+th {
+    
+    color: blue;
+    
+}
+
+#media {
+    
+    font-style: italic;
+    
+}
+
+#vlmedia {
+    
+    font-weight: bold;
+    
+}
