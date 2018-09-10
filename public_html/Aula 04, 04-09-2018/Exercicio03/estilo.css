@@ -1,0 +1,21 @@
+body {
+    
+    background-color: darkslategray;
+}
+
+h2 {
+    
+    color: gold;
+    
+}
+
+#pont {
+    
+    border-top-width: thin;
+    border-left-width: thin;
+    border-right-width: thin;
+    border-bottom-width: thin;
+    border-style: dashed;
+    background-color: black;
+    
+}
