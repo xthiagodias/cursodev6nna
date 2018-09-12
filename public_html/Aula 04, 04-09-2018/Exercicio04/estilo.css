@@ -6,8 +6,9 @@
 #f1 {
 
     background-color: green;
-    position: absolute;
+  
     height: 90px;
+
     display: flex;
     
 }
