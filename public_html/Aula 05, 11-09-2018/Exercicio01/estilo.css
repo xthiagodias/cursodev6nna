@@ -1,0 +1,273 @@
+@charset "ISO-8859-1";
+
+body {
+    
+    background-color: #f1f1f1;
+    
+}
+
+.principal {
+    
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;
+    margin-right: 20px;
+    
+}
+
+hr {
+    margin-top: -20px;
+    border: solid 0.5px gray;
+    display: flex;
+    
+}
+
+.secundario {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+.secundario2 {
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+.secundario3 {
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+
+.secundario4 {
+    margin-top: 25px;
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+.secundario5 {
+    margin-top: 55px;
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+
+.secundario6 {
+
+    margin-left: 0px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;  
+    
+    
+}
+
+
+input {
+    
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border-radius: 15px 15px;
+    border: solid 1px gray;
+}
+
+#edits {
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border: solid 1px gray;
+    border-radius: 15px 15px;
+}
+
+span {
+    
+    padding: 2px;
+    font-size: 13px;
+    
+}
+
+p {
+    font-weight: bold;
+    font-family: "Arial";
+    font-size: 8pt;
+    display: block-inline;
+    
+}
+
+#login {
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#senha {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;    
+    
+}
+
+
+#csenha {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#cidade {
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#estado {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#bairro {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#bairros {
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border: solid 1px gray;
+    border-radius: 15px 15px;
+}
+
+
+#tipotel {
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border: solid 1px gray;
+    border-radius: 15px 15px;
+}
+
+#operadoras {
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border: solid 1px gray;
+    border-radius: 15px 15px;
+}
+
+#operadoras {
+    margin-top: 5px;
+    width: 150pt;
+    height: 25pt;
+    display: flex; 
+    border: solid 1px gray;
+    border-radius: 15px 15px;
+}
+
+#operadora {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;     
+    
+}
+
+#numero {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#complemento {
+    margin-left: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative;      
+    
+}
+
+#wpp {
+    margin-left: 10px;
+    margin-top: 20px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative; 
+    
+}
+
+#wppp {
+    margin-left: -180px;
+    margin-top: 45px;
+    display:flex;
+    flex-wrap: nowrap;
+    height:20px;
+    position:relative; 
+    
+}
+
+button {
+    background-color: buttonshadow;
+    margin-top: 10px;
+border-radius: 15px 15px;
+    width: 100pt;
+    height: 22pt;
+    display:flex;
+    flex-wrap: nowrap;
+    position:relative; 
+    
+}

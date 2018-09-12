@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <link href="estilo.css" rel="stylesheet">
+        <title>Aula 05 - Exercicio Flexbox</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="" method="post">
+            <h4>Informacoes Basicas</h4>
+            <hr>
+            <div class="principal">
+                <p>Tipo de Pessoa<span style="color: red;">*</span>
+
+                    <select id="edits" name="pessoa">
+                        <option value="Escolha">Fisica ou Juridica</option>
+                        <option value="PF">Pessoa Fisica</option>
+                        <option value="PJ">Pessoa Juridica</option>
+                    </select>
+                <div class="secundario">
+                    <p>E-mail<span style="color: red;">*</span>
+                        <input id="email" type="email" placeholder="Informe seu e-mail"></p>
+                </div> 
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <h4>Informacoes de Acesso</h4>
+            <hr> 
+
+            <div class="secundario2">
+                <div id="login">
+                    <p>Nome de Usuario<span style="color: red;">*</span>
+                        <input  type="text" placeholder="Informe um login"></p>
+                </div>
+                <div id="senha">
+                    <p>Senha<span style="color: red;">*</span>
+                        <input type="password" placeholder="Informe uma senha"></p>
+                </div>
+                <div id="csenha">
+                    <p>Confirmacao de Senha<span style="color: red;">*</span>
+                        <input type="password" placeholder="Repita a senha"></p>
+                </div>
+            </div> 
+            <br>
+            <br>
+            <br>
+
+            <h4>Endereco</h4>
+            <hr> 
+
+            <div class="secundario3">
+                <div id="login2">
+
+                    <input  type="text" placeholder="Informe o CEP">
+                </div>
+                <div id="senha2">
+
+                    <button type="submit" value="Buscar CEP" name="buscarCEP"><span style="color: white">Buscar CEP</span></button>
+                </div>
+                <div id="csenha2">
+                    <p>Nao sabe o CEP?<span style="color: blue;"><a href=""> clique aqui</a></span>
+                </div>
+
+
+            </div> 
+
+
+            <div class="secundario4">
+                <div id="cidade">
+                    <p>Cidade<span style="color: red;">*</span>
+                        <input  type="text" placeholder="Informe a cidade"></p>    
+                </div>
+                <div id="estado">
+                    <p>Estado<span style="color: red;">*</span>
+                        <input  type="text" placeholder="Informe o estado"></p>    
+                </div>
+                <div id="bairro">
+                    <p>Bairro<span style="color: red;">*</span>
+                        <select id="bairros" name="bairro">
+                            <option value="Bairro">Escolha o Bairro</option>
+                            <option value="Reduto">Reduto</option>
+                            <option value="Umarizal">Umarizal</option>
+                            <option value="Nazare">Nazare</option>
+                            <option value="Marambaia">Marambaia</option>
+                            <option value="Telegrafo">Telegrafo</option>
+                            <option value="Souza">Souza</option>
+                        </select></p>  
+
+
+                </div>
+
+
+
+            </div>
+
+            <div class="secundario5">
+                <div id="logradouro">
+                    <p>Logradouro
+                        <input  type="text" placeholder="Informe o Endereco"></p>    
+                </div>
+
+                <div id="numero">
+                    <p>Numero<span style="color: red;">*</span>
+                        <input  type="text" placeholder="Informe o n"></p>    
+                </div>
+
+                <div id="complemento">
+                    <p>Complemento
+                        <input  type="text" placeholder="Complemento"></p>    
+                </div>
+
+            </div>
+            <br>
+            <br>
+            <br>
+
+            <h4>Telefones</h4>
+            <hr>        
+            <div class="secundario6">
+                <div id="celular">
+                    <p>Tipo<span style="color: red;">*</span>
+                        <select id="tipotel" name="telefone">
+                            <option value="Tipo de telefone">Tipo de telefone</option>
+                            <option value="tel">Telefone Fixo</option>
+                            <option value="cel">Celular</option>
+                        </select></p>    
+                </div>
+                <div id="numero">
+                    <p>Operadora<span style="color: red;">*</span>
+                        <select id="operadoras" name="operadoras" >
+                            <option value="Operadora">Operadora</option>
+                            <option value="Oi">Oi</option>
+                            <option value="Tim">Tim</option>
+                            <option value="Vivo">Vivo</option>
+                            <option value="Claro">Claro</option>
+                            <option value="Nextel">Nextel</option>
+                            <option value="Fixo">Fixo</option>
+                        </select></p>  
+                    <div id="operadora">
+                        <p>(DDD) Numero<span style="color: red;">*</span>
+                            <input  type="text" placeholder="Informe o numero"></p>     
+                    </div>
+                    <div id="wpp">
+                        <p><input  type="checkbox"></p>  
+                    </div>
+
+                    <div id="wppp">
+                        Numero WhatsApp? 
+                    </div>
+                </div>
+
+
+
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <button type="submit" value="Salvar Telefone" name="salvarTelefone"><span style="color: white">+ Salvar Telefone</span></button>
+
+        </form>
+    </body>
+</html>
