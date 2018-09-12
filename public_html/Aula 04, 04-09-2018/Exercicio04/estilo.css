@@ -6,9 +6,35 @@
 #f1 {
 
     background-color: green;
-    padding: 12px;
-height: 90px;
+    position: absolute;
+    height: 90px;
+    display: flex;
     
+}
+
+#f1 span {
+    font-weight: bold;
+    background-color: green;
+    font-size: 16pt;
+    font-family: sans-serif;
+    margin: 10pt;
+}
+
+#f1 img {
+    
+    background-color: rgba(10,23,55,0.5);
+    opacity: 0.9;
+    -moz-opacity: 0.65;
+ 
+    
+}
+
+.container {
+  
+  padding: 12pt;
+     background-color: green;
+   
+    height: 90px;  
 }
 
 #f2 {
