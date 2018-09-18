@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Aula 06 JavaScript</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <script>
+            
+            function getNome(){
+                return "Thiago Dias";
+            }
+            
+           var peso = 84;
+           var altura = 1.75;
+           var quadrado = (altura * altura);
+           var imc = (peso/quadrado);
+           
+           
+           if (imc < 18.5) {
+               console.log ("Você está magro! "+imc);
+           } else
+             if (imc >= 18.5 && imc < 24.9) {
+              console.log ("Você está no peso normal! "+imc);
+           } else {        
+     
+               console.log("...");
+           } 
+           
+           console.log(getNome());
+           
+           
+       //    function filmes(funcao, nome) {
+               
+    //           funcao(nome);
+     //      }
+           
+           filmes(function mostrarFavoritos(nome){
+               console.log("Meu filme favorito é " +nome);  
+           }, "Star Wars");
+  
+        </script>
+        
+        <script>
+            
+            function Alerta() {
+                
+                nomeCompleto = document.getElementById("nome").value;
+                alert(nomeCompleto);
+               
+            }
+            
+            
+            </script>
+        
+    </head>
+    <body>
+        
+        <input type="text" id="nome">    
+        <input type="button" value="Alerta" OnClick="Alerta()">            
+                    
+        
+        
+        
+        
+    </body>
+</html>

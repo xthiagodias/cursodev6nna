@@ -1,8 +1,8 @@
 @charset "ISO-8859-1";
 
 body {
-    
-    background-color: #f1f1f1;
+    display:block;
+    background-color: #fff2f2;
     
 }
 
@@ -241,8 +241,8 @@ p {
 }
 
 #wpp {
-    margin-left: 10px;
-    margin-top: 20px;
+    margin-top: 30px;
+    margin-left: -50px;
     display:flex;
     flex-wrap: nowrap;
     height:20px;
@@ -251,8 +251,8 @@ p {
 }
 
 #wppp {
-    margin-left: -180px;
-    margin-top: 45px;
+    margin-left: -70px;
+    margin-top: 5px;
     display:flex;
     flex-wrap: nowrap;
     height:20px;
@@ -260,12 +260,24 @@ p {
     
 }
 
-button {
-    background-color: buttonshadow;
+#bt2 {
+    background-color: #1a2efc;
     margin-top: 10px;
-border-radius: 15px 15px;
+    border-radius: 15px 15px;
+    width: 150pt;
+    height: 25pt;
+    display:flex;
+    flex-wrap: nowrap;
+    position:relative; 
+    
+}
+
+#bt1 {
+    background-color: #1a2efc;
+    margin-top: 6px;
+    border-radius: 15px 15px;
     width: 100pt;
-    height: 22pt;
+    height: 25pt;
     display:flex;
     flex-wrap: nowrap;
     position:relative; 
