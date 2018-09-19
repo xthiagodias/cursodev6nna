@@ -6,68 +6,146 @@ and open the template in the editor.
 -->
 <html>
     <head>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <title>Aula 06 JavaScript</title>
+
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
-        
-        <script>
-            
-            function getNome(){
-                return "Thiago Dias";
-            }
-            
-           var peso = 84;
-           var altura = 1.75;
-           var quadrado = (altura * altura);
-           var imc = (peso/quadrado);
-           
-           
-           if (imc < 18.5) {
-               console.log ("Você está magro! "+imc);
-           } else
-             if (imc >= 18.5 && imc < 24.9) {
-              console.log ("Você está no peso normal! "+imc);
-           } else {        
-     
-               console.log("...");
-           } 
-           
-           console.log(getNome());
-           
-           
-       //    function filmes(funcao, nome) {
-               
-    //           funcao(nome);
-     //      }
-           
-           filmes(function mostrarFavoritos(nome){
-               console.log("Meu filme favorito é " +nome);  
-           }, "Star Wars");
-  
-        </script>
-        
-        <script>
-            
-            function Alerta() {
+
+        <!--   <script>
                 
-                nomeCompleto = document.getElementById("nome").value;
-                alert(nomeCompleto);
+                function getNome(){
+                    return "Thiago Dias";
+                }
+                
+               var peso = 84;
+               var altura = 1.75;
+               var quadrado = (altura * altura);
+               var imc = (peso/quadrado);
                
-            }
-            
-            
+               
+               if (imc < 18.5) {
+                   console.log ("Você está magro! "+imc);
+               } else
+                 if (imc >= 18.5 && imc < 24.9) {
+                  console.log ("Você está no peso normal! "+imc);
+               } else {        
+         
+                   console.log("...");
+               } 
+               
+               console.log(getNome());
+               
+               
+           //    function filmes(funcao, nome) {
+                   
+        //           funcao(nome);
+         //      }
+               
+               filmes(function mostrarFavoritos(nome){
+                   console.log("Meu filme favorito é " +nome);  
+               }, "Star Wars");
+      
             </script>
-        
+            
+            <script>
+                
+                function Alerta() {
+                    
+                    nomeCompleto = document.getElementById("nome").value;
+                    alert(nomeCompleto);
+                   
+                }
+                
+                
+                </script>
+           
+            
+        </head>
+        <body>
+            
+            <input type="text" id="nome">    
+            <input type="button" value="Alerta" OnClick="Alerta()">            
+            <BR>
+            <BR>                    
+            
+            <BR>
+            <BR> -->
+
+        <script>
+            function Soma() {
+
+                var valor1 = document.getElementById("t1").value;
+                var valor2 = document.getElementById("t2").value;
+                var resultado = parseInt(valor1) + parseInt(valor2);
+
+
+                var resultado2 = document.getElementById("resultado");
+                resultado2.innerHTML = "Resultado: " + resultado;
+                return resultado;
+
+            }
+
+
+
+            function Subtracao() {
+
+                var valor1 = document.getElementById("t1").value;
+                var valor2 = document.getElementById("t2").value;
+                var resultado = (valor1 - valor2);
+
+
+                var resultado2 = document.getElementById("resultado");
+                resultado2.innerHTML = "Resultado: " + resultado;
+                return resultado;
+
+            }
+
+            function Multiplicacao() {
+
+                var valor1 = document.getElementById("t1").value;
+                var valor2 = document.getElementById("t2").value;
+                var resultado = (valor1 * valor2);
+
+
+                var resultado2 = document.getElementById("resultado");
+                resultado2.innerHTML = "Resultado: " + resultado;
+                return resultado;
+
+            }
+
+            function Divisao() {
+
+                var valor1 = document.getElementById("t1").value;
+                var valor2 = document.getElementById("t2").value;
+                var resultado = (valor1 / valor2);
+
+
+                var resultado2 = document.getElementById("resultado");
+                resultado2.innerHTML = "Resultado: " + resultado;
+                return resultado;
+
+            }
+
+        </script>   
+
     </head>
     <body>
-        
-        <input type="text" id="nome">    
-        <input type="button" value="Alerta" OnClick="Alerta()">            
-                    
-        
-        
-        
-        
+        <h1>Calculadora</h1>
+        #1: <input type="text" id="t1" style="background-color: #ffffcc"><p>
+            #2: <input type="text" id="t2" style="background-color: #ffffcc"><p>
+
+            <input type="button" id="bt1" value="+" onclick="Soma()">
+            <input type="button" id="bt2" value="-" onclick="Subtracao()">
+            <input type="button" id="bt3" value="*" onclick="Multiplicacao()">
+            <input type="button" id="bt4" value="/" onclick="Divisao()">
+
+
+        <div id="resultado"> </div> 
+
+
     </body>
+
+
+
 </html>

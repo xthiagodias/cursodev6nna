@@ -1,0 +1,50 @@
+@charset "ISO-8859-1";
+
+
+#bt1 {
+       font-family: Arial;
+    font-size: 15pt; 
+    height: 40px;
+    width: 40px;
+    background-color: blue; 
+    color:white;
+    font-weight: bold;
+}
+
+#bt2 {
+      font-family: Arial;
+    font-size: 15pt;  
+    height: 40px;
+    width: 40px;
+    background-color: blue; 
+    color:white;
+    font-weight: bold;
+}
+
+#bt3 {
+       font-family: Arial;
+    font-size: 15pt; 
+    height: 40px;
+    width: 40px;
+    background-color: blue; 
+    color:white;
+    font-weight: bold;
+}
+
+#bt4 {
+    font-family: Arial;
+    font-size: 15pt;
+    height: 40px;
+    width: 40px;
+    background-color: blue; 
+    color:white;
+    font-weight: bold;
+}
+
+#resultado {
+    padding: 20px;
+    margin-left: -20px;
+    font-size: 20pt;
+    color: red;
+    
+}
