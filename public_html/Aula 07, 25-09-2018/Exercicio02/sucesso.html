@@ -7,14 +7,64 @@ and open the template in the editor.
 <html>
     <head>
         <title>Login OK!</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            
+            
+            
+            function calcarea() {
+                
+                var valor1 = document.getElementById("base").value;
+                var valor2 = document.getElementById("altura").value;
+                
+                var resultado = 
+                
+            }
+        </script>
+    
+    
+    
     </head>
+    
+   
     <body>
         <div><h1>Login foi efetuado com sucesso!</h1>
+
+            <table border="1" width="400" height="300">
+                <thead>
+                    <tr>
+                        <th>Triângulo</th>
+                        <th>Quadrado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div id="triangulo"></div></td>
+                        <td><div id="quadrado"></div></td>
+                    </tr>
+                    <tr>
+                        <td><div id="calc">Base: <input type="text" id="base" size="10"><br>Altura: <input type="text" id="altura" size="10"><br><input type="button" id="calcular" value="calc. area" name="calc">
+                                <br>
+                                <br>
+                                <br>
+                                Área:<input type="text" id="area" size="10" disabled=""></div></td>
+
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+            <br>
+            <br>
+            <br>
+
             <a href="login.html"><input type="button" value="Voltar" name="Voltar"></a>
-   
+
         </div>
-        
+
     </body>
 </html>
