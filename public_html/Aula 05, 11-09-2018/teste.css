@@ -1,0 +1,33 @@
+hr {
+    margin-top: -10px;
+    border: solid 0.5px red;
+    display: flex;
+    position: relative;
+    
+}
+
+.container {
+    
+    display: block;
+    position: relative; 
+   
+    
+}
+
+#teste {
+    
+   display: flex; 
+   border: solid 0px gray;
+   position: relative; 
+    
+    
+}
+#teste input {
+    width: 400pt;
+   display: flex; 
+   border: solid 1px gray;
+   position: relative; 
+    
+    
+}
+

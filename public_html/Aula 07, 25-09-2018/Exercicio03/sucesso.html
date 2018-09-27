@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login OK! - Calculo Base Circulo, Trapezio e Retangulo</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script language='JavaScript'>
+            function SomenteNumero(e) {
+                var tecla = (window.event) ? event.keyCode : e.which;
+                if ((tecla > 47 && tecla < 58))
+                    return true;
+                else {
+                    if (tecla === 8 || tecla === 0)
+                        return true;
+                    else
+                        return false;
+                }
+            }
+        </script> 
+
+
+
+        <script>
+
+
+
+            function calcareac1() {
+
+                var v1 = document.getElementById("raio").value;
+                var pi = 3.14;
+
+                var resultado = pi * (v1 * v1);
+
+                document.getElementById("arearaio").value = resultado;
+
+                return resultado;
+
+
+            }
+
+
+            function calcareac2() {
+
+                var valor1 = document.getElementById("bcima").value;
+                var valor2 = document.getElementById("bbaixo").value;
+                var valor3 = document.getElementById("baltura").value;
+                var resultado3 = (parseInt(valor1) + parseInt(valor2));
+                var resultado4 = (resultado3) * valor3;
+
+                var resultado5 = (resultado4) / 2;
+                document.getElementById("area2").value = resultado5;
+
+
+                return resultado5;
+
+            }
+
+            function calcareac3() {
+
+                var base = document.getElementById("lado1").value;
+                var altura = document.getElementById("lado2").value;
+                var resultado = (parseInt(base) * parseInt(altura));
+
+                document.getElementById("area3").value = resultado;
+
+
+                return resultado;
+
+
+            }
+        </script>
+
+
+
+    </head>
+
+
+    <body>
+        <div><h1>Login foi efetuado com sucesso!</h1>
+
+            <form action="formulario" method="POST">
+                <table border="1" width="400" height="300">
+                    <thead>
+                        <tr>
+                            <th>Circulo</th>
+                            <th>Trapezio</th>
+                            <th>Retangulo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div id="circulo"></div></td>
+                            <td><div id="trapezio"></div></td>
+                            <td><div id="retangulo"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="calc">Raio: <input type="text" id="raio" size="10" onkeypress='return SomenteNumero(event)'><br>
+                                    <input type="button" id="calcular" value="calc. area" name="calc" onclick="calcareac1()">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    Área: <input type="text" id="arearaio" size="10" disabled=""></div></td>
+
+                            <td><div id="calc2">Base Cima: <input type="text" id="bcima" size="10" onkeypress='return SomenteNumero(event)'><br>Base Baixo: <input type="text" id="bbaixo" size="10" onkeypress='return SomenteNumero(event)'><br>Altura: <input type="text" id="baltura" size="10" onkeypress='return SomenteNumero(event)'>
+                                    <br>
+                                    <input type="button" id="calcular2" value="calc. area" name="calc2" onclick="calcareac2()">
+                                    <br>
+                                    <br>
+                                    Área: <input type="text" id="area2" size="10" disabled=""></div></td>
+                            <td><div id="calc3">Base: <input type="text" id="lado1" size="10" onkeypress='return SomenteNumero(event)'><br>Altura: <input type="text" id="lado2" size="10" onkeypress='return SomenteNumero(event)'><br>
+                                    <br>
+                                    <input type="button" id="calcular3" value="calc. area" name="calc3" onclick="calcareac3()">
+                                    <br>
+                                    <br>
+                                    Área: <input type="text" id="area3" size="10" disabled=""></div></td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <input type="reset" value="Resetar Campos" name="resetar">
+
+
+                <br>
+                <br>
+                <br>
+
+                <a href="login.html"><input type="button" value="Voltar" name="Voltar"></a>
+            </form>
+        </div>
+
+    </body>
+</html>

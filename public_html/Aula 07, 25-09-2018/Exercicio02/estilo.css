@@ -44,6 +44,13 @@ h1 {
     
 }
 
+#calc2 {
+    padding: 15px;
+    margin: auto;
+    
+    
+}
+
 #base {
    margin: 9px;
    margin-top: 0px;
@@ -56,14 +63,28 @@ h1 {
 #calcular {
  
  margin: 0;
- margin-left: 60px;
-margin-top: 2pt;
+ margin-left: 51px;
+ margin-top: 2pt;
+}
+
+#calcular2 {
+ 
+ margin: 0;
+ margin-left: 41px;
+ margin-top: 2pt;
 }
 
 
 #area {
    margin: 9px;
    margin-top: 0px;
- 
+   margin-top: 20px;
+    
+}
+
+#area2 {
+   margin: 9px;
+   margin-top: 0px;
+   margin-top: 48px;
     
 }

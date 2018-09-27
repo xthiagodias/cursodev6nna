@@ -6,65 +6,111 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Login OK!</title>
+        <title>Login OK! - Calculo Base Triangulo e Quadrado</title>
         <link href="estilo.css" rel="stylesheet" type="text/css"/>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+        <script language='JavaScript'>
+            function SomenteNumero(e) {
+                var tecla = (window.event) ? event.keyCode : e.which;
+                if ((tecla > 47 && tecla < 58))
+                    return true;
+                else {
+                    if (tecla === 8 || tecla === 0)
+                        return true;
+                    else
+                        return false;
+                }
+            }
+        </script> 
+
+
+
         <script>
-            
-            
-            
+
+
+
             function calcarea() {
-                
+
                 var valor1 = document.getElementById("base").value;
                 var valor2 = document.getElementById("altura").value;
-                
-                var resultado = 
-                
+
+                var resultado = (valor1 * valor2) / 2;
+
+                document.getElementById("area").value = resultado;
+
+
+                return resultado;
+
+
+            }
+
+
+            function calcarea2() {
+
+                var valor1 = document.getElementById("lado").value;
+                var resultado2 = (valor1 * valor1);
+
+                document.getElementById("area2").value = resultado2;
+
+
+                return resultado2;
+
+
             }
         </script>
-    
-    
-    
+
+
+
     </head>
-    
-   
+
+
     <body>
         <div><h1>Login foi efetuado com sucesso!</h1>
+           <form action="" method="post" >
+                <table border="1" width="400" height="300">
+                    <thead>
+                        <tr>
+                            <th>Triângulo</th>
+                            <th>Quadrado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><div id="triangulo"></div></td>
+                            <td><div id="quadrado"></div></td>
+                        </tr>
+                        <tr>
+                            <td><div id="calc">Base: <input type="text" id="base" size="10" onkeypress='return SomenteNumero(event)'><br>Altura: <input type="text" id="altura" size="10" onkeypress='return SomenteNumero(event)'><br><input type="button" id="calcular" value="calc. area" name="calc" onclick="calcarea()">
+                                    <br>
+                                    <br>
+                                    <br>
+                                    Área:<input type="text" id="area" size="10" disabled=""></div></td>
 
-            <table border="1" width="400" height="300">
-                <thead>
-                    <tr>
-                        <th>Triângulo</th>
-                        <th>Quadrado</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><div id="triangulo"></div></td>
-                        <td><div id="quadrado"></div></td>
-                    </tr>
-                    <tr>
-                        <td><div id="calc">Base: <input type="text" id="base" size="10"><br>Altura: <input type="text" id="altura" size="10"><br><input type="button" id="calcular" value="calc. area" name="calc">
-                                <br>
-                                <br>
-                                <br>
-                                Área:<input type="text" id="area" size="10" disabled=""></div></td>
+                            <td><div id="calc2">Lado: <input type="text" id="lado" size="10" onkeypress='return SomenteNumero(event)'><br>
+                                    <br>
+                                    <input type="button" id="calcular2" value="calc. area" name="calc2" onclick="calcarea2()">
+                                    <br>
+                                    <br>
+                                    Área:<input type="text" id="area2" size="10" disabled=""></div></td>
 
-                        <td></td>
-                    </tr>
+                        </tr>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+                <input type="reset" value="Resetar Campos" name="resetar">
 
+                <br>
+                <br>
+                <br>
 
-            <br>
-            <br>
-            <br>
-
-            <a href="login.html"><input type="button" value="Voltar" name="Voltar"></a>
-
+                <a href="login.html"><input type="button" value="Voltar" name="Voltar"></a>
+</form>
         </div>
+    
+</body>
 
-    </body>
 </html>
+
