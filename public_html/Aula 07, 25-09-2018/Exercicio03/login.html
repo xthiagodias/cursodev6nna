@@ -26,12 +26,18 @@ and open the template in the editor.
 
 
                     // alert("Login Efetuado com Sucesso!");
-                    window.open('sucesso.html');
+                    //   window.open('sucesso.html'); //Outra Janela.
+                    // Mesmo comportamento de um Redirecionamento HTTP
+                    window.location.replace("sucesso.html");
+
+                    // Mesmo comportamento de um click em um link
+                   // window.location.href = "cadastroDoador.html";
                 } else
                 {
 
                     //  alert("Dados inválidos!");  
-                    window.open('falha.html');
+                   // window.open('falha.html');
+                   window.location.replace("falha.html");
                 }
             }
 
