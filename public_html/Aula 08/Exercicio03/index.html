@@ -113,19 +113,51 @@ and open the template in the editor.
 
             function adicionaProduto() {
 
-                var qt = document.getElementById("quantidade").value;
-                var vlrtotal = document.getElementById("valor1").innerHTML;
 
-                //var resultado4 = document.getElementById("valor1");
-                var resultado3 = document.getElementById("valor2");
-                resultado3.innerHTML = qt * vlrtotal;
+                if (document.getElementById("produto").value === "0") {
+                    alert("Voce deve selecionar um Produto!");
 
+                } else {
 
-                var qt = document.getElementById("quantidade").value = "";
+                    if (document.getElementById("quantidade").value === "") {
+                        alert("Voce deve informar a quantidade!");
+
+                    } else {
+
+                        var qt = document.getElementById("quantidade").value;
+                        var vlrtotal = document.getElementById("valor1").innerHTML;
+
+                        //var resultado4 = document.getElementById("valor1");
+                        var resultado3 = document.getElementById("valor2");
+                        resultado3.innerHTML = qt * vlrtotal;
+                      
+                        var node = document.createElement("td"); 
+                        var node2 = document.createElement("td");
+                        var node3 = document.createElement("td");
+                        var node4 = document.createElement("td");
+                        var node5 = document.createElement("td");// Create a <li> node
+                        var textnode1 = document.createTextNode("4");
+                        var textnode2 = document.createTextNode("Pao");
+                        var textnode3 = document.createTextNode("2");
+                        var textnode4 = document.createTextNode("R$2.5");
+                        var textnode5 = document.createTextNode("R$5.0");// Create a text node
+                        node.appendChild(textnode1);
+                        node2.appendChild(textnode2);
+                        node3.appendChild(textnode3);
+                        node4.appendChild(textnode4);
+                        node5.appendChild(textnode5);// Append the text to <li>
+
+                        document.getElementById("tabela").appendChild(node);
+                        document.getElementById("tabela").appendChild(node2);
+                        document.getElementById("tabela").appendChild(node3);
+                        document.getElementById("tabela").appendChild(node4);
+                        document.getElementById("tabela").appendChild(node5);// Append <li> to <ul> with id="myList"
+
+                        var qt = document.getElementById("quantidade").value = "";
+                    }
+                }
+
             }
-
-
-
             function Teste2() {
                 //        var node = document.createElement("p");                 // Create a <li> node
                 //        var textnode = document.createTextNode("Water");         // Create a text node
@@ -179,7 +211,7 @@ and open the template in the editor.
         <form action="">
             <div class="carrinho">
                 <center>
-                    <table class="table table-bordered">
+                    <table class="table table-bordered" id="tabela">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -192,19 +224,27 @@ and open the template in the editor.
                         <tbody>
                             <tr>
                                 <th scope="row">1</th>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
+                                <td>1</td>
                             </tr>
-                            <tr>
-                                <!--    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr> -->
+
                             <tr>
                                 <th scope="row">2</th>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                                <td>2</td>
+                            </tr>           
+                            <!--  <tr>
+                                    <th scope="row">2</th>
+                                     <td>Jacob</td>
+                                     <td>Thornton</td>
+                                     <td>@fat</td>
+                                   </tr> -->
+                            <tr>
+                                <th scope="row">3</th>
                                 <td colspan="3"></td>
                                 <td></td>
                             </tr>
