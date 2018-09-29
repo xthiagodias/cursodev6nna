@@ -1,160 +1,89 @@
-#circulo {
+@charset "ISO-8859-1";
 
-    width: 0px;
-    height: 0px;
-    border: 100px solid;
-    border-color: green;
-    border-bottom: 180px solid yellow;
-    margin-top: auto;
-    border-top: 0;
-    border-radius: 50%;
 
-    margin-bottom: auto;
-    margin-left: auto;
-    margin: 0 auto;
+body {
 
+    background-image: linear-gradient(to right, white,oldlace);
+
+}
+
+.logo {
+
+    display: block;
+    padding: 12px;
+    position: 
+        relative;
 
 
 }
 
-#trapezio {
-
-    border-bottom: 100px solid yellow;
-    border-left: 20px solid transparent;
-    border-right: 15px solid transparent;
-    height: 0;
-    width: 200px;
-
-}
-
-#retangulo {
-
-    line-height:0;
-    width:0;
-    height:0;
-    border-style: solid;
-    border-color: blue;
-    border-width: 0 160px 100px 50px;
-
-    margin-bottom: auto;
-    margin-left: auto;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    color: blue;
-
-}
-
-#calc {
-    padding: 15px;
+p {
+    font-size: 15px;
+    font-style: inherit;
+    font-family: sans-serif;
     margin: auto;
-    margin-top: auto;
-
+    padding: 12px;
+    margin-top: 20px;
+    text-decoration: underline;
 }
 
-#calc2 {
-    padding: 15px;
+select {
+
+    padding: 12px;
+}
+span {
+    padding: 12px;
+    font-size: 15px;
+    font-family: Arial;
+}
+
+#qnt {
+
     margin: auto;
-    margin-top: auto;
-
-
+    margin-left: 30px;
 }
 
-#calc3 {
-    padding: 15px;
+#qnt2 {
+
     margin: auto;
-margin-top: auto;
-
+    margin-left: 30px;
 }
 
-#raio {
-    margin: 9px;
-    margin-top: 0px;
+#qnt3 {
 
-
-}
-
-
-
-#calcular {
-
-    margin: 0;
-    margin-left: 48px;
-    margin-top: 0pt;
-    
-}
-
-#calcular2 {
-    
     margin: auto;
-    
-    margin-left: 85px;
-    
-
+    margin-left: 20px;
 }
 
-#calcular3 {
+#quantidade {
 
-    margin: 0;
-    margin-left: 51px;
-    margin-top: 0pt;
+    border: solid 1px gray;
+    border-radius: 15px 15px;
 }
 
+#valor1 {
 
-#arearaio {
-    margin: 9px;
-    margin-top: 0px;
-  
-
+    margin: auto;
+    margin-left: -20px;
+    font-family: Arial;
+    font-weight: bold;
 }
 
-#area2 {
-    margin: 9px;
-    margin-top: 0px;
-    
+#valor2 {
+
+    margin: auto;
+    margin-left: -20px;
+    font-family: Arial;
+    font-weight: bold;
 }
 
+#limpar {
 
-#area3 {
-    margin: 9px;
-    margin-top: 0px;
-    
+    margin-left: 50px;
+    border-radius: 15px 15px;
 }
 
-#lado1 {
-    margin: 9px;
-    margin-top: 0px;
-    
-}
+#adicionar {
 
-#lado2 {
-    margin: 9px;
-    margin-top: 0px;
-    margin-left: auto;
-    
-}
-
-
-#bcima {
-    margin: 9px;
-    margin-top: 0px;
-
-
-}
-
-#bbaixo {
-    margin: 5px;
-    margin-top: 0px;
-    
-
-
-}
-
-#baltura {
-    margin: 38px;
-    margin-top: 2px;
-
-
+    border-radius: 15px 15px; 
 }
