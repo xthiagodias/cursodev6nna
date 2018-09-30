@@ -131,16 +131,21 @@ and open the template in the editor.
                         var resultado3 = document.getElementById("valor2");
                         resultado3.innerHTML = qt * vlrtotal;
                       
+                       
+                       
                         var node = document.createElement("td"); 
                         var node2 = document.createElement("td");
                         var node3 = document.createElement("td");
                         var node4 = document.createElement("td");
                         var node5 = document.createElement("td");// Create a <li> node
                         var textnode1 = document.createTextNode("4");
-                        var textnode2 = document.createTextNode("Pao");
-                        var textnode3 = document.createTextNode("2");
-                        var textnode4 = document.createTextNode("R$2.5");
-                        var textnode5 = document.createTextNode("R$5.0");// Create a text node
+                        var textnode2 = document.createTextNode(document.getElementById("produto").title);
+                        var textnode3 = document.createTextNode(document.getElementById("quantidade").value);
+                        var textnode4 = document.createTextNode("R$ "+document.getElementById("valor1").innerHTML);
+                        var textnode5 = document.createTextNode("R$ "+document.getElementById("valor2").innerHTML);// Create a text node
+                       
+                     
+                       
                         node.appendChild(textnode1);
                         node2.appendChild(textnode2);
                         node3.appendChild(textnode3);
@@ -153,7 +158,11 @@ and open the template in the editor.
                         document.getElementById("tabela").appendChild(node4);
                         document.getElementById("tabela").appendChild(node5);// Append <li> to <ul> with id="myList"
 
-                        var qt = document.getElementById("quantidade").value = "";
+                      
+                        
+                        
+                        
+                        document.getElementById("quantidade").value = "";
                     }
                 }
 
