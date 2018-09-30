@@ -16,10 +16,16 @@ and open the template in the editor.
         
         
         <script>
+            
+            
+            
             function limpaComanda() {
-                var elemento_pai = document.getElementById('tabela');
-                quebra.removeChild(elemento_pai);
-                elemento_pai.appendChild(quebra);
+       
+        $("#tabela tr").remove();
+
+        document.getElementById("tabela").deleteRow(i);
+
+             //   lista.removeChild(list.childNodes[i]); 
             }
         </script>        
 
