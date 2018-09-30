@@ -13,6 +13,30 @@ and open the template in the editor.
         <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <script src="libs/bootstrap/bootstrap.min.js" type="text/javascript"></script>  
 
+        
+        
+        <script>
+            function limpaComanda() {
+                var elemento_pai = document.getElementById('tabela');
+                quebra.removeChild(elemento_pai);
+                elemento_pai.appendChild(quebra);
+            }
+        </script>        
+
+        <script>
+            function Quebra() {
+                var elemento_pai = document.getElementById('tabela');
+                //    var titulo = document.createElement('h1');
+                var quebra = document.createElement('tr');
+                //    var texto = document.createTextNode("Um título qualquer");
+                var quebralinha = document.createTextNode("");
+             //   titulo.appendChild(texto);
+                quebra.appendChild(quebralinha);
+             //   elemento_pai.appendChild(titulo);
+                elemento_pai.appendChild(quebra);
+            }
+        </script>     
+
         <script type="text/javascript">
 
             var vlrpao = 2.50;
@@ -20,6 +44,7 @@ and open the template in the editor.
             var vlrfeijao = 4.50;
             var vlrqueijo = 6.50;
             var vlrpresunto = 5.0;
+            var linha = 0;
             function selecionaProduto(valor) {
                 //        var node = document.createElement("p");                 // Create a <li> node
                 //        var textnode = document.createTextNode("Water");         // Create a text node
@@ -99,7 +124,7 @@ and open the template in the editor.
 
 
                 var selection = document.getElementById("produto");
-                var selected = selection.options[selection.selectedIndex].text;
+                var sel = selection.options[selection.selectedIndex].text;
                 //   var select = document.getElementById('produto'),
                 //           output = document.getElementById('valor1');
 
@@ -113,6 +138,8 @@ and open the template in the editor.
 
             function adicionaProduto() {
 
+                var selection = document.getElementById("produto");
+                var sel = selection.options[selection.selectedIndex].text;
 
                 if (document.getElementById("produto").value === "0") {
                     alert("Voce deve selecionar um Produto!");
@@ -130,38 +157,39 @@ and open the template in the editor.
                         //var resultado4 = document.getElementById("valor1");
                         var resultado3 = document.getElementById("valor2");
                         resultado3.innerHTML = qt * vlrtotal;
-                      
-                       
-                       
-                        var node = document.createElement("td"); 
+
+
+                        var node = document.createElement("td");
                         var node2 = document.createElement("td");
                         var node3 = document.createElement("td");
                         var node4 = document.createElement("td");
-                        var node5 = document.createElement("td");// Create a <li> node
-                        var textnode1 = document.createTextNode("4");
-                        var textnode2 = document.createTextNode(document.getElementById("produto").title);
+                        var node5 = document.createElement("td");
+
+
+                        var textnode1 = document.createTextNode(linha = linha + 1);
+                        var textnode2 = document.createTextNode(sel);
                         var textnode3 = document.createTextNode(document.getElementById("quantidade").value);
-                        var textnode4 = document.createTextNode("R$ "+document.getElementById("valor1").innerHTML);
-                        var textnode5 = document.createTextNode("R$ "+document.getElementById("valor2").innerHTML);// Create a text node
-                       
-                     
-                       
+                        var textnode4 = document.createTextNode("R$ " + document.getElementById("valor1").innerHTML);
+                        var textnode5 = document.createTextNode("R$ " + document.getElementById("valor2").innerHTML);
+
+
                         node.appendChild(textnode1);
                         node2.appendChild(textnode2);
                         node3.appendChild(textnode3);
                         node4.appendChild(textnode4);
-                        node5.appendChild(textnode5);// Append the text to <li>
+                        node5.appendChild(textnode5);
+
 
                         document.getElementById("tabela").appendChild(node);
                         document.getElementById("tabela").appendChild(node2);
                         document.getElementById("tabela").appendChild(node3);
                         document.getElementById("tabela").appendChild(node4);
-                        document.getElementById("tabela").appendChild(node5);// Append <li> to <ul> with id="myList"
+                        document.getElementById("tabela").appendChild(node5);
+               Quebra();
 
-                      
-                        
-                        
-                        
+
+
+
                         document.getElementById("quantidade").value = "";
                     }
                 }
@@ -175,10 +203,18 @@ and open the template in the editor.
                 alert("OK");
             }
         </script>
+        
+<style>
+  td{
+       word-wrap:break-word;
+    }
+</style>
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
+    
+    
     <body>
         <div>
             <div class="logo">
@@ -210,7 +246,7 @@ and open the template in the editor.
             <br>
             <center>
                 <input type="button" id="adicionar" name="addcarrinho" value="Adicionar ao Carrinho" onclick="adicionaProduto()">
-                <input type="button" id="limpar" name="limpar" value="Limpar Comanda">
+                <input type="button" id="limpar" name="limpar" value="Limpar Comanda" onclick="limpaComanda()">
                 <br>
                 <br>
             </center>
@@ -228,35 +264,38 @@ and open the template in the editor.
                                 <th scope="col">Quantidade</th>
                                 <th scope="col">Preco</th>
                                 <th scope="col">Subtotal</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                                <td>1</td>
-                            </tr>
-
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                                <td>2</td>
-                            </tr>           
-                            <!--  <tr>
-                                    <th scope="row">2</th>
-                                     <td>Jacob</td>
-                                     <td>Thornton</td>
-                                     <td>@fat</td>
-                                   </tr> -->
-                            <tr>
-                                <th scope="row">3</th>
-                                <td colspan="3"></td>
-                                <td></td>
-                            </tr>
+                           
+                            <!--     <tr>
+                                     <th scope="row">1</th>
+                                     <td>1</td>
+                                     <td>1</td>
+                                     <td>1</td>
+                                     <td>1</td>
+                                 </tr>
+     
+                                 <tr>
+                                     <th scope="row">2</th>
+                                     <td>2</td>
+                                     <td>2</td>
+                                     <td>2</td>
+                                     <td>2</td>
+                                 </tr>           
+                                   <tr>
+                                         <th scope="row">2</th>
+                                          <td>Jacob</td>
+                                          <td>Thornton</td>
+                                          <td>@fat</td>
+                                        </tr> 
+                                 <tr>
+                                     <th scope="row">3</th>
+                                     <td colspan="3"></td>
+                                     <td></td>--
+                                 </tr>-->
+                       
                         </tbody>
                     </table>
                 </center> 
