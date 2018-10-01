@@ -137,7 +137,7 @@ and open the template in the editor.
 
                 if (document.getElementById("produto").value === "0") {
                     alert("Voce deve selecionar um Produto!");
-
+                    
                 } else {
 
                     if (document.getElementById("quantidade").value === "") {
@@ -237,6 +237,7 @@ and open the template in the editor.
             <hr style="border: solid 1px;">
         </div>
         <div class="central">
+            
 
 
             <!-- Modal -->
@@ -262,7 +263,7 @@ and open the template in the editor.
 
             <p>Comanda do Cliente</p>
             <span>Produto:  </span>
-            <select id="produto" name="produto" data-placeholder='Nenhum valor selecionado...' onchange="selecionaProduto(this.value);">
+            <select id="produto" name="produto" data-toggle="tooltip" data-placement="top" title="Escolha o produto" data-placeholder='Nenhum valor selecionado...' onchange="selecionaProduto(this.value);">
                 <option value="0">Selecione o Produto</option>
                 <option value="1">Pao</option>
                 <option value="2">Arroz</option>
@@ -270,16 +271,16 @@ and open the template in the editor.
                 <option value="4">Queijo</option>
                 <option value="5">Presunto</option>
             </select>
-            <span id="qnt">Quantidade:  </span><input id="quantidade" type="text" size="10" required placeholder="">
-            <span id="qnt2">Preco:  R$</span><span id="valor1"></span>
-            <span id="qnt3">Sub-Total:  R$</span><span id="valor2"></span>
+            <span id="qnt">Quantidade:  </span><input id="quantidade" type="text" size="10" data-toggle="tooltip" data-placement="top" title="Informe a quantidade" required placeholder="">
+            <span id="qnt2">Preco:  <b>R$</b></span><span id="valor1"></span>
+                        <span id="qnt3">Sub-Total:  <b>R$</b></span><span id="valor2"></span>
         </div>
         <div class="comandos">
             <br>
             <br>
             <center>
-                <input type="button" id="adicionar" name="addcarrinho" value="Adicionar ao Carrinho" class="btn btn-primary" onclick="adicionaProduto()">
-                <input type="button" id="limpar" name="limpar" value="Limpar Comanda" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <input type="button" id="adicionar" name="addcarrinho" value="Adicionar ao Carrinho" data-toggle="tooltip" data-placement="top" title="Adiciona o produto" class="btn btn-primary" onclick="adicionaProduto()">
+                <input type="button" id="limpar" name="limpar" value="Limpar Comanda"  data-placement="top" title="Limpa a comanda" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
                 <br>
                 <br>
             </center>
