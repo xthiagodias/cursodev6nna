@@ -27,12 +27,7 @@ p {
     text-decoration: underline;
 }
 
-select {
 
-    padding: 12px;
-
-
-}
 span {
     padding: 12px;
     font-size: 15px;
@@ -62,12 +57,13 @@ span {
     border: solid 1px gray;
     border-radius: 15px 15px;
     font-family: Arial;
-    font-size: 13px;
+    font-size: 15px;
     background-color: #007bff;
     color: white;
-    width: 170px;
-    height: 40px;
+
+    height: 30px;
     text-align: center;
+    
 
 }
 
@@ -92,7 +88,7 @@ span {
     margin-left: 50px;
     border-radius: 15px 15px;
     width: 170px;
-    height: 40px;
+    height: 30px;
     text-align: center;
 }
 
@@ -100,13 +96,15 @@ span {
     font-size: 13px;
     border-radius: 15px 15px; 
     width: 170px;
-    height: 40px;
+    height: 30px;
     text-align: center;
+
 }
 
 
 #produto {
-
+    
+   
     font-family: Arial;
     font-size: 13px;
     background-color: #007bff;
@@ -114,12 +112,6 @@ span {
     text-align: center;
     color: white;
     width: 170px;
-    height: 40px;
-}
-
-option {
-font-size: 13px;
-    color:white;
-
+    height: 30px;
 }
 

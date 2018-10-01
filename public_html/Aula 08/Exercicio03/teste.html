@@ -7,23 +7,46 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
+        <link href="teste.css" rel="stylesheet" type="text/css"/>
+        
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function Quebra() {
             var elemento_pai = document.body;
-        //    var titulo = document.createElement('h1');
-            var quebra = document.createElement('br');
-        //    var texto = document.createTextNode("Um título qualquer");
-            var quebralinha = document.createTextNode("br");
+            var titulo = document.createElement('br');
+           // var quebra = document.createElement('h1');
+            var texto = document.createTextNode("Um título qualquer");
+         //   var quebralinha = document.createTextNode("TESTE");
             titulo.appendChild(texto);
-            quebra.appendChild(quebralinha);
+        //    texto.appendChild(quebralinha);
             elemento_pai.appendChild(titulo);
-            elemento_pai.appendChild(quebra);
+            elemento_pai.appendChild(texto);
         }
         </script>
     </head>
     <body>
+        
+        <div>
+             <select id="produto" name="produto" data-toggle="tooltip" data-placement="top" title="Escolha o produto" data-placeholder='Nenhum valor selecionado...' onchange="selecionaProduto(this.value);">
+                <option value="0">Selecione o Produto</option>
+                <option value="1">Pao</option>
+                <option value="2">Arroz</option>
+                <option value="3">Feijao</option>
+                <option value="4">Queijo</option>
+                <option value="5">Presunto</option>
+            </select>
+            
+            
+        </div>
+        
+        
+        
+        
+        
+        
+        
         <div><input type="button" name="Teste" value="Teste" onclick="Quebra()"> </div>
     </body>
 </html>

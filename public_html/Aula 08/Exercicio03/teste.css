@@ -1,0 +1,12 @@
+#produto {
+    
+   
+    font-family: Arial;
+    font-size: 13px;
+    background-color: #007bff;
+    border-radius: 15px 15px;
+    text-align: center;
+    color: white;
+    width: 170px;
+    height: 20px;
+}

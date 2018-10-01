@@ -140,10 +140,11 @@ and open the template in the editor.
 
                 } else {
 
-                    if (document.getElementById("quantidade").value === "") {
+                    if ((document.getElementById("quantidade").value === "") || (document.getElementById("quantidade").value === "0")) {
                         alert("Voce deve informar a quantidade!");
 
-                    } else {
+                    } else { 
+                          
 
                         var qt = document.getElementById("quantidade").value;
                         var vlrtotal = document.getElementById("valor1").innerHTML;
