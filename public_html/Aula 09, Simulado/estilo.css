@@ -45,6 +45,8 @@ span {
     height: 30px;
     margin-left: 160pt;
 
+    
+
 }
 
 #bsalvar {
@@ -87,6 +89,7 @@ span {
 .botoes {
 
     margin:auto;
+    text-align: center;
 
 }
 

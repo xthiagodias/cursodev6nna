@@ -19,6 +19,8 @@ and open the template in the editor.
             var numero;
             var complemento;
             var endCompleto;
+            
+            var array_ends = []; 
 
             function salvarEnd() {
 
@@ -38,6 +40,8 @@ and open the template in the editor.
                 numero = document.getElementById("numero").value = "";
                 complemento = document.getElementById("complemento").value = "";
 
+array_ends.push(endCompleto);
+
                 //   var salvar = document.getElementById("endCompleto1");
 
                 //   salvar.innerHTML = endCompleto;
@@ -50,9 +54,9 @@ and open the template in the editor.
 
                 var salvar = document.getElementById("endCompleto1");
 
-                salvar.innerHTML = endCompleto;
+               // salvar.innerHTML = endCompleto;
 
-
+salvar.innerHTML = array_ends[Math.floor(Math.random()*array_ends.length)];
 
             }
 
@@ -102,9 +106,9 @@ and open the template in the editor.
                 <span>Endereco Completo:</span><div id="endCompleto1"></div>
                 <BR>
                 <div id="botoes">
-                    <input type="button" id="bgerar" name="gerarEndereco" value="Gerar Endereco" onclick="gerarEnd()">
-                    <input type="button" id="bsalvar" name="salvarEndereco" value="Salvar" onClick="salvarEnd()">
-                    <input type="reset" id="blimpar" name="limparCampos" value="Limpar" onClick="limparEnd()">
+                    <input type="button" id="bgerar" name="gerarEndereco" value="Gerar Endereco" align="middle" onclick="gerarEnd()">
+                    <input type="button" id="bsalvar" name="salvarEndereco" value="Salvar" align="middle" onClick="salvarEnd()">
+                    <input type="reset" id="blimpar" name="limparCampos" value="Limpar" align="middle" onClick="limparEnd()">
                 </div>
             </div>
         </form>
