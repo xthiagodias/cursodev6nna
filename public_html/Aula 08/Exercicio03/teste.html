@@ -7,23 +7,101 @@ and open the template in the editor.
 <html>
     <head>
         <title>TODO supply a title</title>
+        <link href="teste.css" rel="stylesheet" type="text/css"/>
+        
+        
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script>
             function Quebra() {
             var elemento_pai = document.body;
-        //    var titulo = document.createElement('h1');
-            var quebra = document.createElement('br');
-        //    var texto = document.createTextNode("Um título qualquer");
-            var quebralinha = document.createTextNode("br");
+            var titulo = document.createElement('br');
+           // var quebra = document.createElement('h1');
+            var texto = document.createTextNode("Um título qualquer");
+         //   var quebralinha = document.createTextNode("TESTE");
             titulo.appendChild(texto);
-            quebra.appendChild(quebralinha);
+        //    texto.appendChild(quebralinha);
             elemento_pai.appendChild(titulo);
-            elemento_pai.appendChild(quebra);
+            elemento_pai.appendChild(texto);
         }
+        
+        
+        function Teste() {
+            
+            var v1 = document.getElementById("valor1").value;
+            var v2 = document.getElementById("valor2").value;
+            var resultado = parseInt(v1)+parseInt(v2);
+            
+        
+            
+            if(resultado >= 40) {
+                
+                alert("O Resultado é igual ou maior a 40.");
+            } else {
+                
+                alert("O Resultao é menor que 40.");
+            }
+            
+            
+            
+     var result = document.getElementById("resultado");
+      result.innerHTML = resultado;
+            
+            return resultado;
+            
+        }
+        
+        function Teste2() {
+            
+            var v1 = document.getElementById("valor1").value = "";
+            var v2 = document.getElementById("valor2").value = "";
+            var resultado = parseInt(v1)+parseInt(v2);
+
+     var result = document.getElementById("resultado");
+      result.innerHTML = "";
+            
+            return resultado;
+            
+        }      
+        
+        
+        
         </script>
     </head>
+    
     <body>
-        <div><input type="button" name="Teste" value="Teste" onclick="Quebra()"> </div>
+        
+        <div>
+             <select id="produto" name="produto" data-toggle="tooltip" data-placement="top" title="Escolha o produto" data-placeholder='Nenhum valor selecionado...' onchange="selecionaProduto(this.value);">
+                <option value="0">Selecione o Produto</option>
+                <option value="1">Pao</option>
+                <option value="2">Arroz</option>
+                <option value="3">Feijao</option>
+                <option value="4">Queijo</option>
+                <option value="5">Presunto</option>
+            </select>
+            
+            
+        </div>
+        
+        <BR>
+        <BR>
+        <BR>
+        
+   
+        Valor 1:<input type="text" id="valor1" size="20"><br>
+        Valor 2:<input type="text" id="valor2" size="20">
+        
+        <BR>
+        <BR>
+        <span style="color: blue; font-size: 20px;">Resultado :</span><div id="resultado"> </div>
+       
+        <BR>
+        <BR>
+        
+        <input type="button" id="botao" name="Teste" value="Teste" onclick="Teste()">
+        <input type="button" id="botao1" name="RESETA" value="RESETA" onclick="Teste2()">
+       
+      
     </body>
 </html>

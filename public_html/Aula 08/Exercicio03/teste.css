@@ -1,0 +1,32 @@
+#produto {
+    
+   
+    font-family: Arial;
+    font-size: 13px;
+    background-color: #007bff;
+    border-radius: 15px 15px;
+    text-align: center;
+    color: white;
+    width: 170px;
+    height: 20px;
+}
+
+#resultado {
+    margin: auto;
+    margin-left: 100px;
+    margin-top: -23px;
+    font-size: 20px;
+    color: red;
+    
+    
+}
+
+#botao {
+    margin: auto;
+   
+   margin-top: 50px;
+    font-size: 20px;
+    color: red;
+    
+    
+}
