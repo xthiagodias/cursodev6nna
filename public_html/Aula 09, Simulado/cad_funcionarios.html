@@ -19,8 +19,8 @@ and open the template in the editor.
             var numero;
             var complemento;
             var endCompleto;
-            
-            var array_ends = []; 
+
+            var array_ends = [];
 
             function salvarEnd() {
 
@@ -30,33 +30,64 @@ and open the template in the editor.
                 numero = document.getElementById("numero").value;
                 complemento = document.getElementById("complemento").value;
 
-                endCompleto = (logradouro + " - " + numero + " - " + complemento);
-                alert("Endereco salvo com Sucesso!");
+                if (document.getElementById("nome").value === "") {
+
+                    alert("O campo nome deve ser preenchido.");
+
+                } else {
+
+                    if (document.getElementById("email").value === "") {
+
+                        alert("O campo email deve ser preenchido.");
+                    } else {
+
+                        if (document.getElementById("logradouro").value === "") {
+
+                            alert("O campo logradouro deve ser preenchido.");
+                        } else {
+
+                            if (document.getElementById("numero").value === "") {
+
+                                alert("O campo numero deve ser preenchido.");
+                            } else {
+
+                                if (document.getElementById("complemento").value === "") {
+
+                                    alert("O campo complemento deve ser preenchido.");
+                                } else {
 
 
-                nome = document.getElementById("nome").value = "";
-                email = document.getElementById("email").value = "";
-                logradouro = document.getElementById("logradouro").value = "";
-                numero = document.getElementById("numero").value = "";
-                complemento = document.getElementById("complemento").value = "";
-
-array_ends.push(endCompleto);
-
-                //   var salvar = document.getElementById("endCompleto1");
-
-                //   salvar.innerHTML = endCompleto;
+                                    endCompleto = (logradouro + " - " + numero + " - " + complemento);
+                                    alert("Endereco salvo com Sucesso!");
 
 
+                                    nome = document.getElementById("nome").value = "";
+                                    email = document.getElementById("email").value = "";
+                                    logradouro = document.getElementById("logradouro").value = "";
+                                    numero = document.getElementById("numero").value = "";
+                                    complemento = document.getElementById("complemento").value = "";
+
+                                    array_ends.push(endCompleto);
+
+                                    //   var salvar = document.getElementById("endCompleto1");
+
+                                    //   salvar.innerHTML = endCompleto;
+
+                                }
+                            }
+                        }
+                    }
+
+                }
 
             }
-
             function gerarEnd() {
 
                 var salvar = document.getElementById("endCompleto1");
 
-               // salvar.innerHTML = endCompleto;
+                // salvar.innerHTML = endCompleto;
 
-salvar.innerHTML = array_ends[Math.floor(Math.random()*array_ends.length)];
+                salvar.innerHTML = array_ends[Math.floor(Math.random() * array_ends.length)];
 
             }
 
