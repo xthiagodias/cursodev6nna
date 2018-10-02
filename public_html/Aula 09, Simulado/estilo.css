@@ -1,0 +1,92 @@
+@charset "ISO-8859-1";
+
+.titulo {
+    margin: auto;
+    margin-top: 10pt;
+    font-size: 16pt;
+    text-align: center;
+    font-weight: bold;
+
+
+}
+
+hr {
+    border: solid 1px;
+}
+
+#comp {
+    margin-left: 42px;
+}
+
+input {
+
+    border: solid 2px;
+}
+
+span {
+    font-weight: bold;
+    font-family: Helvetica;
+}
+
+
+#endCompleto1 {
+
+    font-family: Helvetica;
+    font-weight: bold;
+    color: blue;
+}
+
+#bgerar {
+    font-family: Helvetica;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+    margin-left: 160pt;
+
+}
+
+#bsalvar {
+    font-family: Helvetica;
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+
+}
+
+#blimpar {
+    font-family: Helvetica;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    width: 120px;
+    height: 30px;
+
+}
+
+.principal {
+    padding: 12pt;
+}
+
+.cargo {
+    padding: 12pt;
+}
+
+.linguagens {
+
+    padding: 12pt;
+}
+
+.endcomp {
+    padding: 12pt;
+}
+
+.botoes {
+
+    margin:auto;
+
+}
+

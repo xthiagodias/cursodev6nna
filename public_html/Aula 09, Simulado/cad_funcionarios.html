@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Cadastro de Funcionarios</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script>
+
+            var nome;
+            var email;
+            var logradouro;
+            var numero;
+            var complemento;
+            var endCompleto;
+
+            function salvarEnd() {
+
+                nome = document.getElementById("nome").value;
+                email = document.getElementById("email").value;
+                logradouro = document.getElementById("logradouro").value;
+                numero = document.getElementById("numero").value;
+                complemento = document.getElementById("complemento").value;
+
+                endCompleto = (logradouro + " - " + numero + " - " + complemento);
+                alert("Endereco salvo com Sucesso!");
+
+
+                nome = document.getElementById("nome").value = "";
+                email = document.getElementById("email").value = "";
+                logradouro = document.getElementById("logradouro").value = "";
+                numero = document.getElementById("numero").value = "";
+                complemento = document.getElementById("complemento").value = "";
+
+                //   var salvar = document.getElementById("endCompleto1");
+
+                //   salvar.innerHTML = endCompleto;
+
+
+
+            }
+
+            function gerarEnd() {
+
+                var salvar = document.getElementById("endCompleto1");
+
+                salvar.innerHTML = endCompleto;
+
+
+
+            }
+
+            function limparEnd() {
+
+                var salvar = document.getElementById("endCompleto1");
+
+                salvar.innerHTML = "";
+
+            }
+
+        </script>
+
+
+    </head>
+
+    <body>
+        <form action="" method="POST">
+            <div class="titulo">Cadastro de Funcionario</div>
+            <hr>
+            <BR>
+            <div class="principal">
+                <div><span>Nome: </span> <input id="nome" type="text" size="100" required> </div>
+                <BR>
+                <div><span>E-Mail: </span> <input id="email" type="email" size="50" required> </div>
+                <BR>
+                <div><span>Logradouro: </span> <input id="logradouro" type="text" size="93" required> </div>
+                <BR>
+                <div><span>Numero: </span> <input id="numero" type="number" size="15" required>  <span id="comp">Complemento: </span> <input id="complemento" type="text" size="49" required> </div>
+            </div>
+            <BR>
+            <div class="cargo">
+                <span>Cargo:</span><p>
+
+                    <input type="radio" id="analistaSistema" name="analista" value="analistaSistema"> <span>Analista de Sistemas</span><p>
+                    <input type="radio" id="analistaRede" name="analista" value="analistaRede"> <span>Analista de Redes</span><p>
+                    <input type="radio" id="analistaDado" name="analista" value="analistaDados"> <span>Analista de Dados</span><p>
+            </div>
+            <div class="linguagens">
+                <span>Linguagens de Programacao:</span><p>
+
+                    <input type="checkbox" id="java" name="java" value="java"> <span>Analista de Sistemas</span><p>
+                    <input type="checkbox" id="php" name="php" value="php"> <span>Analista de Redes</span><p>
+                    <input type="checkbox" id="python" name="python" value="python"> <span>Analista de Dados</span><p> 
+            </div>    
+            <div class="endcomp">
+                <span>Endereco Completo:</span><div id="endCompleto1"></div>
+                <BR>
+                <div id="botoes">
+                    <input type="button" id="bgerar" name="gerarEndereco" value="Gerar Endereco" onclick="gerarEnd()">
+                    <input type="button" id="bsalvar" name="salvarEndereco" value="Salvar" onClick="salvarEnd()">
+                    <input type="reset" id="blimpar" name="limparCampos" value="Limpar" onClick="limparEnd()">
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
