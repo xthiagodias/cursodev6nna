@@ -24,8 +24,51 @@ and open the template in the editor.
             elemento_pai.appendChild(titulo);
             elemento_pai.appendChild(texto);
         }
+        
+        
+        function Teste() {
+            
+            var v1 = document.getElementById("valor1").value;
+            var v2 = document.getElementById("valor2").value;
+            var resultado = parseInt(v1)+parseInt(v2);
+            
+        
+            
+            if(resultado >= 40) {
+                
+                alert("O Resultado é igual ou maior a 40.");
+            } else {
+                
+                alert("O Resultao é menor que 40.");
+            }
+            
+            
+            
+     var result = document.getElementById("resultado");
+      result.innerHTML = resultado;
+            
+            return resultado;
+            
+        }
+        
+        function Teste2() {
+            
+            var v1 = document.getElementById("valor1").value = "";
+            var v2 = document.getElementById("valor2").value = "";
+            var resultado = parseInt(v1)+parseInt(v2);
+
+     var result = document.getElementById("resultado");
+      result.innerHTML = "";
+            
+            return resultado;
+            
+        }      
+        
+        
+        
         </script>
     </head>
+    
     <body>
         
         <div>
@@ -41,12 +84,24 @@ and open the template in the editor.
             
         </div>
         
+        <BR>
+        <BR>
+        <BR>
         
+   
+        Valor 1:<input type="text" id="valor1" size="20"><br>
+        Valor 2:<input type="text" id="valor2" size="20">
         
+        <BR>
+        <BR>
+        <span style="color: blue; font-size: 20px;">Resultado :</span><div id="resultado"> </div>
+       
+        <BR>
+        <BR>
         
-        
-        
-        
-        <div><input type="button" name="Teste" value="Teste" onclick="Quebra()"> </div>
+        <input type="button" id="botao" name="Teste" value="Teste" onclick="Teste()">
+        <input type="button" id="botao1" name="RESETA" value="RESETA" onclick="Teste2()">
+       
+      
     </body>
 </html>

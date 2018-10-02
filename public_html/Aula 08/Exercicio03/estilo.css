@@ -85,7 +85,7 @@ span {
 
 #limpar {
     font-size: 13px;
-    margin-left: 50px;
+    margin-left: 30px;
     border-radius: 15px 15px;
     width: 170px;
     height: 30px;
@@ -95,6 +95,17 @@ span {
 #adicionar {
     font-size: 13px;
     border-radius: 15px 15px; 
+    width: 170px;
+    height: 30px;
+    margin-left: 30px;
+    text-align: center;
+
+}
+
+#fechar {
+    font-size: 13px;
+    border-radius: 15px 15px;
+    margin-left: 30px;
     width: 170px;
     height: 30px;
     text-align: center;

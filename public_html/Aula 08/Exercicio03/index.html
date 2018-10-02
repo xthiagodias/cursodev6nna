@@ -143,8 +143,8 @@ and open the template in the editor.
                     if ((document.getElementById("quantidade").value === "") || (document.getElementById("quantidade").value === "0")) {
                         alert("Voce deve informar a quantidade!");
 
-                    } else { 
-                          
+                    } else {
+
 
                         var qt = document.getElementById("quantidade").value;
                         var vlrtotal = document.getElementById("valor1").innerHTML;
@@ -213,7 +213,68 @@ and open the template in the editor.
 
                 //   lista.removeChild(list.childNodes[i]); 
             }
+
+
+            function fecharVenda() {
+
+             var selection = document.getElementById("produto");
+                var sel = selection.options[selection.selectedIndex].text;
+
+               
+
+                        var qt = document.getElementById("quantidade").value;
+                        var vlrtotal = document.getElementById("valor1").innerHTML;
+
+                        //var resultado4 = document.getElementById("valor1");
+                        var resultado3 = document.getElementById("valor2");
+                        resultado3.innerHTML = qt * vlrtotal;
+
+
+                        var node = document.createElement("td");
+                        var node2 = document.createElement("td");
+                        var node3 = document.createElement("td");
+                        var node4 = document.createElement("td");
+                        var node5 = document.createElement("td");
+
+
+
+                        var textnode1 = document.createTextNode(linha = linha + 1);
+                        var textnode5 = document.createTextNode("R$ " + document.getElementById("valor2").innerHTML);
+var textnode2 = document.createTextNode("");
+var textnode3 = document.createTextNode("");
+var textnode4 = document.createTextNode("");
+
+                        node.appendChild(textnode1);
+                        node3.appendChild(textnode2);
+                        node4.appendChild(textnode3);
+                        node5.appendChild(textnode4);
+                        node2.appendChild(textnode5);
+
+
+                        document.getElementById("tabela").appendChild(node);
+                        document.getElementById("tabela").appendChild(node2);
+                        document.getElementById("tabela").appendChild(node3);
+                        document.getElementById("tabela").appendChild(node4);
+                        document.getElementById("tabela").appendChild(node5);
+                        Quebra();
+
+
+
+
+                        document.getElementById("quantidade").value = "";
+                        document.getElementById("produto").value = 0;
+
+                        var resultado3 = document.getElementById("valor1");
+                        resultado3.innerHTML = "";
+            
+            
+            }
+
+
         </script>  
+
+
+
 
         <style>
             td{
@@ -262,6 +323,27 @@ and open the template in the editor.
                 </div>
             </div>
 
+            <!-- Modal2 -->
+            <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Padoca do seu Ze!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            Deseja mesmo fechar a Venda?
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Nao</button>
+                            <button type="button" class="btn btn-primary" onclick="fecharVenda()" data-dismiss="modal">Sim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+
             <p>Comanda do Cliente</p>
             <span>Produto:  </span>
             <select id="produto" name="produto" data-toggle="tooltip" data-placement="top" title="Escolha o produto" data-placeholder='Nenhum valor selecionado...' onchange="selecionaProduto(this.value);">
@@ -275,7 +357,7 @@ and open the template in the editor.
             <span id="qnt">Quantidade:  </span><input id="quantidade" type="text" size="10" data-toggle="tooltip" data-placement="top" title="Informe a quantidade" required placeholder="">
             <span id="qnt2">Preco:  <b>R$</b></span><span id="valor1"></span>
             <span id="qnt3">Sub-Total:  <b>R$</b></span><span id="valor2"></span>
-        
+
         </div>
         <div class="comandos">
             <br>
@@ -283,6 +365,7 @@ and open the template in the editor.
             <center>
                 <input type="button" id="adicionar" name="addcarrinho" value="Adicionar ao Carrinho" data-toggle="tooltip" data-placement="top" title="Adiciona o produto" class="btn btn-primary" onclick="adicionaProduto()">
                 <input type="button" id="limpar" name="limpar" value="Limpar Comanda"  data-placement="top" title="Limpa a comanda" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <input type="button" id="fechar" name="fecharVenda" value="Finalizar Venda"  data-placement="top" title="Fechar a Venda" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
                 <br>
                 <br>
             </center>
