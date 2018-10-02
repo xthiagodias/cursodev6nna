@@ -3,7 +3,7 @@
 body {
     
     background-image: linear-gradient( to left, beige, white);
-    
+    display: block;
 }
 
 .titulo {
