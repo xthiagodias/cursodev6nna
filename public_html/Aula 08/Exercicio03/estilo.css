@@ -3,7 +3,7 @@
 
 body {
 
-    background-image: linear-gradient(to right, white,#99ccff,white);
+    background-image: linear-gradient(to right, white,#ffbf9a,white);
 
 }
 
@@ -58,7 +58,7 @@ span {
     border-radius: 15px 15px;
     font-family: Arial;
     font-size: 15px;
-    background-color: #007bff;
+    background-color: #f98340;
     color: white;
 
     height: 30px;
@@ -88,17 +88,21 @@ span {
     margin-left: 30px;
     border-radius: 15px 15px;
     width: 170px;
-    height: 30px;
+    height: 40px;
     text-align: center;
+    background-color: #f98340;
+        border: solid 1px white;
 }
 
 #adicionar {
     font-size: 13px;
     border-radius: 15px 15px; 
     width: 170px;
-    height: 30px;
+    height: 40px;
     margin-left: 30px;
     text-align: center;
+        background-color: #f98340;
+        border: solid 1px white;
 
 }
 
@@ -107,8 +111,10 @@ span {
     border-radius: 15px 15px;
     margin-left: 30px;
     width: 170px;
-    height: 30px;
+    height: 40px;
     text-align: center;
+        background-color: #f98340;
+        border: solid 1px white;
 
 }
 
@@ -118,11 +124,12 @@ span {
    
     font-family: Arial;
     font-size: 13px;
-    background-color: #007bff;
+    background-color: #f98340;
     border-radius: 15px 15px;
     text-align: center;
     color: white;
     width: 170px;
     height: 30px;
+    
 }
 
