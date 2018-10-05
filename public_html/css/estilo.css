@@ -1,0 +1,369 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04/10/2018, 11:52:01
+    Author     : xthiagodias
+*/
+
+@charset "ISO-8859-1";
+
+
+
+#corpo {
+
+    opacity: 0.6;
+    filter: alpha(opacity=90); 
+
+
+
+}
+
+.topoPagina {
+    display: compact;
+    padding: 20pt;
+    width: 100%;
+    height: 100%;
+   
+   position: absolute;
+   
+    
+
+}
+
+#btAnunciar {
+    margin-right: 20px;
+    font-family: Tahoma;
+    background-color: green;
+    width: 150px;
+    text-align: center;
+    color: white;
+    border: solid 1px black;
+
+
+}
+
+
+#menus {
+
+
+
+
+
+}
+
+#pills-tab {
+
+
+
+}
+
+
+.bannerTopo {
+    display: block;
+ 
+
+    margin-bottom: 100px;
+    border: solid 1px red;
+    background-color: #fafafa;
+    height: 134px;
+  
+  
+
+
+}
+
+
+
+ .menu  {
+    
+    display: block;
+    border: solid 1px black;
+    margin-top: -84px;
+    float: right;
+    width: 50%;
+   
+    
+}
+
+
+
+fieldset {
+    display: inline;
+    margin-right: 20px;
+    background-color: white;
+  border: solid 1px black;
+  
+  
+
+}
+
+#navBuscar {
+    margin-left: 0px;
+    margin-top: 20px;
+    padding: 12pt;
+    width: 320px;
+    border: solid 1px black;
+    background-color: #fafafa;
+}
+
+.campoBuscar {
+    padding: 0pt;
+    margin: auto;
+    margin-top: -15pt;
+    margin-left: -16px;
+    width: 320px;
+}
+
+#btFiltrar {
+    margin-bottom: 10px;
+}
+
+.campoCategorias {
+    padding: 10pt;
+
+    border: solid 1px black;
+    margin-top: 5px;
+    width: 320px;
+    margin-left: -16px;
+    height: 686px;
+    background-color: #fafafa;
+}
+
+ #cat .container4{
+
+    font-weight: bold;
+    text-align: center;
+    margin-left: 90px;
+    margin-top: 1px;
+    font-size: 15pt;
+    color: black;
+}
+
+hr {
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+span {
+
+    text-align: left;
+    font-weight: bold;
+    margin-top: 1px;
+    font-size: 12pt;
+    color: black;
+}
+
+
+.container {
+    display: block;
+    margin-top: 0px;
+ 
+    width: 325px;
+    margin-left: 0px;
+    height: 100%;;
+
+
+
+}
+
+ .container2 .anuncios {
+    display: block;
+    margin-top: 0px;
+    margin-left: 0px;
+    border: solid 1px black;
+    background-color: #fafafa;
+   
+    height: 150px;
+    margin-bottom: 10px;
+
+    
+    
+
+}
+
+.container2 {
+    
+    display: block;
+    height: 100%;
+    width: 50%;
+   
+    margin: auto;
+    margin-bottom: 100px;
+    margin-left: 330px;
+    margin-top: 10px;
+  
+    position: absolute;
+    height: 792px;
+border: solid 1px black;
+
+}
+
+
+.container3 {
+    display: block;
+    margin-top: -4px;
+   
+    margin-left: 3%;
+    height: 100%;
+    
+  
+
+
+}
+
+
+
+em {
+    color: red;
+    font-size: 15pt;
+
+    
+}
+
+ .container4 .campoPropagandas {
+    padding: 10pt;
+display: block;
+    border: solid 1px black;
+    margin-top: 5px;
+    width: 288px;
+    margin-left: 0px;
+    height: 170px;
+    background-color: #fafafa;
+    float: end;
+
+}
+
+ .container4 .campoPropagandas2 {
+    padding: 10pt; 
+display: block;
+    border: solid 1px black;
+    margin-top: 5px;
+    width: 288px;
+    margin-left: 0px;
+    height: 170px;
+    background-color: #fafafa;
+    float: end;
+}
+
+ .container4 .campoPropagandas1 {
+    padding: 10pt;
+display: block;
+    border: solid 1px black;
+    margin-top: 5px;
+    width: 288px;
+    margin-left: 0px;
+    height: 170px;
+    background-color: #fafafa;
+    float: end;
+}
+
+/*
+Banner Direita
+*/
+  .container4 {
+    display: block;
+   
+    margin-left: 78%;
+    margin-top: -770px;
+    margin-bottom: 0px;
+  
+   
+    height: 600px;
+  
+
+}
+
+
+ .conteudo {
+
+
+   width: 100%;
+   height: 100%;
+   margin-top: -90px;
+   display: absolute;
+ 
+   height: 0px;
+}
+
+a {
+    color: black;
+}
+
+a:hover { 
+    
+    text-decoration:none; 
+   
+
+}
+
+a:link { 
+    
+    text-decoration:none; 
+    
+
+}
+
+a:active { 
+    
+    text-decoration:none; 
+    
+
+}
+
+
+.anuncios img {
+    
+    padding: 5pt;
+}
+
+.conteudoLivro {
+    padding: 5pt;
+    display: inline;
+ 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+    width: 380px;
+}
+
+.container2 .tipoAnuncio {
+ 
+
+    display: block;
+    width: 105px;
+    height: 100px;
+    margin-bottom: 110px;
+    margin-left: 320px;
+    margin-top: -120px;
+    float:inside;
+    position: relative;
+   
+}
+
+.container2 .anuncios .valor {
+ 
+
+   
+    width: 105px;
+    height: 30px;
+    margin-bottom: 110px;
+    margin-left: 328px;
+    margin-top: -220px;
+    
+    
+}
+
+ .container2 .anuncios .data {
+    
+ 
+   
+    width: 135px;
+    height: 30px;
+    margin-bottom: 110px;
+    margin-left: 305px;
+    margin-top: -30px;
+}
