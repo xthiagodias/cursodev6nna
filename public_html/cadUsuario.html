@@ -133,6 +133,16 @@ and open the template in the editor.
 
             }
         </style>
+        
+        <script>
+            
+            function tipoUsuario() {
+                
+               // var tipo = document.getElementById('cadPF').style.
+                
+            }
+            
+            </script>
 
 
     </head>
@@ -280,9 +290,19 @@ and open the template in the editor.
                     <hr style="color: green; border: solid 1px green;">
                     <label>Nao tem cadastro?? <br>Cadastre-se, nao demora nadinha! :)</label>
                     <BR>
-                    <form class="needs-validation" name="fisico" novalidate>
+                    <form class="was-validated">
+                        <div class="form-group">
+                            <select class="custom-select" id="tipoCadastro" required>
+                                <option value="">Selecione o Tipo de Cadastro</option>
+                                <option value="1">Pessoa Fisica</option>
+                                <option value="2">Instituicao</option>
 
+                            </select>
+                            <div class="invalid-feedback">Voce deve informar o Tipo de Cadastro</div>
+                        </div>   
+                    </form>
 
+                    <form class="needs-validation" name="fisico" id="cadPF" novalidate>
                         <div class="col-md-6">
                             <label for="validationCustom01">Nome</label><br>
                             <input type="text" size="30" class="form-control" id="validationCustom01" placeholder="Nome" value="" required>
@@ -506,7 +526,10 @@ and open the template in the editor.
             <div class="row">
                 <div class="col-xs-12" id="bottom">
 
-                    <labeL>PROPAGANDAS</labeL>
+                    <img style="height: 194px;" src="https://www.gmkfreelogos.com/logos/U/img/Unama.gif" class="rounded float-left" alt="...">
+                    <img style="height: 194px; width: 500px;" src="https://mundobaquara.files.wordpress.com/2007/08/larte.gif?w=480" class="rounded float-le" alt="...">
+                    <img style="height: 194px;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3DvZ5RWBQzeD-t9grBe1I_DVDm9cy-uZKEqYmpa5aJZDBQyTU" class="rounded float-right" alt="...">
+
 
                 </div>               
 
