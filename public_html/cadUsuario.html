@@ -87,10 +87,10 @@ and open the template in the editor.
                 display: inline;
                 border-radius: 1% 1% 1% 1%;
                 border: solid 2px blue;
-                margin-left: 890px;
+                margin-left: 889px;
                 margin-top: -910px;
                 height: 900px;
-                width: 250px;
+                width: 251px;
                 position: relative;
                 background-color: #fafafa;
 
@@ -204,8 +204,8 @@ and open the template in the editor.
 
                                             <a href='contato.html'><button class="btn btn-default btn-outline-secondary" type="button">Contato</button></a>
 
-                                            <a href='cadUsuario.html'><button class="btn btn-default btn-outline-secondary" type="button">Sobre</button></a>
-                                            <a href='cadUsuario.html'><button class="btn btn-default btn-outline-secondary" type="button">Config</button></a>
+                                            <a href='sobre.html'><button class="btn btn-default btn-outline-secondary" type="button">Sobre</button></a>
+                                            <a href='configuracao.html'><button class="btn btn-default btn-outline-secondary" type="button">Perfil</button></a>
                                         </form>
 
 
@@ -311,8 +311,8 @@ and open the template in the editor.
                     <BR>
                     <form class="was-validated">
                         <div class="form-group">
-                            <select class="custom-select" id="tipoCadastro" required>
-                                <option value="">Selecione o Tipo de Cadastro</option>
+                            <select class="custom-select" id="tipoCadastro" onchange="selecionaTipoCadastro(this.value)" required>
+                                <option id='tipo0' value="">Selecione o Tipo de Cadastro</option>
                                 <option value="1">Pessoa Fisica</option>
                                 <option value="2">Instituicao</option>
 
@@ -321,7 +321,9 @@ and open the template in the editor.
                         </div>   
                     </form>
 
-                    <form class="needs-validation" name="fisico" id="cadPF" novalidate>
+                        
+                    <!-- PF -->
+                    <form hidden class="needs-validation" name="fisico" id="cadPF" novalidate>
                         <div class="col-md-6">
                             <label for="validationCustom01">Nome</label><br>
                             <input type="text" size="30" class="form-control" id="validationCustom01" placeholder="Nome" value="" required>
@@ -457,11 +459,159 @@ and open the template in the editor.
                         <div class="col-md-6">
                             <br>
                             <br>
+                            <button class="btn btn-success" type="submit" onclick="salvaCadastroPF();">Enviar Cadastro</button>
+                            <button type="reset" class="btn btn-secondary" title="Limpar campos">Limpar Campos</button>
+                            
+                        </div>
+                    </form> 
+                    
+                    
+                    
+                    <!-- PJ -->
+                    <form hidden class="needs-validation" name="fisico" id="cadPJ" novalidate>
+                        <div class="col-md-6">
+                            <label for="validationCustom11">Nome</label><br>
+                            <input type="text" size="30" class="form-control" id="validationCustom11" placeholder="Nome" value="" required>
+                            <div class="valid-feedback">
+                                Otimo!
+                            </div>
+                            <div class="invalid-feedback">
+                                Insira um nome valido.
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="validationCustom12">Sobrenome</label><br>
+                            <input type="text" size="50" class="form-control" id="validationCustom12" placeholder="Sobrenome" value="" required>
+                            <div class="valid-feedback">
+                                Otimo!
+                            </div>
+                            <div class="invalid-feedback">
+                                Insira um sobrenome valido.
+                            </div>
+                        </div>
+                        <div class="col-md-9">
+                            <div class="input-group-prepend">
+                                <span  class="input-group-text" id="inputGroupPrepend1">@</span><label>E-mail</label>
+
+                            </div>
+                            <input  type="email" class="form-control" id="validationCustomUsername1" placeholder="E-mail" aria-describedby="inputGroupPrepend" required>
+                            <div class="valid-feedback">
+                                Tudo certo com seu E-mail!
+                            </div>
+                            <div class="invalid-feedback">
+                                O e-mail informado e invalido.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom13">Cidade</label>
+                            <input type="text" class="form-control" id="validationCustom13" placeholder="Cidade" required>
+                            <div class="valid-feedback">
+                                Certo!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom14">Estado</label>
+                            <input type="text" class="form-control" id="validationCustom14" placeholder="Estado" required>
+                            <div class="valid-feedback">
+                                Quase la!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label for="validationCustom15">CEP</label>
+                            <input type="text" class="form-control" id="validationCustom15" placeholder="CEP" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+                                Informe um CEP valido.
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 col-md-4">
+                            <label for="validationCustom16">CNPJ</label>
+                            <input type="text" class="form-control" id="validationCustom16" placeholder="CNPJ" required>
+                            <div class="valid-feedback">
+                                CNPJ Validado!
+                            </div>
+                            <div class="invalid-feedback">
+                                O CNPJ informado nao e valido.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom17">Telefone</label>
+                            <input type="tel" class="form-control" id="validationCustom17" placeholder="Telefone" required>
+                            <div class="valid-feedback">
+                                Telefone Validado!
+                            </div>
+                            <div class="invalid-feedback">
+                                Informe um telefone de contato.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom18">Usuario</label>
+                            <input type="text" class="form-control" id="validationCustom18" placeholder="Usuario" required>
+                            <div class="valid-feedback">
+                                Estamos quase finalizando seu cadastro!
+                            </div>
+                            <div class="invalid-feedback">
+                                Informe um usuario para voce ter acesso total ao site.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom19">Senha</label>
+                            <input type="password" class="form-control" id="validationCustom19" placeholder="Senha" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+                                Insira uma senha valida.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="validationCustom20">Confirmar Senha</label>
+                            <input type="password" class="form-control" id="validationCustom20" placeholder="Confirmar Senha" required>
+                            <div class="valid-feedback">
+                                Prontinho!
+                            </div>
+                            <div class="invalid-feedback">
+                                Insira uma senha valida.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <br>
+                            <input style="margin-top: 10px;" class="form-check-input" type="checkbox" value="" id="invalidCheck1" required>
+                            <label style="margin-top: 8px; margin-left: 20px;" class="form-check-label" for="invalidCheck">
+                                Aceito os termos e condicoes de uso.
+                            </label>
+                            <div class="invalid-feedback">
+                                Voce deve aceitar os termos de uso.
+                            </div> 
+                        </div>
+                        <div class="col-md-6">
+                            <br>
+                            <br>
                             <button class="btn btn-success" type="submit">Enviar Cadastro</button>
                             <button type="reset" class="btn btn-secondary" title="Limpar campos">Limpar Campos</button>
+                            
                         </div>
-                    </form>      
-
+                    </form>
+              <!--      <input type='button' name='Esconder' value='Esconder' onClick='tipoCadastro2()'>
+                    <input type='button' name='Mostrar' value='Mostrar' onClick='tipoCadastro1()'>
+              -->
                     <script>
                         // Example starter JavaScript for disabling form submissions if there are invalid fields
                         (function () {
@@ -472,12 +622,18 @@ and open the template in the editor.
                                 // Loop over them and prevent submission
                                 var validation = Array.prototype.filter.call(forms, function (form) {
                                     form.addEventListener('submit', function (event) {
+                                        
                                         if (form.checkValidity() === false) {
+                                           
                                             event.preventDefault();
                                             event.stopPropagation();
+                                            
                                         }
+                                      
                                         form.classList.add('was-validated');
+                                        
                                     }, false);
+                                    
                                 });
                             }, false);
                         })();
