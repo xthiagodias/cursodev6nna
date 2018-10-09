@@ -459,7 +459,7 @@ and open the template in the editor.
                         <div class="col-md-6">
                             <br>
                             <br>
-                            <button class="btn btn-success" type="submit" onclick="salvaCadastroPF();">Enviar Cadastro</button>
+                            <button class="btn btn-success" type="submit">Enviar Cadastro</button>
                             <button type="reset" class="btn btn-secondary" title="Limpar campos">Limpar Campos</button>
                             
                         </div>
@@ -470,6 +470,8 @@ and open the template in the editor.
                     <!-- PJ -->
                     <form hidden class="needs-validation" name="fisico" id="cadPJ" novalidate>
                         <div class="col-md-6">
+                            
+                            
                             <label for="validationCustom11">Nome</label><br>
                             <input type="text" size="30" class="form-control" id="validationCustom11" placeholder="Nome" value="" required>
                             <div class="valid-feedback">
@@ -502,43 +504,11 @@ and open the template in the editor.
                                 O e-mail informado e invalido.
                             </div>
                         </div>
+                      
 
                         <div class="col-md-6">
-                            <label for="validationCustom13">Cidade</label>
-                            <input type="text" class="form-control" id="validationCustom13" placeholder="Cidade" required>
-                            <div class="valid-feedback">
-                                Certo!
-                            </div>
-                            <div class="invalid-feedback">
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-6">
-                            <label for="validationCustom14">Estado</label>
-                            <input type="text" class="form-control" id="validationCustom14" placeholder="Estado" required>
-                            <div class="valid-feedback">
-                                Quase la!
-                            </div>
-                            <div class="invalid-feedback">
-
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <label for="validationCustom15">CEP</label>
-                            <input type="text" class="form-control" id="validationCustom15" placeholder="CEP" required>
-                            <div class="valid-feedback">
-                                OK!
-                            </div>
-                            <div class="invalid-feedback">
-                                Informe um CEP valido.
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-md-4">
                             <label for="validationCustom16">CNPJ</label>
-                            <input type="text" class="form-control" id="validationCustom16" placeholder="CNPJ" required>
+                            <input type="text" size="30" class="form-control" id="validationCustom16" placeholder="CNPJ" required>
                             <div class="valid-feedback">
                                 CNPJ Validado!
                             </div>
@@ -546,30 +516,48 @@ and open the template in the editor.
                                 O CNPJ informado nao e valido.
                             </div>
                         </div>
-
-                        <div class="col-md-6">
-                            <label for="validationCustom17">Telefone</label>
-                            <input type="tel" class="form-control" id="validationCustom17" placeholder="Telefone" required>
+                        
+                        
+                        <div class="col-md-12">
+                        <fieldset style="margin-top: 20px;">
+                            <legend style="margin-left: 0px; margin-top: 20px; font-size: 10pt; font-family: Arial; font-weight: bold; color: black;">Inf Resp Legal</legend>
+                        <div class="col-md-11" style="margin-top: -10px; margin-left:  -15px;">
+                            <label for="validationCustom17">Nome Completo</label>
+                            <input type="text" class="form-control" id="validationCustom17" placeholder="Nome Completo" required>
                             <div class="valid-feedback">
-                                Telefone Validado!
+                                Otimo!
                             </div>
                             <div class="invalid-feedback">
-                                Informe um telefone de contato.
+                                Informe o nome completo do responsavel pela empresa.
                             </div>
                         </div>
 
-                        <div class="col-md-6">
-                            <label for="validationCustom18">Usuario</label>
-                            <input type="text" class="form-control" id="validationCustom18" placeholder="Usuario" required>
+                        <div class="col-md-6" style="margin-top: 10px; margin-left:  -15px; margin-bottom: 20px;">
+                            <label for="validationCustom18">CPF</label>
+                            <input type="text" class="form-control" id="validationCustom18" placeholder="CPF" required>
                             <div class="valid-feedback">
                                 Estamos quase finalizando seu cadastro!
                             </div>
                             <div class="invalid-feedback">
-                                Informe um usuario para voce ter acesso total ao site.
+                                Informe o CPF do responsavel pela empresa.
+                            </div>
+                        </div>
+                             
+                        </fieldset>
+                             <hr style="margin-top: -10px; color:black;">
+                        </div>
+                        <div class="col-md-6" style="margin-top: -10px;">
+                            <label for="validationCustom21">Usuario</label>
+                            <input type="text" class="form-control" id="validationCustom21" placeholder="Usuario" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+                                Cadastre seu usuario.
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: -10px;">
                             <label for="validationCustom19">Senha</label>
                             <input type="password" class="form-control" id="validationCustom19" placeholder="Senha" required>
                             <div class="valid-feedback">
@@ -580,7 +568,7 @@ and open the template in the editor.
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: 10px;">
                             <label for="validationCustom20">Confirmar Senha</label>
                             <input type="password" class="form-control" id="validationCustom20" placeholder="Confirmar Senha" required>
                             <div class="valid-feedback">
@@ -591,7 +579,7 @@ and open the template in the editor.
                             </div>
                         </div>
 
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="margin-top: -10px;">
                             <br>
                             <input style="margin-top: 10px;" class="form-check-input" type="checkbox" value="" id="invalidCheck1" required>
                             <label style="margin-top: 8px; margin-left: 20px;" class="form-check-label" for="invalidCheck">
