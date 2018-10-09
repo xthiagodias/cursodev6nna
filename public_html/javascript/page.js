@@ -5,3 +5,4 @@
  */
 
 
+$('body').scrollspy({ target: '.anuncios' });
