@@ -9,10 +9,276 @@ and open the template in the editor.
         <title>XipBook, Inserir Anuncio.</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Arquivos de configuracao, bootstrap, css -->
+        <script src="libs/JQuery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
+        <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/>
+        <!--  <script src="libs/bootstrap/bootstrap.min.js" type="text/javascript"></script> -->
+
+        <script src="javascript/page.js" type="text/javascript"></script>
+        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+
+        <!--    <script src="css2/ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.min.js" type="text/javascript"></script> -->
+        <link href="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/> 
+        <script src="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.min.js" type="text/javascript"></script>
+
+
+
+        <style>
+
+            body {
+
+                background-image: url('imagens/imgFundo.png');
+                background-position: center center;
+                background-repeat: no-repeat;
+                position: relative;
+
+
+            }
+
+            body .container {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }
+
+        </style>
     </head>
     <body>
-        <div>Em desenvolvimento.</div>
-        <br>
-        <a href="index.html"><button type="button">Voltar</button></a>
+
+        <div class="container" style="border: solid 2px red;">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="imagemLogo">
+                        <a href="index.html"><img src="imagens/logotipo.png" alt="" width="130" height="100"/></a>
+                        <h1 style="position: relative; margin-left: 200px; margin-top: -50px; text-align: center; float: start; align-content: center; font-family: Tahoma; color: black; font-weight: bold; font-size: 25pt">Cadastro de Anuncio</h1>
+                    </div>
+
+                </div>
+
+            </div>
+            <hr style="border: solid 1px black; margin-top: 5px;">
+        </div>
+
+
+
+
+        <div class="container" style="border: solid 2px blue; height: 1300px; margin-top: 1px;">
+            <div class="row">
+                <div class="col-xs-12">
+
+                    <BR>
+
+
+
+                    <!-- Form Cadastro Anuncio -->
+                    <form class="needs-validation" name="cadAnuncio" novalidate>
+                        <div class="col-md-6">
+                            <label for="validationCustom01">Titulo</label><br>
+                            <input type="text" size="30" class="form-control" id="validationCustom01" placeholder="Titulo do Anuncio" value="" required>
+                            <div class="valid-feedback">
+                                Otimo!
+                            </div>
+                            <div class="invalid-feedback">
+                                Voce deve informar o Titulo do anuncio.
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label for="validationCustom02">ISBN</label><br>
+                            <input type="text" size="10" class="form-control" id="validationCustom02" placeholder="ISBN" value="">
+                            <div class="valid-feedback">
+                                Otimo!
+                            </div>
+                            <div class="invalid-feedback">
+                                Voce pode informar o ISBN do livro ( Campo nao obrigatorio ).
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="input-group-prepend">
+                                <label>Autor</label>
+
+                            </div>
+                            <input type="text" class="form-control" id="validationCustomUsername" placeholder="Autor do Livro" aria-describedby="inputGroupPrepend" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+                                Voce deve informar o autor do livro.
+                            </div>
+                        </div>
+                        <br>
+                        <div class="col-xl-2">
+                            <label for="validationCustom03">Editora</label>
+                            <input type="text" class="form-control" id="validationCustom03" placeholder="Editora">
+                            <div class="valid-feedback">
+                                Certo!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2">
+                            <label for="validationCustom04">Categoria</label>
+                            <input type="text" class="form-control" id="validationCustom04" placeholder="Categoria" required>
+                            <div class="valid-feedback">
+                                Quase la!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-1">
+                            <label for="validationCustom05">Ano</label>
+                            <input type="text" class="form-control" id="validationCustom05" placeholder="Ano" required>
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2">
+                            <label for="validationCustom06">Paginas</label>
+                            <input type="text" class="form-control" id="validationCustom06" placeholder="Paginas">
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>
+
+                        <div class="col-xl-2">
+                            <label for="validationCustom07">Edicao</label>
+                            <input type="tel" class="form-control" id="validationCustom07" placeholder="Edicao">
+                            <div class="valid-feedback">
+                                OK!
+                            </div>
+                            <div class="invalid-feedback">
+
+                            </div>
+                        </div>    
+
+                        <div class="col-xl-5">
+                            <br>
+                            <fieldset style="border: solid 1px black;">
+                                <legend>Tipo de Anuncio</legend>
+
+                                <input hidden="" type="radio" name="tipoAnuncio" value="0"> 
+                                
+                                <input type="radio" name="tipoAnuncio" value="1"> <label for="validationCustom09">Venda</label>
+                                <input type="radio" name="tipoAnuncio" value="2"> <label for="validationCustom09">Troca</label>
+                                <input type="radio" name="tipoAnuncio" value="3"> <label for="validationCustom09">Doacao</label>
+                                <input type="radio" name="tipoAnuncio" value="4"> <label for="validationCustom09">Procuro</label>
+                                <input type="radio" name="tipoAnuncio" value="5"> <label for="validationCustom09">Aceito Doacao</label>
+
+
+                               <div class="valid-feedback">
+                                    OK!
+                                </div>
+                                <div class="invalid-feedback">
+                                    Escolha o tipo de anuncio.
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-xl-2">
+                            
+                            <label for="validationCustom08">Preco</label>
+                            <input type="text" class="form-control" id="validationCustom08" placeholder="Preco do livro" disabled required>
+                            <div class="valid-feedback">
+                                Estamos quase finalizando!
+                            </div>
+                            <div class="invalid-feedback">
+                                Voce deve informar o valor caso seu anuncio seja de venda.
+                            </div>
+                        </div>
+                        <p>
+                            <br>
+                        <div class="col-6">
+                            <br>
+       
+                            <label for="validationCustom10">Descricao</label><br>
+                            <textarea rows="7" cols="45" id="validationCustom10" placeholder="Fale um pouco sobre o livro" required></textarea>
+                            <div class="valid-feedback">
+                                Prontinho!
+                            </div>
+                            <div class="invalid-feedback">
+                                Fale um pouco mais sobre o livro que esta anunciando.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <br>
+                            <input style="margin-top: 10px;" class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                            <label style="margin-top: 8px; margin-left: 20px;" class="form-check-label" for="invalidCheck">
+                                Aceito os termos e condicoes para publicao de livro.
+                            </label>
+                            <div class="invalid-feedback">
+                                Voce deve aceitar os termos de uso.
+                            </div> 
+                        </div>
+                        <div class="col-xl-6">
+                            <br>
+                            <br>
+                            <BR>
+                            <BR>
+                            <button class="btn btn-success" type="submit" title="Cadastrar Anuncio">Cadastrar Anuncio</button>
+                            <button type="reset" class="btn btn-primary" title="Limpar Campos">Limpar Campos</button>
+                            <a href="index.html"><button type="button" class="btn btn-secondary" title="Voltar para tela Inicial">Cadastrar Depois</button></a>
+                            <div style="margin-top: 20px;">
+                                <label>Codigo do anuncio:</label> xxxxxx<p>
+                            <label>Data e Hora:</label> xx/xx/xxxx xx:xx
+                            <hr style="border: solid 1px black; margin-top: 5px;">
+                            <label style="float: left; margin-top: -10px;">Copyright (xipbook)</label>
+                            </div>
+                        </div>
+                    </form> 
+
+                    <!--      <input type='button' name='Esconder' value='Esconder' onClick='tipoCadastro2()'>
+                          <input type='button' name='Mostrar' value='Mostrar' onClick='tipoCadastro1()'>
+                    -->
+                    <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                        (function () {
+                            'use strict';
+                            window.addEventListener('load', function () {
+                                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                                var forms = document.getElementsByClassName('needs-validation');
+                                // Loop over them and prevent submission
+                                var validation = Array.prototype.filter.call(forms, function (form) {
+                                    form.addEventListener('submit', function (event) {
+
+                                        if (form.checkValidity() === false) {
+
+                                            event.preventDefault();
+                                            event.stopPropagation();
+
+                                        }
+
+                                        form.classList.add('was-validated');
+
+                                    }, false);
+
+                                });
+                            }, false);
+                        })();
+                    </script>  
+
+
+
+
+
+                </div>
+
+            </div>
+
+        </div>  
+
+
+    
+        
     </body>
 </html>

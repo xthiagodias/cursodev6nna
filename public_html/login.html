@@ -24,21 +24,152 @@ and open the template in the editor.
 
         <script>
 
+            function testando() {
+
+                //  $("#msg").show;
+                document.getElementById("msg").hidden = false;
+                //  var x =   document.getElementById("msg");
+                //          x.style.visibility = "visible";
+                //          x.hidden === false;
+            }
+
+            function testando2() {
+
+                //   $("#msg").show;
+                document.getElementById("msg").hidden = true;
+                //   var x2 =  document.getElementById("msg")
+                //           x2.style.visibility = "hidden";
+                //            x2.hidden === true;
+            }
+
+            function sleep(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
 
 
-            function validarAcesso() {
-                var campo1 = document.getElementById("usuario").value;
-                var campo2 = document.getElementById("senha").value;
 
-                if ((campo1 === login) && (campo2 === senha)) {
+            var tipoAcesso;
+            var campo1;
+            var campo2;
+            var ii;
+            async  function validarAcesso() {
+                campo1 = document.getElementById("usuario").value;
+                campo2 = document.getElementById("senha").value;
+                tipoAcesso = document.getElementById("acesso").checked;
 
-                    alert("Login realizado com sucesso");
-                    window.location.replace("index.html");
 
-                } else {
-                    alert("Usuario nao encontrado, cadastre-se e gratuito!");
-                    $('.alert').alert();
+                var local = document.forms['formLogin'];
+
+                for (var i = 0, l = local.elements.length; i < l; i++)
+                {
+
+                    if (local.elements[i].type === 'radio' && local.elements[i].checked)
+                    {
+
+                        if (local.elements[i].value === "Cliente") {
+
+
+
+                            // alert("Cliente Selecionado");
+                            //   $().alert();
+                            //   $(".alert-success").show();
+                            //  $("#teste").show();
+
+                            // Este evendo é acionado após o carregamento da página
+                            //  jQuery(window).load(function () {
+                            //Após a leitura da pagina o evento fadeOut do loader é acionado, esta com delay para ser perceptivo em ambiente fora do servidor.
+                            //      jQuery("#loader").delay(2000).fadeOut("slow");
+                            //  });
+                            if (campo1 === "admin" && campo2 === "123456") {
+                                document.getElementById("container").hidden = false;
+                                document.getElementById("msgerro").hidden = true;
+                                //    document.getElementById("msgok").hidden = false;
+                                //  $(".alert-success").html("<strong>Info!</strong>" + " Cliente Selecionado!" + " <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>");
+                                //    $("div").html("<img style='text-align: center; align-content: center; margin-top: 200px; margin-left: 500px' src='imagens/carregando.gif' width='150' heigth='150'>");
+                                await  sleep(5000);
+
+                                //     document.getElementById("msgok").hidden = false;
+                                //     $("div").hide();
+                                //     document.getElementById("msginfo").hidden = true;
+
+                                document.getElementById("container").hidden = true;
+                                document.getElementById("msgok").hidden = false;
+                                // await sleep(5000);
+                                await  sleep(2000);
+                                window.location.replace("index.html");
+                            } else {
+                                document.getElementById("msgerro").hidden = false;
+                                document.getElementById("msginfo").hidden = true;
+                                document.getElementById("msgok").hidden = true;
+                            }
+                        } else {
+
+                            if (local.elements[i].value === "Instituicao") {
+                                // alert("Instituicao Selecionado");
+                                if (campo1 === "admin" && campo2 === "123456") {
+                                    document.getElementById("container").hidden = false;
+                                    document.getElementById("msgerro").hidden = true;
+                                    //    document.getElementById("msgok").hidden = false;
+                                    //  $(".alert-success").html("<strong>Info!</strong>" + " Cliente Selecionado!" + " <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>");
+                                    //    $("div").html("<img style='text-align: center; align-content: center; margin-top: 200px; margin-left: 500px' src='imagens/carregando.gif' width='150' heigth='150'>");
+                                    await  sleep(5000);
+
+                                    //     document.getElementById("msgok").hidden = false;
+                                    //     $("div").hide();
+                                    //     document.getElementById("msginfo").hidden = true;
+
+                                    document.getElementById("container").hidden = true;
+                                    document.getElementById("msgok").hidden = false;
+                                    // await sleep(5000);
+                                    await  sleep(2000);
+                                    window.location.replace("index.html");
+                                } else {
+                                    document.getElementById("msgerro").hidden = false;
+                                    document.getElementById("msginfo").hidden = true;
+                                    document.getElementById("msgok").hidden = true;
+                                }
+                            } else {
+                                if (!local.elements[i].checked) {
+                                    document.getElementById("msgerro").hidden = false;
+                                    document.getElementById("msginfo").hidden = true;
+                                    document.getElementById("msgok").hidden = true;
+                                }
+                            }
+
+                        }
+
+
+
+                    }
+
                 }
+
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            function voltarPaginaPrincipal() {
+
+                window.location.replace("index.html");
+
 
             }
 
@@ -165,12 +296,38 @@ and open the template in the editor.
 
 
     <body>
-        
 
-<div class="alert alert-info">
-  <strong>Info!</strong> Indicates a neutral informative change or action.
-</div>
- 
+        <div id="container" hidden="">
+            <div id="loader" ></div>
+            <div id="content">
+                <img style="margin-left: 600px; margin-top: -40px; position: relative; align-content: center; align-items: center;" src="imagens/carregando.gif" alt="" width="150" height="150"/>
+            </div>
+        </div>
+
+
+        <form>
+            <div class="alert alert-info alert-dismissible" aria-hidden="true" hidden="" role="alert" id="msginfo">
+                <strong>Aviso!</strong> Entre com seu usuario e senha para acesso completo ao site.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="alert alert-success alert-dismissible" aria-hidden="true" hidden="" role="alert" id="msgok">
+                <strong>Sucesso!</strong> Seus dados foram validados com sucesso!.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="alert alert-danger alert-dismissible" aria-hidden="true" hidden="" role="alert" id="msgerro">
+                <strong>Aviso!</strong> Algum dado pode estar incorreto, verifique se foram digitados corretamente.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        </form>
+
 
 
         <div class="container">
@@ -186,11 +343,12 @@ and open the template in the editor.
 
                     </div>
 
-                    <input type="radio" name="tipo" value="cliente"><label>Cliente</label>
-                    <input style="margin-left: 20px;" type="radio" name="tipo" value="instituicao"><label>Instituicao</label>
-                    <br>
-                    <br>
-
+                    <form method="POST" name="formLogin">
+                        <input type="radio" name="tipo" value="Cliente" id="acesso"><label>Cliente</label>
+                        <input style="margin-left: 20px;" type="radio" name="tipo" value="Instituicao" id="acesso"><label>Instituicao</label>
+                        <br>
+                        <br>
+                    </form>
                     <form>
                         <div class="form-group">
                             <label for="usuario">Usuario</label>
@@ -201,17 +359,17 @@ and open the template in the editor.
                             <label for="senha">Senha</label>
                             <input type="password" class="form-control" id="senha" placeholder="Senha">
                         </div>
-                        <button type="submit" class="btn btn-success" title="Entrar com seus dados cadastrados" onclick="validarAcesso()">Entrar</button>
-                        <a href="index.html"><button type="button" class="btn btn-primary" title="Voltar para Pagina Inicial">Voltar</button></a>
+                        <input type="button" class="btn btn-success" title="Entrar com seus dados cadastrados" value="Entrar" name="btEntrar" onclick="validarAcesso()">
+                        <input type="button" class="btn btn-primary" title="Voltar para Pagina Inicial" name="brVoltar" value="Voltar" onClick="voltarPaginaPrincipal()">
 
 
                     </form>
 
                     <br>
                     <!--Facebook-->
-                    <button style='color: white; background-color: blue; font-family: Arial;' type="button" class="btn btn-fb" title='Entrar com Facebook'><i class="fa fa-facebook pr-1"></i> Facebook</button>
+                    <input style='color: white; background-color: blue; font-family: Arial;' type="button" class="btn btn-fb" title='Entrar com Facebook' value="Facebook" name="btFacebook"><i class="fa fa-facebook pr-1"></i>
                     <!--Google +-->
-                    <button style='color: white; background-color: red; font-family: Arial;' type="button" class="btn btn-gplus" title='Entrar com Google'><i class="fa fa-google-plus pr-1"></i> Google +</button>
+                    <input style='color: white; background-color: red; font-family: Arial;' type="button" class="btn btn-gplus" title='Entrar com Google' value="Google +" name="btGoogle"><i class="fa fa-google-plus pr-1"></i>
 
                     <br>
                     <br>
@@ -220,6 +378,7 @@ and open the template in the editor.
 
 
             </div>
+
         </div>
 
 
