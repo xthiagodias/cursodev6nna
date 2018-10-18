@@ -24,6 +24,15 @@ and open the template in the editor.
 
         <script>
 
+            function escondeTipo() {
+
+                document.getElementById("msgtipo").hidden = true;
+
+            }
+
+
+
+
             function testando() {
 
                 //  $("#msg").show;
@@ -55,7 +64,7 @@ and open the template in the editor.
             async  function validarAcesso() {
                 campo1 = document.getElementById("usuario").value;
                 campo2 = document.getElementById("senha").value;
-                tipoAcesso = document.getElementById("acesso").checked;
+                tipoAcesso = document.getElementById("acesso1").checked;
 
 
                 var local = document.forms['formLogin'];
@@ -65,6 +74,21 @@ and open the template in the editor.
 
                     if (local.elements[i].type === 'radio' && local.elements[i].checked)
                     {
+
+
+
+                        if (local.elements[i].value === "Nenhum") {
+
+
+                            document.getElementById("container").hidden = true;
+                            document.getElementById("msgok").hidden = true;
+                            document.getElementById("msginfo").hidden = true;
+                            document.getElementById("msgerro").hidden = true;
+                            document.getElementById("msgtipo").hidden = false;
+
+
+
+                        }
 
                         if (local.elements[i].value === "Cliente") {
 
@@ -83,6 +107,7 @@ and open the template in the editor.
                             if (campo1 === "admin" && campo2 === "123456") {
                                 document.getElementById("container").hidden = false;
                                 document.getElementById("msgerro").hidden = true;
+                                document.getElementById("msgtipo").hidden = true;
                                 //    document.getElementById("msgok").hidden = false;
                                 //  $(".alert-success").html("<strong>Info!</strong>" + " Cliente Selecionado!" + " <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>");
                                 //    $("div").html("<img style='text-align: center; align-content: center; margin-top: 200px; margin-left: 500px' src='imagens/carregando.gif' width='150' heigth='150'>");
@@ -94,6 +119,7 @@ and open the template in the editor.
 
                                 document.getElementById("container").hidden = true;
                                 document.getElementById("msgok").hidden = false;
+                                document.getElementById("msgtipo").hidden = true;
                                 // await sleep(5000);
                                 await  sleep(2000);
                                 window.location.replace("index.html");
@@ -101,6 +127,7 @@ and open the template in the editor.
                                 document.getElementById("msgerro").hidden = false;
                                 document.getElementById("msginfo").hidden = true;
                                 document.getElementById("msgok").hidden = true;
+                                document.getElementById("msgtipo").hidden = true;
                             }
                         } else {
 
@@ -109,6 +136,7 @@ and open the template in the editor.
                                 if (campo1 === "admin" && campo2 === "123456") {
                                     document.getElementById("container").hidden = false;
                                     document.getElementById("msgerro").hidden = true;
+                                    document.getElementById("msgtipo").hidden = true;
                                     //    document.getElementById("msgok").hidden = false;
                                     //  $(".alert-success").html("<strong>Info!</strong>" + " Cliente Selecionado!" + " <button type='button' class='close' data-dismiss='alert' aria-label='Close'><span aria-hidden='true'>&times;</span></button>");
                                     //    $("div").html("<img style='text-align: center; align-content: center; margin-top: 200px; margin-left: 500px' src='imagens/carregando.gif' width='150' heigth='150'>");
@@ -120,31 +148,33 @@ and open the template in the editor.
 
                                     document.getElementById("container").hidden = true;
                                     document.getElementById("msgok").hidden = false;
+                                    document.getElementById("msgtipo").hidden = true;
                                     // await sleep(5000);
                                     await  sleep(2000);
                                     window.location.replace("index.html");
+
                                 } else {
-                                    document.getElementById("msgerro").hidden = false;
-                                    document.getElementById("msginfo").hidden = true;
-                                    document.getElementById("msgok").hidden = true;
+
+
+                                    if (!local.elements[i].checked) {
+                                        document.getElementById("msgerro").hidden = false;
+                                        document.getElementById("msginfo").hidden = true;
+                                        document.getElementById("msgok").hidden = true;
+                                        document.getElementById("msgtipo").hidden = true;
+                                    }
                                 }
-                            } else {
-                                if (!local.elements[i].checked) {
-                                    document.getElementById("msgerro").hidden = false;
-                                    document.getElementById("msginfo").hidden = true;
-                                    document.getElementById("msgok").hidden = true;
-                                }
+
                             }
 
+
+
                         }
-
-
 
                     }
 
                 }
-
             }
+
 
 
 
@@ -190,6 +220,18 @@ and open the template in the editor.
             }
 
             body .container {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }
+            
+                        body #gif {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }
+            
+                        body #container {
 
                 opacity: 0.9;
                 filter: alpha(opacity=20);
@@ -300,7 +342,7 @@ and open the template in the editor.
         <div id="container" hidden="">
             <div id="loader" ></div>
             <div id="content">
-                <img style="margin-left: 600px; margin-top: -40px; position: relative; align-content: center; align-items: center;" src="imagens/carregando.gif" alt="" width="150" height="150"/>
+                <img style="margin-left: 600px; margin-top: -40px; position: relative; align-content: center; align-items: center;" src="imagens/carregando.gif" alt="" width="150" height="150" id="gif"/>
             </div>
         </div>
 
@@ -308,6 +350,13 @@ and open the template in the editor.
         <form>
             <div class="alert alert-info alert-dismissible" aria-hidden="true" hidden="" role="alert" id="msginfo">
                 <strong>Aviso!</strong> Entre com seu usuario e senha para acesso completo ao site.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="alert alert-info alert-dismissible" aria-hidden="true" hidden="" role="alert" id="msgtipo">
+                <strong>Aviso!</strong> Voce deve informar o Tipo de Usuario.
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -344,8 +393,9 @@ and open the template in the editor.
                     </div>
 
                     <form method="POST" name="formLogin">
-                        <input type="radio" name="tipo" value="Cliente" id="acesso"><label>Cliente</label>
-                        <input style="margin-left: 20px;" type="radio" name="tipo" value="Instituicao" id="acesso"><label>Instituicao</label>
+                        <input type="radio" name="tipo" value="Nenhum" id="acesso1" hidden="" checked><label></label>
+                        <input type="radio" name="tipo" value="Cliente" id="acesso2" onchange="escondeTipo();"><label>Cliente</label>
+                        <input style="margin-left: 20px;" type="radio" name="tipo" value="Instituicao" id="acesso3" onchange="escondeTipo();"><label>Instituicao</label>
                         <br>
                         <br>
                     </form>
