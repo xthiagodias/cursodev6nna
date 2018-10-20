@@ -21,11 +21,6 @@ and open the template in the editor.
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
         <link href="css/estilo6.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilo2.css" rel="stylesheet" type="text/css"/>
-
-        <link href="css/estilo3.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilo4.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilo5.css" rel="stylesheet" type="text/css"/>
 
 
 
@@ -109,39 +104,43 @@ and open the template in the editor.
                 height: auto;
                 width: auto;
 
-                margin-top: 5px;
-                margin-left: 5px;
+
+                margin-top: 2px;
+
 
                 background-color: #fafafa;
-               
-                margin-bottom: 5px;
+
+                margin-bottom: auto;
                 margin-right: 5px;
+                margin-left: 5px;
             }
 
             #ads {
                 margin: auto;
                 display: block;
-               
+
                 border: solid 2px blue;
-                margin-top: 5px;
+                margin-top: 2px;
                 height: auto;
                 width: auto;
                 position: relative;
                 background-color: #fafafa;
+                margin-left: auto;
+                margin-right: auto;
 
-                margin-bottom: 5px;
+                margin-bottom: 2px;
             }   
 
             #sidebar {
                 margin: auto;
                 display: block;
                 border: solid 2px yellow;
-                height: 909px;
+                height: auto;
                 width: auto;
                 position: relative;
                 background-color: #fafafa;
                 margin-left: auto;
-                margin-top: 5px;
+                margin-top: 2px;
 
                 border-radius: 1% 1% 1% 1%;
             }
@@ -150,15 +149,17 @@ and open the template in the editor.
 
                 display: block;
                 border: solid 2px red;
+                margin-bottom: auto;
+                margin-top: 2px;
 
-
-              
+                height: auto;
+                width: auto;
 
                 background-color: #fafafa;
 
                 border-radius: 1% 1% 1% 1%;
             }  
-            
+
             a:hover {
                 text-decoration: none;
             }
@@ -188,14 +189,14 @@ and open the template in the editor.
                                 </div>
                                 <div class="collapse navbar-collapse" id="myNavbar">
                                     <ul class="nav navbar-nav">
-                                        <li><form style="padding: 10pt; height: 80px;" class="form-inline">
+                                        <li><form style="padding: 10pt; height: auto;" class="form-inline">
 
                                                 <div class="btn-group">
-                                                    <a class="btn ribbon" href="inserirAnuncio.html"><span class="btn ribbon"><button style="margin-top: -20px; width: 140px; height: 40px" type="button" class="btn btn-success ribbon">Anuncie Ja!</button></span></a>
+                                                    <a class="btn ribbon" href="inserirAnuncio.html"><button style="margin-top: -20px; width: 140px; height: 40px; margin-left: -20px;" type="button" class="btn btn-success ribbon">Anuncie Ja!</button></a>
 
 
 
-                                                    <a href='index.html'><button style="width: auto; margin-top: 0;" class="btn btn-primary btn-sm" type="button">Pagina Inicial</button></a>
+                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button">Pagina Inicial</button></a>
                                                     <a href='cadUsuario2.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Cadastro</button></a>
 
 
@@ -203,12 +204,13 @@ and open the template in the editor.
 
                                                     <a href='sobre.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Sobre</button></a>
                                                     <a href='configuracao.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Perfil</button></a>
+                                                    <a href="http://www.unama.br/" target="_blank"><img style='margin-left: 70px;' src="imagens/unama2.png" alt='' width="200" height="50"></a>
                                                 </div>   
                                             </form></li>
 
 
                                     </ul>
-                                    <ul style="width: 50px;" class="nav navbar-nav navbar-right">
+                                    <ul style="width: auto; margin-top: auto;" class="nav navbar-nav navbar-right">
                                         <li><a href='login.html'><span class="glyphicon glyphicon-log-in"></span><span style="color: #002752;; font-family: Tahoma; width: auto;"> Login</span></a></li>
                                     </ul>
 
@@ -223,14 +225,14 @@ and open the template in the editor.
                 </div>
             </div>
             <div class="container">    
-                <div class="row content">
+                <div class="row">
                     <div class="col-sm-3 sidenav" id='sidebar'>
-                        <div class="campoBuscar1">
+                        <div class="campoBuscar1" >
 
 
                             <nav id="navBuscar" class="navbar navbar-light bg-light">
                                 <form class="form-inline">
-                                    <input style='width: 260px;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                                    <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
                                     <BR>
                                     <br>
                                     <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
@@ -238,13 +240,19 @@ and open the template in the editor.
 
 
                                     <div class="collapse" id="myNavbar1">
-                                        <ul class="nav navbar-nav">
-                                            <li><input type="checkbox"> TESTE 1</li>
-                                            <li><input type="checkbox"> TESTE 2</li>
-                                            <li><input type="checkbox"> TESTE 3</li>
-                                            <li><input type="checkbox"> TESTE 4</li>
-                                            <li><input type="checkbox"> TESTE 5</li>
-                                            <li><input type="button" value='OK' name='OK'></li>
+                                        <ul class="nav nav-tabs-justified">
+                                            
+                                            <li><input type="checkbox"> Filtro 1</li>
+                                            
+                                            <li><input type="checkbox"> Filtro 2</li>
+                                            
+                                            <li><input type="checkbox"> Filtro 3</li>
+                                            
+                                            <li><input type="checkbox"> Filtro 4</li>
+                                            
+                                            <li><input type="checkbox"> Filtro 5</li>
+                                            
+                                            <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
 
 
                                         </ul>
@@ -254,12 +262,13 @@ and open the template in the editor.
 
                                 </form>
                             </nav>
-                        </div>
-                        <div style="width: auto;" class="campoCategorias">
 
-                            <div  id="v-pills-tab" role="tablist" style="width: auto;">
-                                <span id="cat">Categorias</span>
-                                <hr style="border: solid 1px black; width: auto;">
+
+                            <div class="campoCategorias">
+
+                                <p>  <span id="cat">Categorias</span> </p>
+                                <p> <hr style="border: solid 1px black; width: auto;">
+
                                 <span>Academicos</span>
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -309,6 +318,7 @@ and open the template in the editor.
                         </div>
 
                     </div>
+
                     <div class="col-sm-7 ml-auto text-left" id="conteudoCentral"> 
 
 
@@ -669,6 +679,7 @@ and open the template in the editor.
 
                     </div>
 
+
                     <div class="col-sm-2 sidenav ml-auto" id='ads'>
                         <div class="well">
                             <p>ADS1</p>
@@ -699,40 +710,40 @@ and open the template in the editor.
             <footer class="container" id='bottom'>
                 <div class="row">
                     <div class="col">
-                <div class="bs-example">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Carousel indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>   
-                        <!-- Wrapper for carousel items -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img style='height: 200px; width: auto;' src="imagens/unama2.png"  alt="First Slide">
-                            </div>
-                            <div class="item">
-                                <img style='height: 200px; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide">
-                            </div>
-                            <div class="item">
-                                <img style='height: 200px; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide">
+                        <div class="bs-example">
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Carousel indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>   
+                                <!-- Wrapper for carousel items -->
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img style='height: auto; width: auto;' src="imagens/unama2.png"  alt="First Slide">
+                                    </div>
+                                    <div class="item">
+                                        <img style='height: auto; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide">
+                                    </div>
+                                    <div class="item">
+                                        <img style='height: auto; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide">
+                                    </div>
+                                </div>
+                                <!-- Carousel controls -->
+                                <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
                             </div>
                         </div>
-                        <!-- Carousel controls -->
-                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                        </a>
-                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                        </a>
-                    </div>
-                </div>
                     </div>
                 </div>
             </footer>
-            
 
         </div>
+
     </body>
 </html>

@@ -62,6 +62,7 @@ fieldset {
 .imagemLogo {
   
     
+    
 }
 
 
@@ -76,6 +77,7 @@ fieldset {
 }
 
 .topoPagina {
+    
    
    position: relative;
    
@@ -141,46 +143,27 @@ fieldset {
 
 
 #navBuscar {
-    margin-left: auto;
-    margin-top: auto;
-
-    height: auto;
-
-    background-color: #fafafa;
-    position: relative;
-    display: block;
-    border-radius: 1% 1% 1% 1%;
+   
 }
 
 .campoBuscar {
   
-    margin-top: 10px;
-  margin-left: -16px;
-  width: 320px;
-      position: relative;
-    display: flex;
-    border-radius: 1% 1% 1% 1%;
-    border: solid 2px yellow;
+   
  
 }
 
 #btFiltrar {
  
-height: 35px;
-margin: auto;
-position: relative;
-
-
     
     
 }
 
 .campoCategorias {
-
+  
 }
 
 label {
-    
+    padding: 0pt;
     color: black;
     margin-top: 5px;
     margin-left: 5px;
@@ -194,8 +177,8 @@ label {
 
     font-weight: bold;
     text-align: center;
-    margin-left: auto;
-    margin-top: auto;
+    margin-left: 90px;
+    margin-top: 1px;
     font-size: 15pt;
     color: black;
     text-align: center;
@@ -270,20 +253,17 @@ border: solid 1px black;
 
 
 .campoPropagandas {
-    
- 
-
+  
     
 
 }
 
 .campoPropagandas2 {
-
+  
 }
 
 .campoPropagandas1 {
  
-  
 }
 
 /*
@@ -307,23 +287,17 @@ Banner Direita
 .anuncios img {
     
   
-    display: flex;
 }
 
 .conteudoLivro {
-    padding: 5pt;
-    display: block;
- position: relative;
-  width: auto;
-    margin-left: 120px;
-    margin-top: -140px;
+   
 
 }
 
 .tipoAnuncio {
  
     margin: 0 auto;
-    display: block;
+    display: flex;
   
 
     
@@ -516,14 +490,6 @@ a:active {
   position: relative;
   overflow-y: scroll;
   height: 895px; }
-
-
-
-/*Remove that CSS*/
-.col-md-3 {
-    margin-left:5%;
-    }
-/*Remove that CSS*/
 
 
 
