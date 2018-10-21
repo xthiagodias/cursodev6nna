@@ -313,14 +313,24 @@ Banner Direita
 img {
     
   padding: 1pt;
-  margin-top: 4px;
+  margin-top: auto;
+  margin-left: auto;
+}
+
+#imganuncio  {
+    
+  padding: 1pt;
+  margin-top: 15px;
+  margin-left: 5px;
+
+  
 }
 
 .conteudoLivro {
     padding: 5pt;
     display: block;
- position: relative;
-  
+ position: absolute;
+  width: auto;
   height: auto;
     margin-left: 120px;
     margin-top: -140px;
@@ -334,12 +344,13 @@ img {
   
 
 height: auto;
+width: auto;
     
   
     
     margin-bottom: auto;
     margin-left: auto;
-    margin-top: auto;
+    margin-top: -15px;
     position: relative;
   
    
@@ -351,14 +362,15 @@ height: auto;
    text-align: right;
     margin-bottom: auto;
     margin-left: auto;
-    margin-top: -130px;
+    margin-top: -140px;
     font-weight: bold;
     position: relative;
     font-family: tahoma;
     font-size: 13pt;
     color: red;
     float: right;
-   
+    margin-right: 10px;
+width: auto;   
 height: auto;
 
     
@@ -380,7 +392,7 @@ height: auto;
     text-align: right;
     margin-bottom: auto;
     margin-left: auto;
-    margin-top: auto;
+    margin-top: 10px;
     position: relative;
     font-weight: bold;
 }
