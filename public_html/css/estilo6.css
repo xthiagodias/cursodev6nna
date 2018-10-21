@@ -220,13 +220,13 @@ span {
 
  .anuncios {
     display: block;
-    margin-top: 0px;
-    margin-left: 0px;
+    margin-top: auto;
+    margin-left: auto;
     border: solid 0.5px green;
     background-color: #fafafa;
     border-radius: 1% 1% 1% 1%;
-    height: 150px;
-    width: 100%;
+ 
+    
     position: relative;
     margin-bottom: 10px;
 
@@ -307,14 +307,21 @@ Banner Direita
 .anuncios img {
     
   
-    display: flex;
+    display: block;
+}
+
+img {
+    
+  padding: 1pt;
+  margin-top: 4px;
 }
 
 .conteudoLivro {
     padding: 5pt;
     display: block;
  position: relative;
-  width: auto;
+  
+  height: auto;
     margin-left: 120px;
     margin-top: -140px;
 
@@ -322,83 +329,90 @@ Banner Direita
 
 .tipoAnuncio {
  
-    margin: 0 auto;
+    margin: auto;
     display: block;
   
 
+height: auto;
     
+  
     
-    margin-bottom: 110px;
-    margin-left: 420px;
-    margin-top: -110px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: auto;
     position: relative;
   
    
 }
 
 .valor {
- margin: 0 auto;
-   text-align: center;
-    margin-bottom: 110px;
-    margin-left: 400px;
-    margin-top: -230px;
+    margin: auto;
+    display: block;
+   text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: -130px;
     font-weight: bold;
     position: relative;
     font-family: tahoma;
     font-size: 13pt;
     color: red;
+    float: right;
+   
+height: auto;
 
     
     
 }
 
 .data {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 110px;
-    margin-left: 400px;
-    margin-top: -10px;
+    margin: auto;
+    text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: auto;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 110px;
-    margin-left: 400px;
-    margin-top: 230px;
+    margin: auto;
+    text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: auto;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio1 {
-    margin: 0 auto;
-    text-align: center;
-    margin-bottom: 110px;
-    margin-left: 400px;
-    margin-top: -108px;
+    margin: auto;
+    text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: auto;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio3 {
  
-    text-align: center;
-    margin-bottom: 14px;
-    margin-left: 400px;
+    text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
     margin-top: -35px;
     position: relative;
     font-weight: bold;
+    margin-right: 5px;
    
 }
 
 .dataAnuncio4 {
  
-    text-align: center;
-    margin-bottom: 14px;
-    margin-left: 400px;
-    margin-top: -135px;
+    text-align: right;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-top: auto;
     position: relative;
     font-weight: bold;
    
