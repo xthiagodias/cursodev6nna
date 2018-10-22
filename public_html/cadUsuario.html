@@ -48,6 +48,12 @@ and open the template in the editor.
                 opacity: 0.9;
                 filter: alpha(opacity=20);
             }
+            
+            body .tipoAnuncio {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }            
 
         </style>
 
@@ -129,6 +135,7 @@ and open the template in the editor.
                 margin-right: auto;
 
                 margin-bottom: 2px;
+                border-radius: 1% 1% 1% 1%;
             }   
 
             #sidebar {
@@ -152,8 +159,7 @@ and open the template in the editor.
                 margin-bottom: auto;
                 margin-top: 2px;
 
-                height: auto;
-                width: auto;
+              
 
                 background-color: #fafafa;
 
@@ -164,6 +170,21 @@ and open the template in the editor.
                 text-decoration: none;
             }
         </style>
+        
+        
+        
+        <style>
+
+
+.navbar {
+  
+
+ 
+}
+
+</style>
+        
+        
     </head>
     <body>
 
@@ -196,7 +217,7 @@ and open the template in the editor.
 
 
 
-                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button">Pagina Inicial</button></a>
+                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button"><i class="fa fa-fw fa-home"></i>Pagina Inicial</button></a>
                                                     <a href='cadUsuario.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Cadastro</button></a>
 
 
@@ -226,7 +247,15 @@ and open the template in the editor.
             </div>
             <div class="container">    
                 <div class="row">
-                    <div class="col-sm-3 sidenav ml-auto" id='sidebar'>
+                    
+                    
+                    <div style="height: auto; border: solid 2px yellow;" id='sidebar' class="col-sm-3 ">
+                           <center> <button type='button' style='width: 252px;' id='btMenu' class="glyphicon glyphicon-align-justify btn btn-primary btn-sm my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar2"> <span style="font-weight: bold; font-family: Tahoma; font-size: 10pt; color: white; margin-left: 15px;">Categorias</span></button></center> 
+                            <p>
+                          
+                                         <div class="collapse" id="myNavbar2">
+                    
+                    
                         <div class="campoBuscar1" >
 
 
@@ -319,7 +348,7 @@ and open the template in the editor.
 
                     </div>
                 
-                        
+                    </div>    
 
                     <div class="col-sm-6 well ml-auto" id="conteudoCentral"> 
 
@@ -684,7 +713,7 @@ and open the template in the editor.
                     </div>
 
 
-                    <div class="col-sm-3 sidenav ml-auto" id='ads'>
+                    <div class="col-sm-3 ml-auto" id='ads'>
                         <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
                             <p>ADS1</p>
                             <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F03%2F29%2F07%2FWDL-Logo-2700_11465_035003743_1869315452.jpg"  alt="Responsive image">
