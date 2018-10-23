@@ -6,22 +6,34 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>XipBook, Anuncio</title>
+        <title>XipBook, Compartilhamento de Livros =)</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- Arquivos de configuracao, bootstrap, css -->
-        <script src="libs/JQuery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
-        <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/>
-        <!--  <script src="libs/bootstrap/bootstrap.min.js" type="text/javascript"></script> -->
+        <!--     <script src="libs/JQuery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
+             <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+             <script src="libs/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+             <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        -->
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <link href="css/detalheAnuncio.css" rel="stylesheet" type="text/css"/>
 
         <script src="javascript/page.js" type="text/javascript"></script>
-        <link href="css/estilo5.css" rel="stylesheet" type="text/css"/>
+        <script src="javascript/materialize.js" type="text/javascript"></script>
 
-        <!--    <script src="css2/ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.min.js" type="text/javascript"></script> -->
-        <link href="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/> 
-        <script src="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.min.js" type="text/javascript"></script>
+        <script src="css4.1/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="css4.1/js/bootstrap.js" type="text/javascript"></script>
 
+        <link href="css2/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css2/bootstrap.min.css" rel="stylesheet" type="text/css"/>
 
 
         <style>
@@ -31,242 +43,290 @@ and open the template in the editor.
                 background-image: url('imagens/imgFundo.png');
                 background-position: center center;
                 background-repeat: no-repeat;
-                position: relative;
+
 
 
             }
 
-            body .container {
+            body #principal {
 
                 opacity: 0.9;
                 filter: alpha(opacity=20);
             }
 
+            body .tipoAnuncio {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }            
+
         </style>
 
+
         <style>
-
-            .col-xs-12 {
-                display: inline;
-                height: 150px;
-                width: 100%;
-                margin-top: 20px;
-                background-color: #fafafa;
-                color: white;
-                text-align: center;
-                border: solid 2px red;
-                position: relative;
-                border-radius: 1% 1% 1% 1%;
-
+            /* Remove the navbar's default margin-bottom and rounded borders */ 
+            .navbar {
+                margin-bottom: 0;
+                border-radius: 0;
             }
 
-            #sidebar {
-                display: inline;
-                border: solid 2px yellow;
-                height: 900px;
-                width: 321px;
-                position: relative;
-                background-color: #fafafa;
+            /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+            .row.content {height: 450px}
 
-                border-radius: 1% 1% 1% 1%;
+            /* Set gray background color and 100% height */
+            .sidenav {
+                padding-top: 20px;
+                background-color: #f1f1f1;
+                height: 100%;
+            }
+
+            /* Set black background color, white text and some padding */
+            footer {
+                background-color: #555;
+                color: white;
+                padding: 15px;
+            }
+
+            /* On small screens, set height to 'auto' for sidenav and grid */
+            @media screen and (max-width: 767px) {
+                .sidenav {
+                    height: auto;
+                    padding: 15px;
+
+
+                }
+                .row.content {height:auto;} 
+            }
+
+
+            #topo {
+                margin: auto;
+                display: block;
+                border: solid 2px red;
+                height: auto;
+                width: auto;
+                background-color: #fafafa;
+                margin-top: auto;
+
             }
 
             #conteudoCentral {
-                display: inline;
+                margin: auto;
+                display: block;
                 border: solid 2px green;
-                margin-left: 330px;
-                margin-top: -890px;
-                height: 900px;
-                width: 570px;
-                position: relative;
+                height: auto;
+
+
+
+                margin-top: 2px;
+
+
                 background-color: #fafafa;
-                border-radius: 1% 1% 1% 1%;
-            }  
+
+                margin-bottom: auto;
+                margin-right: 5px;
+                margin-left: 5px;
+            }
 
             #ads {
-                display: inline;
-                border-radius: 1% 1% 1% 1%;
+                margin: auto;
+                display: block;
+
                 border: solid 2px blue;
-                margin-left: 909px;
-                margin-top: -910px;
-                height: 900px;
-                width: 231px;
+                margin-top: 2px;
+                height: auto;
+                width: auto;
                 position: relative;
                 background-color: #fafafa;
+                margin-left: auto;
+                margin-right: auto;
 
-            }      
+                margin-bottom: 2px;
 
+            }   
+
+            #sidebar {
+                margin: auto;
+                display: block;
+                border: solid 2px yellow;
+                height: auto;
+                width: auto;
+                position: relative;
+                background-color: #fafafa;
+                margin-left: auto;
+                margin-top: 2px;
+
+                border-radius: 1% 1% 1% 1%;
+            }
 
             #bottom {
-                display: inline;
+
+                display: block;
                 border: solid 2px red;
-                width: 100%;
-                margin-left: 0px;
-                margin-top: 20px;
-                height: 200px;
-                position: relative;
+                margin-bottom: auto;
+                margin-top: 2px;
+
+
+
                 background-color: #fafafa;
 
-                border-radius: 1% 1% 1% 1%;
+
             }  
 
-
-            a:hover { 
-
-                text-decoration:none; 
-
-
-            }
-
-            #paginacao {
-                display: inline;
-                height: 50px;
-                width: 200px;
-                margin-top: -90px;
-                margin-left: 180px;
-                background-color: #fafafa;
-                color: white;
-                text-align: center;
-
-                position: relative;
-
-
-            }
-
-            #brd {
-                border: solid 0px white; 
-
-            }
-            
-            
-            
-            
-            #dadosAnunciante {
-                display: inline;
-                height: 50px;
-                width: 200px;
-                margin-top: -90px;
-                margin-left: 180px;
-                background-color: #fafafa;
-                color: white;
-                text-align: center;
-
-                position: relative;
-
-
+            a:hover {
+                text-decoration: none;
             }
         </style>
 
-        <style type="text/css">
-            .carousel{
-                background: #2f4357;
-                margin-top: 0px;
-                height: 196px;
-                width: 100%;
+
+
+        <style>
+
+
+            .navbar {
+
+
+
             }
-            .carousel .item{
-                min-height: 50px; /* Prevent carousel from being distorted if for some reason image doesn't load */
+
+        </style>
+
+
+        <style>
+            body{
+                width: auto;
             }
-            .carousel .item img{
-                margin: 0 auto; /* Align slide image horizontally center */
+            #items{
+                overflow-x: scroll;
+                width: auto;
+                white-space: nowrap;
             }
-            .bs-example{
-                margin: 0px;
-                height: 20px;
+            .imagemAnuncio {
+
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                border:1px solid;
+                margin-left: 10px;
+                margin-right: auto;
             }
         </style>
 
     </head>
-
-
     <body>
 
 
-        <div class="container">
+        <div id='principal'>
+            <div class="container">
 
 
-            <div class="row">
+                <div class="row">
 
-                <div class="col-xs-12">
+                    <div id="topo">
+                        <nav style="background-color: #fafafa; border: solid 0px transparent;" class="navbar navbar-inverse">
+                            <a class="navbar-brand" href="#"><img style=' padding: 0pt; margin-top: -15px;' src='imagens/logotipo.png' alt='' width="50" height="50"></a>
+                            <div class="container">
 
-                    <div class="imagemLogo">
-                        <a href="index.html"><img src="imagens/logotipo.png" alt="" width="170" height="130"/></a>
-                    </div>
+                                <div class="navbar-header">
 
+                                    <button style="background-color: #002752;" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>                        
+                                    </button>
 
+                                </div>
+                                <div class="collapse navbar-collapse" id="myNavbar">
+                                    <ul class="nav navbar-nav">
+                                        <li><form style="padding: 10pt; height: auto;" class="form-inline">
 
-
-                    <div class="navMenu">
-
-                        <div class="nav justify-content-end">
-
-                            <div class="mm">
-
-
-
-
-                                <nav class="nav nav-pills nav-justified">
-
-                                    <nav class="navbar navbar-light bg-light">
-                                        <form class="form-inline" style="height: 50px;">
-                                            <a href='inserirAnuncio.html'><button class="btn btn-success" type="button" title="Anunciar Livro" style="width: 140px; height: 40px">Anuncie Ja!</button></a>
-                                            <a href='index.html'><button class="btn btn-default btn-outline-secondary" type="button">Pagina Inicial</button></a>
-                                            <a href='cadUsuario.html'><button class="btn btn-default btn-outline-secondary" type="button">Cadastro</button></a>
-                                            <a href='login.html'><button class="btn btn-default btn-outline-secondary" type="button">Login</button></a>
-
-                                            <a href='contato.html'><button class="btn btn-default btn-outline-secondary" type="button">Contato</button></a>
-
-                                            <a href='sobre.html'><button class="btn btn-default btn-outline-secondary" type="button">Sobre</button></a>
-                                            <a href='configuracao.html'><button class="btn btn-default btn-outline-secondary" type="button">Perfil</button></a>
-                                        </form>
+                                                <div class="btn-group">
+                                                    <a class="btn ribbon" href="inserirAnuncio.html"><button style="margin-top: -20px; width: 140px; height: 40px; margin-left: -20px;" type="button" class="btn btn-success ribbon">Anuncie Ja!</button></a>
 
 
-                                    </nav>
-                                </nav>
-                                <div class="row">
-                                    <div class="col-xs-1">
-                                        <form class="form-group" style="height: 50px;">
-                                            <img style="margin-top: 0px;" src="imagens/unama2.png" alt="" width="200" height="60"/>
-                                        </form>  
-                                    </div>
+
+                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button"><i class="fa fa-fw fa-home"></i>Pagina Inicial</button></a>
+                                                    <a href='cadUsuario.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Cadastro</button></a>
+
+
+                                                    <a href='contato.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Contato</button></a>
+
+                                                    <a href='sobre.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Sobre</button></a>
+                                                    <a href='configuracao.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Perfil</button></a>
+                                                    <a href="http://www.unama.br/" target="_blank"><img style='margin-left: 70px;' src="imagens/unama2.png" alt='' width="200" height="50"></a>
+                                                </div>   
+                                            </form></li>
+
+
+                                    </ul>
+                                    <ul style="width: auto; margin-top: auto;" class="nav navbar-nav navbar-right">
+                                        <li><a href='login.html'><span class="glyphicon glyphicon-log-in"></span><span style="color: #002752;; font-family: Tahoma; width: auto;"> Login</span></a></li>
+                                    </ul>
+
+
                                 </div>
                             </div>
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-
-
-            </div>
-        </div>
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12" id="sidebar">
-
-                    <div class="campoBuscar">
-
-
-                        <nav id="navBuscar" class="navbar navbar-light bg-light">
-                            <form class="form-inline">
-                                <input class="form-control mr-sm-2" type="search" placeholder="O que voce procura?" aria-label="Search">
-                                <button class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-                            </form>
-                            <button id="btFiltrar" class="btn btn-success my-2 my-sm-0" type="submit">Filtrar</button>
                         </nav>
+
+
+
                     </div>
+                </div>
+            </div>
+
+            <div class="container">    
+                <div class="row">
 
 
-                    <div class="campoCategorias">
-                        <div class="row">
-                            <div class="col-3">
-                                <div  id="v-pills-tab" role="tablist">
-                                    <span id="cat">Categorias</span>
-                                    <hr style="width: 290px; border: solid 1px black;">
+                    <div style="height: auto; border: solid 2px yellow;" id='sidebar' class="col-sm-3 ">
+                        <center> <button type='button' style='width: 252px;' id='btMenu' class="glyphicon glyphicon-align-justify btn btn-primary btn-sm my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar2"> <span style="font-weight: bold; font-family: Tahoma; font-size: 10pt; color: white; margin-left: 15px;">Categorias</span></button></center> 
+                        <p>
+
+                        <div class="collapse" id="myNavbar2">
+
+
+                            <div class="campoBuscar1" >
+
+
+                                <nav id="navBuscar" class="navbar navbar-light bg-light">
+                                    <form class="form-inline">
+                                        <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                                        <BR>
+                                        <br>
+                                        <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
+
+
+
+                                        <div class="collapse" id="myNavbar1">
+                                            <ul class="nav nav-tabs-justified">
+
+                                                <li><input type="checkbox"> Filtro 1</li>
+
+                                                <li><input type="checkbox"> Filtro 2</li>
+
+                                                <li><input type="checkbox"> Filtro 3</li>
+
+                                                <li><input type="checkbox"> Filtro 4</li>
+
+                                                <li><input type="checkbox"> Filtro 5</li>
+
+                                                <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
+
+
+                                            </ul>
+
+                                        </div>
+
+
+                                    </form>
+                                </nav>
+
+
+                                <div class="campoCategorias">
+
+                                    <p>  <span id="cat">Categorias</span> </p>
+                                    <p> <hr style="border: solid 1px black; width: auto;">
+
                                     <span>Academicos</span>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck1">
@@ -284,298 +344,265 @@ and open the template in the editor.
                                         <input type="checkbox" class="custom-control-input" id="customCheck4">
                                         <label class="custom-control-label" for="customCheck4">Medicina</label>
                                     </div>
-                                    <span>Literatura</span>
                                     <div class="custom-control custom-checkbox">
                                         <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                        <label class="custom-control-label" for="customCheck5">Nacional</label>
+                                        <label class="custom-control-label" for="customCheck5">Portugues</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck6">Ingles</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck7">Contabilidade</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck8">Enfermagem</label>
+                                    </div>
+                                    <span>Literatura</span>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                        <label class="custom-control-label" for="customCheck9">Nacional</label>
                                     </div>
 
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                        <label class="custom-control-label" for="customCheck6">Internacional</label>
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                        <label class="custom-control-label" for="customCheck10">Internacional</label>
                                     </div>
 
                                 </div>
 
                             </div>
 
-                        </div> 
-
-                    </div>
-
-
-                </div>               
-
-            </div>
-
-        </div>
-
-
-
-
-        <div class="container">
-            <div class="row text-justify">
-                <div class="col-xs-offset-12" id="conteudoCentral">
-
-
-                    <center><label style="color: green; font-weight: bold; font-size: 15pt;">Anuncio</label></center>
-
-                    <div style="margin-left: 10px; width: 470px;" id="myCarousel" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-
-                            <div class="item active">
-                                <img src="" alt="Livro Redes de Computadores" style="width:100%; height: 200px;">
-                                <div class="carousel-caption">
-                                    <h3>Redes de Computadores</h3>
-                                    <p>2018!</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <img src="chicago.jpg" alt="Chicago" style="width:100%;">
-                                <div class="carousel-caption">
-                                    <h3>Chicago</h3>
-                                    <p>Thank you, Chicago!</p>
-                                </div>
-                            </div>
-
-                            <div class="item">
-                                <img src="ny.jpg" alt="New York" style="width:100%;">
-                                <div class="carousel-caption">
-                                    <h3>New York</h3>
-                                    <p>We love the Big Apple!</p>
-                                </div>
-                            </div>
-
                         </div>
 
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+                    </div>    
+
+
+                    <div class="container">
+
+                        <div class="row">
+
+                            <div class="col-sm-6 ml-auto" id="conteudoCentral" style="border: solid 2px green;"> 
 
 
 
 
+                                <center><label style="color: green; font-weight: bold; font-size: 17pt;">Detalhe do anuncio</label></center>
 
-                    <!-- Grid row -->
-                    <div style="height: 200px;" class="row">
+                                <div style="margin-left: 10px; width: auto;" id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    </ol>
 
-                        <!-- Grid column -->
-                        <div class="col-md-12 mb-4">
+                                    <!-- Wrapper for slides -->
+                                    <div class="carousel-inner">
 
-                            <!-- Exaple 1 -->
-                            <div style="margin-top: -197px; margin-left: 487px; height: 197px; width: 70px;" class=" card example-1 scrollbar-ripe-malinka">
-                                <div style="height: 190px;" class="card-body">
-                                    <!--      <h4 style='text-align: center; align-content: center; font-family: Verdana; color:blue;' id="section1"><span style='text-align: center; align-content: center; color: green;'>Lista de Anuncios</span></h4>
-                                    -->
-                                    <a href="">
 
-                                        <div class="imagensAnuncio">
-                                            <img src="imagens/capaLivro.jpeg" alt="" width="40" height="50" title="imagems do anuncio"/>
+                                        <div class="item active">
+                                            <center>   <img src="imagens/capaLivro.jpeg" alt="Livro Redes de Computadores" style="width: 200px; height: 200px;"> </center>
+                                            <div class="carousel-caption">
+
+                                                <h3>Redes de Computadores</h3>
+                                                <p>2018!</p>
+                                            </div>
                                         </div>
 
-                                    </a>
-                                    <br>
+                                        <div class="item">
+                                            <center>   <img src="imagens/capaLivro.jpeg" alt="Imagem 2" style="width: 200px; height: 200px;"> </center>
+                                            <div class="carousel-caption">
 
-                                    <a href="">
-
-                                        <div class="imagensAnuncio">
-                                            <img src="imagens/capaLivro.jpeg" alt="" width="40" height="50" title="imagems do anuncio"/>
+                                                <h3>Kurose</h3>
+                                                <p>2018!</p>
+                                            </div>
                                         </div>
 
-                                    </a>
-                                    <br>
-                                    <a href="">
+                                        <div class="item">
+                                            <center>     <img src="imagens/capaLivro.jpeg" alt="Imagem 3" style="width: 200px; height: 200px;"> </center>
+                                            <div class="carousel-caption">
+                                                <h3>Sobre o Livro</h3>
+                                                <p>Informacoes!</p>
+                                            </div>
 
-                                        <div class="imagensAnuncio">
-                                            <img src="imagens/capaLivro.jpeg" alt="" width="40" height="50" title="imagems do anuncio"/>
+
                                         </div>
-
-                                    </a>
-                                    <br>
-                                    <a href="">
-
-                                        <div class="imagensAnuncio">
-                                            <img src="imagens/capaLivro.jpeg" alt="" width="40" height="50" title="imagems do anuncio"/>
-                                        </div>
-
-                                    </a>
-                                    <br>
-
-
-                                    <!--     <div class='col-xs-1' id='paginacao'>
-                                             <nav aria-label="Page navigation example">
-                                                 <ul class="pagination">
-                                                     <li class="page-item">
-                                                         <a class="page-link" href="#" aria-label="Previous">
-                                                             <span aria-hidden="true">&laquo;</span>
-                                                             <span class="sr-only">Previous</span>
-                                                         </a>
-                                                     </li>
-                                                     <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                     <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                     <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                     <li class="page-item">
-                                                         <a class="page-link" href="#" aria-label="Next">
-                                                             <span aria-hidden="true">&raquo;</span>
-                                                             <span class="sr-only">Next</span>
-                                                         </a>
-                                                     </li>
-                                                 </ul>
-                                             </nav>
-                                         </div> -->
-
-
-
-
-
-
-                                </div>
-
-
-
-                            </div>
-
-                            <div style="border: solid 0px black;" class="container" id="dadosAnunciante">
-                                <div class="row">
-                                    <div class="col">
-
-                                        <label> TESTE </label>
 
 
 
                                     </div>
+
+
+
+
+
+                                    <!-- Left and right controls -->
+                                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+
                                 </div>
 
-                            </div> 
+
+                                <br>
+                                <div class="col">
+                                    <div id="items" class="card example-1 scrollbar-ripe-malinka" style="width: auto; height: auto; margin-left: auto;">
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 1" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 2" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 3" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 4" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 5" style="width: 100px; height: 100px;">
+                                        </div>
+                                        <div class="imagemAnuncio">
+                                            <img src="imagens/capaLivro.jpeg" alt="Imagem 6" style="width: 100px; height: 100px;">
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <div style='width: auto; height: auto;'>
+                                        <fieldset style="float: left; border: dashed 1px #c9ffcb; padding: 5pt; width: auto; height: auto;">
+                                            <legend style='width: auto;'>Dados do Anunciante</legend>
+
+                                            <span class="text-info">Nome:</span><br> <label class="custom-control">Thiago Dias </label><br>
+                                            <span class="text-info">Telefone:</span><br> <label class="custom-control">(91) 98222-2232 </label>
+
+                                            <div>
+                                                <span class="text-info">Avaliacao do Anunciante:</span><br>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span>
+                                                <span class="fa fa-star checked"></span> 
+
+                                            </div>
+
+                                            <br>
+                                            <br>
+                                        </fieldset>
+                                    </div>
+
+                                    <div style='width: auto; height: auto;'>
+                                        <fieldset style="float: left; border: dashed 1px #c9ffcb; width: auro; padding: 5pt; width: auto; height: auto; margin-left: 5px;">
+                                            <legend style='width: auto;'>Dados do Livro</legend>
+
+                                            <span class="text-info">Livro:</span><br> <label class="custom-control"> Redes de Computadores </label><br>
+                                            <span class="text-info">ISBN:</span><br> <label class="custom-control"> 3928318029382 </label><br>
+                                            <span class="text-info">Editora:</span><br> <label class="custom-control"> Teste </label><br>
+                                            <span class="text-info">Categoria:</span><br> <label class="custom-control"> Informatica </label><br>
+                                         
+                                            <span class="text-info"><img src="imagens/vendeLivro.png" alt='Anuncio Vende livro' width="60" height="60" title='Anuncio de Venda'></span>
+                                            <span class="text-info"></span><label class="custom-control" style='color: red; font-size: 14pt;'> R$ 80,00 </label>
+                                            
+                                            
+                                            <div>
+                                                <br>
+                                                <span class="text-info">Discricao:</span><br>
+                                               <div class='card'>
+                                                   Descricao do Livro de Redes..............<br>
+                                                   Teste do compo de descricao!
+                                               </div>
+                                            </div>
+
+                                            <br>
+                                            <br>
+                                        </fieldset>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                            <!-- Grid row -->
+
+
+
+
+
+                            <div class="col-sm-3 ml-auto" id='ads'>
+                                <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
+                                    <p>ADS1</p>
+                                    <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F03%2F29%2F07%2FWDL-Logo-2700_11465_035003743_1869315452.jpg"  alt="Responsive image">
+                                </div>    
+
+                                <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
+                                    <p>ADS2</p>
+                                    <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="http://www.logotipos.ind.br/conteudo/logos/trilha_letras_logotipo_editoras_infantis.jpg"  alt="Responsive image">
+                                </div>
+
+                                <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
+                                    <p>ADS3</p>
+                                    <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="https://png.pngtree.com/templates/md/20180310/md_5aa3bf3bc3a89.jpg" alt="Responsive image">
+                                </div>
+                            </div>
+
+
 
                         </div>
 
 
                     </div>
+
+
+
+
+                    <footer class="container" id='bottom'>
+                        <div class="row">
+                            <div class="col">
+                                <div class="bs-example">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+
+                                        <ol class="carousel-indicators">
+                                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                                        </ol>   
+
+
+                                        <div class="carousel-inner">
+                                            <div class="item active">
+                                                <center> <img style='height: 150px; width: auto;' src="imagens/unama2.png"  alt="First Slide"> </center>
+                                            </div>
+                                            <div class="item">
+                                                <center> <img style='height: 150px; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide"> </center>
+                                            </div>
+                                            <div class="item">
+                                                <center> <img style='height: 150px; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide"> </center>
+                                            </div>
+                                        </div>
+
+                                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                        </a>
+                                        <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </footer> 
+
                 </div>
             </div>
         </div>
-
-
-
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-xs-12" id="ads">
-                    <div class='card' style='height: 150px; margin-top: 10px;'>
-                        <labeL>ADS1</labeL>
-                        <img src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F03%2F29%2F07%2FWDL-Logo-2700_11465_035003743_1869315452.jpg" class="img-fluid" alt="Responsive image">
-                        <!--       <div class="campoPropagandas1">
-               
-               
-                                   <div class="card border-success mb-3" style="max-width: 18rem;">
-                                       <div class="card-header bg-transparent border-success">Header</div>
-                                       <div class="card-body text-success">
-                                           <h5 class="card-title">Success card title</h5>
-                                           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                       </div>
-                                       <div class="card-footer bg-transparent border-success">Footer</div>
-                                   </div>
-               
-               
-               
-                               </div>
-               
-               
-                        <!--          <div class="campoPropagandas">
-                  
-                                      TESTE
-                  
-                  
-                                  </div>
-                                  <div class="campoPropagandas2">
-                  
-                                      TESTE
-                  
-                  
-                  
-                  
-                  
-                                  </div> -->
-                    </div>
-
-                    <div class='card' style='height: 150px; margin-top: 92px;'>
-                        <labeL>ADS2</labeL>
-                        <img src="http://www.logotipos.ind.br/conteudo/logos/trilha_letras_logotipo_editoras_infantis.jpg" class="img-fluid" alt="Responsive image">
-
-                    </div>
-
-                    <div class='card' style='height: 150px; margin-top: 20px;'>
-                        <labeL>ADS3</labeL>
-                        <img src="https://png.pngtree.com/templates/md/20180310/md_5aa3bf3bc3a89.jpg" class="img-fluid" alt="Responsive image">
-
-                    </div>
-
-                </div>               
-
-            </div>
-
-        </div>  
-
-
-
-
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12" id="bottom">
-                    <div class="bs-example">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                            <!-- Carousel indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>   
-                            <!-- Wrapper for carousel items -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                    <img style='height: 195px; width: auto;' src="imagens/unama2.png"  alt="First Slide">
-                                </div>
-                                <div class="item">
-                                    <img style='height: 195px; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide">
-                                </div>
-                                <div class="item">
-                                    <img style='height: 195px; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide">
-                                </div>
-                            </div>
-                            <!-- Carousel controls -->
-                            <a class="carousel-control left" href="#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                            </a>
-                            <a class="carousel-control right" href="#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>               
-
-            </div>
-
-        </div>  
-
     </body>
 
 

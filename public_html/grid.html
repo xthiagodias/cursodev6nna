@@ -20,7 +20,7 @@ and open the template in the editor.
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-        <link href="css/estilo6.css" rel="stylesheet" type="text/css"/>
+        <link href="css/teste.css" rel="stylesheet" type="text/css"/>
 
 
 
@@ -50,6 +50,8 @@ and open the template in the editor.
 
             #esquerda {
                 background-color: wheat;
+                
+                height: auto;
                
 
 
@@ -58,8 +60,9 @@ and open the template in the editor.
 
             #centro {
                 background-color: whitesmoke;
-               
-
+            
+                height: auto;
+width: auto;
 
             }
 
@@ -67,13 +70,45 @@ and open the template in the editor.
                 background-color: tomato;
               
 
+                height: auto;
 
             }
 
             #baixa {
+                display: block;
                 background-color: thistle;
 
-             
+            position: relative;
+          
+            }
+            
+            #teste {
+                
+                    width: auto;
+                    position: relative;
+                    display: block;
+                    background-color: #00695c;
+                
+            }
+            
+            #teste2 {
+                
+                position: relative;
+                display: block;
+                width: auto;
+                
+            }
+            
+            #lname {
+                
+                width: 100%;
+                
+            }
+            
+                #lname:hover {
+                
+                background-color: gray;
+                
             }
 
         </style>
@@ -84,104 +119,53 @@ and open the template in the editor.
     <body>
         
         
+<h1 style="font-size:1.5vw;">Livro Programando com Borland Delphi 7 - 2005</h1>
+<p style="font-size:2vw;">Resize the browser window to see how the font size scales.</p>
 
-        <div class="container nav-tabs">
-
-           <footer class="container col-sm navbar-fixed-top"> <div id="topo" style="border: solid 1px black; text-align: center;">
-               
-
-                    <h1>TOPO</h1>
-                
-            </div>
-               
-           </footer>
-        
+       <div style="border: solid 2px black;" class="container">
+  <form action="action_page.php">
+    
+      <div class="col-25">
+        <label for="fname">First Name</label>
+     
+      <div class="col-75">
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      </div>
+    </div>
+  
+      <div class="col-75">
+        <label for="lname">Last Name</label>
+      </div>
+      <div class="col-75">
+        <input type="text" SIZE="100" id="lname" name="lastname" placeholder="Your last name..">
+      </div>
+   
+ 
+      <div class="col-25">
+        <label for="country">Country</label>
+      </div>
+      <div class="col-75">
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada" selected="">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+      </div>
+  
+     <div class="row">
+      <div class="col-25">
+        <label for="subject">Subject</label>
+      </div>
+      <div class="col-75">
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      </div>
+     </div>
+    <div class="row">
+      <input type="submit" value="Submit">
+    </div>
+  </form>
+</div>
             
-            
-            <div id="esquerda" style="border: solid 1px black; height: auto;margin-top: 71px;" class="container col-sm-3 sidenav">
-
-                <h1>MENU ESQUERDO</h1>
-                <h1>MENU ESQUERDO</h1>
-                <h1>MENU ESQUERDO</h1>
-                <h1>MENU ESQUERDO</h1>
-
-            </div>
-
-
-
-            <div id="centro" style="margin-top: 71px; border: solid 1px black;" class="container col-sm-6 sidenav">
-
-                <div class="accordion" id="accordionExample">
-                    <div class="card">
-                        <div class="card-header" id="headingOne">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    Collapsible Group Item #1
-                                </button>
-                            </h5>
-                        </div>
-
-                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingTwo">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    Collapsible Group Item #2
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-header" id="headingThree">
-                            <h5 class="mb-0">
-                                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Collapsible Group Item #3
-                                </button>
-                            </h5>
-                        </div>
-                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-                            <div class="card-body">
-                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-
-            <div id="direita" style="margin-top: 71px; border: solid 1px black;" class="container col-sm-3">
-
-                <h1>ADS</h1>
-                <h1>ADS</h1>
-                <h1>ADS</h1>
-                <h1>ADS</h1>
-            </div>
-
-
-
-
-
-
-
-            <footer class="container col-sm navbar-fixed-bottom">  <div id="baixa" style="border: solid 1px black; text-align: center;">
-                  
-                        <h1>BOTTOM</h1>
-                   
-                </div>
-            </footer>
-
-        </div>
+    
     </body>
 </html>

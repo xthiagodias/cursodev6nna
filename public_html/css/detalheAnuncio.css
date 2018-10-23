@@ -463,7 +463,8 @@ a:active {
   border-radius: 10px; }
 
 .scrollbar-deep-purple::-webkit-scrollbar {
-  width: 12px;
+  width: 10px;
+  height: 3px;
   background-color: #F5F5F5; }
 
 .scrollbar-deep-purple::-webkit-scrollbar-thumb {
@@ -478,6 +479,7 @@ a:active {
 
 .scrollbar-cyan::-webkit-scrollbar {
   width: 8px;
+  height: 3px;
   background-color: #F5F5F5; }
 
 .scrollbar-cyan::-webkit-scrollbar-thumb {
@@ -492,6 +494,7 @@ a:active {
 
 .scrollbar-dusty-grass::-webkit-scrollbar {
   width: 8px;
+  height: 3px;
   background-color: #F5F5F5; }
 
 .scrollbar-dusty-grass::-webkit-scrollbar-thumb {
@@ -506,14 +509,19 @@ a:active {
   border-radius: 10px; }
 
 .scrollbar-ripe-malinka::-webkit-scrollbar {
-  width: 8px;
+  width: 0;
+  height: 10px;
+  
   background-color: #F5F5F5; }
 
 .scrollbar-ripe-malinka::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   background-image: -webkit-linear-gradient(330deg, #f093fb 0%, #f5576c 100%);
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); }
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
+  
+
+}
 
 .bordered-deep-purple::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
@@ -541,7 +549,11 @@ a:active {
 .example-1 {
   position: relative;
   overflow-y: scroll;
-  height: 895px; }
+  height: 895px; 
+  margin-right: auto;
+  
+ 
+}
 
 
 
@@ -663,4 +675,9 @@ button.btn-default:before {
   div.example {
     font-size: 50px;
   }
+}
+
+
+.checked {
+    color: orange;
 }

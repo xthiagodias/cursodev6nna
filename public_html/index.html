@@ -22,7 +22,8 @@ and open the template in the editor.
 
         <link href="css/estilo6.css" rel="stylesheet" type="text/css"/>
 
-
+        <script src="javascript/page.js" type="text/javascript"></script>
+        <script src="javascript/materialize.js" type="text/javascript"></script>
 
         <script src="css4.1/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="css4.1/js/bootstrap.js" type="text/javascript"></script>
@@ -48,7 +49,7 @@ and open the template in the editor.
                 opacity: 0.9;
                 filter: alpha(opacity=20);
             }
-            
+
             body .tipoAnuncio {
 
                 opacity: 0.9;
@@ -87,6 +88,8 @@ and open the template in the editor.
                 .sidenav {
                     height: auto;
                     padding: 15px;
+
+
                 }
                 .row.content {height:auto;} 
             }
@@ -108,7 +111,7 @@ and open the template in the editor.
                 display: block;
                 border: solid 2px green;
                 height: auto;
-               
+
 
 
                 margin-top: 2px;
@@ -159,32 +162,34 @@ and open the template in the editor.
                 margin-bottom: auto;
                 margin-top: 2px;
 
-              
+
 
                 background-color: #fafafa;
 
-               
+
             }  
 
             a:hover {
                 text-decoration: none;
             }
         </style>
-        
-        
-        
+
+
+
         <style>
 
 
-.navbar {
-  
+            .navbar {
 
- 
-}
 
-</style>
-        
-        
+
+            }
+
+        </style>
+
+       
+
+
     </head>
     <body>
 
@@ -247,107 +252,107 @@ and open the template in the editor.
             </div>
             <div class="container">    
                 <div class="row">
-                    
-                    
+
+
                     <div style="height: auto; border: solid 2px yellow;" id='sidebar' class="col-sm-3 ">
-                           <center> <button type='button' style='width: 252px;' id='btMenu' class="glyphicon glyphicon-align-justify btn btn-primary btn-sm my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar2"> <span style="font-weight: bold; font-family: Tahoma; font-size: 10pt; color: white; margin-left: 15px;">Categorias</span></button></center> 
-                            <p>
-                          
-                                         <div class="collapse" id="myNavbar2">
-                    
-                    
-                        <div class="campoBuscar1" >
+                        <center> <button type='button' style='width: 252px;' id='btMenu' class="glyphicon glyphicon-align-justify btn btn-primary btn-sm my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar2"> <span style="font-weight: bold; font-family: Tahoma; font-size: 10pt; color: white; margin-left: 15px;">Categorias</span></button></center> 
+                        <p>
+
+                        <div class="collapse" id="myNavbar2">
 
 
-                            <nav id="navBuscar" class="navbar navbar-light bg-light">
-                                <form class="form-inline">
-                                    <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-                                    <BR>
-                                    <br>
-                                    <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
+                            <div class="campoBuscar1" >
+
+
+                                <nav id="navBuscar" class="navbar navbar-light bg-light">
+                                    <form class="form-inline">
+                                        <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                                        <BR>
+                                        <br>
+                                        <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
 
 
 
-                                    <div class="collapse" id="myNavbar1">
-                                        <ul class="nav nav-tabs-justified">
+                                        <div class="collapse" id="myNavbar1">
+                                            <ul class="nav nav-tabs-justified">
 
-                                            <li><input type="checkbox"> Filtro 1</li>
+                                                <li><input type="checkbox"> Filtro 1</li>
 
-                                            <li><input type="checkbox"> Filtro 2</li>
+                                                <li><input type="checkbox"> Filtro 2</li>
 
-                                            <li><input type="checkbox"> Filtro 3</li>
+                                                <li><input type="checkbox"> Filtro 3</li>
 
-                                            <li><input type="checkbox"> Filtro 4</li>
+                                                <li><input type="checkbox"> Filtro 4</li>
 
-                                            <li><input type="checkbox"> Filtro 5</li>
+                                                <li><input type="checkbox"> Filtro 5</li>
 
-                                            <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
+                                                <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
 
 
-                                        </ul>
+                                            </ul>
 
+                                        </div>
+
+
+                                    </form>
+                                </nav>
+
+
+                                <div class="campoCategorias">
+
+                                    <p>  <span id="cat">Categorias</span> </p>
+                                    <p> <hr style="border: solid 1px black; width: auto;">
+
+                                    <span>Academicos</span>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Informatica</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Direito</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                        <label class="custom-control-label" for="customCheck3">Administracao</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                        <label class="custom-control-label" for="customCheck4">Medicina</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                        <label class="custom-control-label" for="customCheck5">Portugues</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck6">Ingles</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck7">Contabilidade</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck8">Enfermagem</label>
+                                    </div>
+                                    <span>Literatura</span>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                        <label class="custom-control-label" for="customCheck9">Nacional</label>
                                     </div>
 
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                        <label class="custom-control-label" for="customCheck10">Internacional</label>
+                                    </div>
 
-                                </form>
-                            </nav>
-
-
-                            <div class="campoCategorias">
-
-                                <p>  <span id="cat">Categorias</span> </p>
-                                <p> <hr style="border: solid 1px black; width: auto;">
-
-                                <span>Academicos</span>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Informatica</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">Direito</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">Administracao</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">Medicina</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                    <label class="custom-control-label" for="customCheck5">Portugues</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                    <label class="custom-control-label" for="customCheck6">Ingles</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                    <label class="custom-control-label" for="customCheck7">Contabilidade</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                    <label class="custom-control-label" for="customCheck8">Enfermagem</label>
-                                </div>
-                                <span>Literatura</span>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
-                                    <label class="custom-control-label" for="customCheck9">Nacional</label>
-                                </div>
-
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
-                                    <label class="custom-control-label" for="customCheck10">Internacional</label>
                                 </div>
 
                             </div>
 
                         </div>
 
-                    </div>
-                
                     </div>    
 
                     <div class="col-sm-6 well ml-auto" id="conteudoCentral"> 
@@ -720,7 +725,7 @@ and open the template in the editor.
                         </div>    
 
                         <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
-                             <p>ADS2</p>
+                            <p>ADS2</p>
                             <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="http://www.logotipos.ind.br/conteudo/logos/trilha_letras_logotipo_editoras_infantis.jpg"  alt="Responsive image">
                         </div>
 
@@ -751,16 +756,17 @@ and open the template in the editor.
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                 </ol>   
+
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img style='height: auto; width: auto;' src="imagens/unama2.png"  alt="First Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/unama2.png"  alt="First Slide"> </center>
                                     </div>
                                     <div class="item">
-                                        <img style='height: auto; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide"> </center>
                                     </div>
                                     <div class="item">
-                                        <img style='height: auto; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide"> </center>
                                     </div>
                                 </div>
                                 <!-- Carousel controls -->
