@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/ProjetoCadastro">
+	<Resource name="jdbc/scpeDataSource" 
+		auth="Container"
+		type="javax.sql.DataSource" 
+		maxActive="100" 
+		maxIdle="30"
+		maxWait="10000" 
+		user="root" 
+		password="thi1087"
+		driverClassName="com.mysql.jdbc.Driver" 
+		url="jdbc:mysql://localhost:3306/base_dados?serverTimezone=UTC" />
+</Context>
