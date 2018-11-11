@@ -159,26 +159,26 @@ and open the template in the editor.
                                     document.getElementById("msginfo").hidden = true;
                                     document.getElementById("msgok").hidden = true;
                                     document.getElementById("msgtipo").hidden = true;
-                                } 
-
-                                    if (!local.elements[i].checked) {
-                                        document.getElementById("msgerro").hidden = false;
-                                        document.getElementById("msginfo").hidden = true;
-                                        document.getElementById("msgok").hidden = true;
-                                        document.getElementById("msgtipo").hidden = true;
-                                    }
                                 }
 
+                                if (!local.elements[i].checked) {
+                                    document.getElementById("msgerro").hidden = false;
+                                    document.getElementById("msginfo").hidden = true;
+                                    document.getElementById("msgok").hidden = true;
+                                    document.getElementById("msgtipo").hidden = true;
+                                }
                             }
 
-
-
                         }
+
+
 
                     }
 
                 }
-            
+
+            }
+
 
 
 
@@ -248,22 +248,33 @@ and open the template in the editor.
 
             #login {
                 display: block;
+                
+                margin: 0 auto !important;
+                  text-align: left;
+                /* inline-block space fix */
+                margin-right: -4px;
                 height: auto;
-                width: auto;
-                margin-top: auto;
+                width: 100%;
+                
+               position: inherit;
+               
                 background-color: #fafafa;
                 color: white;
-
+               float:  none;
                 border: solid 2px red;
-                position: relative;
+            
                 border-radius: 1% 1% 1% 1%;
 
-                margin-left: auto;
+                
+
+
 
 
 
 
             }
+
+            
 
             #sidebar {
                 display: inline;
@@ -386,59 +397,56 @@ and open the template in the editor.
 
 
 
-        <div class="container" id='login'>
-            <div class='col'>
+        <div class="container col-sm-pull-6 col-md-4" id='login'>
+        
+
+                    <div class="imagemLogo">
+                        <img src="imagens/logotipo.png" alt="" width="170" height="130"/>
 
 
-                <div class="imagemLogo">
-                    <img src="imagens/logotipo.png" alt="" width="170" height="130"/>
+                    </div>
+
+                    <form class='form-group' method="POST" name="formLogin">
+                        <input type="radio" name="tipo" value="Nenhum" id="acesso1" hidden="" checked><label></label>
+                        <input hidden='' class='col-12 radio-inline' type="radio" name="tipo" value="Cliente" id="acesso2" onchange="escondeTipo();" required>
+                        <input hidden='' class='col-12 radio-inline' type="radio" name="tipo" value="Instituicao" id="acesso3" onchange="escondeTipo();" required>
+                        <BR>
+                        <div style='background-image: radial-gradient(#faff68, white); border: solid 0px black; text-align: center; align-items: center; align-content: center; margin-top: 150px;'> 
+                            <label style='margin-top: -1px;' class="radio-inline"><input type="radio" name="tipo" value="Cliente" id="acesso2" onchange="escondeTipo();" required><span style='font-family: monospace; font-weight: bold;'>Cliente</span></label>
+                            <label class="radio-inline"><input type="radio" name="tipo" value="Instituicao" id="acesso3" onchange="escondeTipo();" required><span style='font-family: monospace; font-weight: bold;'>Instituicao</span></label>
+                        </div>
+                        <br>
+                        <br>
+                    </form>
+                    <form>
+
+                        <div class="form-group ">
 
 
+
+                            <label style='margin-top: auto; margin-left: auto; margin-left: -15px;' class='col-12' for="usuario">Usuario</label>
+                            <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Usuario" required=''>
+                            <small id="emailHelp" class="form-text text-muted">Informe seu usuario e senha para ter acesso ao site.</small>
+                        </div>
+                        <div class="form-group">
+                            <label style='margin-top: auto; margin-left: auto; margin-left: auto;' for="senha">Senha</label>
+                            <input type="password" class="form-control" id="senha" placeholder="Senha" required=''>
+                        </div>
+                        <center>  <input type="button" class="btn btn-success" title="Entrar com seus dados cadastrados" value="Entrar" name="btEntrar" onclick="validarAcesso()"><input style='margin-left: 5px;' type="button" class="btn btn-primary" title="Voltar para Pagina Inicial" name="brVoltar" value="Voltar" onClick="voltarPaginaPrincipal()"> </center>
+
+
+                    </form>
+
+                    <br>
+                    <center> <!--Facebook--><input style='color: white; background-color: blue; font-family: Arial;' type="button" class="btn btn-fb" title='Entrar com Facebook' value="Facebook" name="btFacebook"><i class="fa fa-facebook pr-1"></i><!--Google +--><input style='color: white; background-color: red; font-family: Arial; margin-left: 3px;' type="button" class="btn btn-gplus" title='Entrar com Google' value="Google +" name="btGoogle"><i class="fa fa-google-plus pr-1"></i></center>
+
+                    <br>
+                    <br>
+                    <center> <small id="emailHelp2" class="form-text text-muted">Nao tem cadastro?</small><a href="cadUsuario.html" title="Cadastro de novos usuarios"><span style="color:blue;">Cadastre-se</span></a> </center>
                 </div>
 
-                <form class='form-group' method="POST" name="formLogin">
-                    <input type="radio" name="tipo" value="Nenhum" id="acesso1" hidden="" checked><label></label>
-                    <input hidden='' class='col-12 radio-inline' type="radio" name="tipo" value="Cliente" id="acesso2" onchange="escondeTipo();" required>
-                    <input hidden='' class='col-12 radio-inline' type="radio" name="tipo" value="Instituicao" id="acesso3" onchange="escondeTipo();" required>
-                    <BR>
-                    <div style='background-image: radial-gradient(#faff68, white); border: solid 0px black; text-align: center; align-items: center; align-content: center; margin-top: 150px;'> 
-                        <label style='margin-top: -1px;' class="radio-inline"><input type="radio" name="tipo" value="Cliente" id="acesso2" onchange="escondeTipo();" required><span style='font-family: monospace; font-weight: bold;'>Cliente</span></label>
-                        <label class="radio-inline"><input type="radio" name="tipo" value="Instituicao" id="acesso3" onchange="escondeTipo();" required><span style='font-family: monospace; font-weight: bold;'>Instituicao</span></label>
-                    </div>
-                    <br>
-                    <br>
-                </form>
-                <form>
 
-                    <div class="form-group ">
-
-
-
-                        <label style='margin-top: auto; margin-left: auto; margin-left: -15px;' class='col-12' for="usuario">Usuario</label>
-                        <input type="text" class="form-control" id="usuario" aria-describedby="emailHelp" placeholder="Usuario" required=''>
-                        <small id="emailHelp" class="form-text text-muted">Informe seu usuario e senha para ter acesso ao site.</small>
-                    </div>
-                    <div class="form-group">
-                        <label style='margin-top: auto; margin-left: auto; margin-left: auto;' for="senha">Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="Senha" required=''>
-                    </div>
-                    <center>  <input type="button" class="btn btn-success" title="Entrar com seus dados cadastrados" value="Entrar" name="btEntrar" onclick="validarAcesso()"><input style='margin-left: 5px;' type="button" class="btn btn-primary" title="Voltar para Pagina Inicial" name="brVoltar" value="Voltar" onClick="voltarPaginaPrincipal()"> </center>
-
-
-                </form>
-
-                <br>
-                <center> <!--Facebook--><input style='color: white; background-color: blue; font-family: Arial;' type="button" class="btn btn-fb" title='Entrar com Facebook' value="Facebook" name="btFacebook"><i class="fa fa-facebook pr-1"></i><!--Google +--><input style='color: white; background-color: red; font-family: Arial; margin-left: 3px;' type="button" class="btn btn-gplus" title='Entrar com Google' value="Google +" name="btGoogle"><i class="fa fa-google-plus pr-1"></i></center>
-
-                <br>
-                <br>
-                <center> <small id="emailHelp2" class="form-text text-muted">Nao tem cadastro?</small><a href="cadUsuario.html" title="Cadastro de novos usuarios"><span style="color:blue;">Cadastre-se</span></a> </center>
-            </div>
-
-
-        </div>
-
-
+       
 
 
     </body>

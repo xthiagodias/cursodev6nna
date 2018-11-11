@@ -11,16 +11,6 @@ and open the template in the editor.
 @charset "ISO-8859-1";
 
 
-.imagemAnuncio img:hover {
-    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-}
-
-legend {
-    
-    background-color: #f1f3f1;
-    color: white;
-    
-}
 
 .no-gutters {
   margin-right: 0;
@@ -70,7 +60,9 @@ fieldset {
 }
 
 .imagemLogo {
-  
+    padding: 6pt;
+    float: left;
+    
     
 }
 
@@ -86,8 +78,12 @@ fieldset {
 }
 
 .topoPagina {
+    display: compact;
+    padding: 20pt;
+    width: 40%;
+    height: 10%;
    
-   position: relative;
+   position: absolute;
    
     
 
@@ -151,14 +147,14 @@ fieldset {
 
 
 #navBuscar {
-    margin-left: auto;
-    margin-top: auto;
-
-    height: auto;
+    margin-left: 0px;
+    margin-top: -12px;
+    padding: 12pt;
+    height: 160px;
 
     background-color: #fafafa;
     position: relative;
-    display: block;
+    display: flex;
     border-radius: 1% 1% 1% 1%;
 }
 
@@ -176,21 +172,26 @@ fieldset {
 
 #btFiltrar {
  
-height: 35px;
-margin: auto;
-position: relative;
-
-
+    margin-left: 35px;
+    margin-bottom: 10px;
     
     
 }
 
 .campoCategorias {
+    padding: 10pt;
 
+
+    margin-top: 5px;
+    width: 316px;
+    margin-left: -14px;
+    height: 310px;
+    background-color: #fafafa;
+    border-radius: 1% 1% 1% 1%;
 }
 
 label {
-    
+    padding: 0pt;
     color: black;
     margin-top: 5px;
     margin-left: 5px;
@@ -204,8 +205,8 @@ label {
 
     font-weight: bold;
     text-align: center;
-    margin-left: auto;
-    margin-top: auto;
+    margin-left: 90px;
+    margin-top: 1px;
     font-size: 15pt;
     color: black;
     text-align: center;
@@ -230,13 +231,13 @@ span {
 
  .anuncios {
     display: block;
-    margin-top: auto;
-    margin-left: auto;
+    margin-top: 0px;
+    margin-left: 0px;
     border: solid 0.5px green;
     background-color: #fafafa;
     border-radius: 1% 1% 1% 1%;
- 
-    
+    height: 150px;
+    width: 100%;
     position: relative;
     margin-bottom: 10px;
 
@@ -281,19 +282,41 @@ border: solid 1px black;
 
 .campoPropagandas {
     
- 
-
+    padding: 10pt;
+    display: flex;
+    border: solid 1px black;
+    margin-top: 180px;
+    width: 388px;
+    margin-left: -149px;
+    height: 170px;
+    background-color: #fafafa;
+    border-radius: 1% 1% 1% 1%;
     
 
 }
 
 .campoPropagandas2 {
-
+    padding: 10pt; 
+    display: flex;
+    border: solid 1px black;
+    margin-top: 350px;
+    width: 288px;
+    margin-left: 0px;
+    height: 170px;
+    background-color: #fafafa;
+    border-radius: 1% 1% 1% 1%;
 }
 
 .campoPropagandas1 {
  
-  
+    display: flex;
+    border: solid 1px black;
+    margin-top: 5px;
+    width: 280px;
+    margin-left: 0px;
+    height: 170px;
+    background-color: #fafafa;
+    border-radius: 1% 1% 1% 1%;
 }
 
 /*
@@ -316,32 +339,15 @@ Banner Direita
 
 .anuncios img {
     
-  
-    display: block;
-}
-
-img {
-    
-  padding: 1pt;
-  margin-top: auto;
-  margin-left: auto;
-}
-
-#imganuncio  {
-    
-  padding: 1pt;
-  margin-top: 15px;
-  margin-left: 5px;
-
-  
+    padding: 5pt;
+    display: flex;
 }
 
 .conteudoLivro {
     padding: 5pt;
     display: block;
- position: absolute;
-  width: auto;
-  height: auto;
+ position: relative;
+  width: 70%;
     margin-left: 120px;
     margin-top: -140px;
 
@@ -349,92 +355,83 @@ img {
 
 .tipoAnuncio {
  
-    margin: auto;
-    display: block;
+    margin: 0 auto;
+    display: flex;
   
 
-height: auto;
-width: auto;
     
-  
     
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: -15px;
+    margin-bottom: 110px;
+    margin-left: 420px;
+    margin-top: -110px;
     position: relative;
   
    
 }
 
 .valor {
-    margin: auto;
-    display: block;
-   text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: -140px;
+ margin: 0 auto;
+   text-align: center;
+    margin-bottom: 110px;
+    margin-left: 400px;
+    margin-top: -230px;
     font-weight: bold;
     position: relative;
     font-family: tahoma;
     font-size: 13pt;
     color: red;
-    float: right;
-    margin-right: 10px;
-width: auto;   
-height: auto;
 
     
     
 }
 
 .data {
-    margin: auto;
-    text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 110px;
+    margin-left: 400px;
+    margin-top: -10px;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio {
-    margin: auto;
-    text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: 10px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 110px;
+    margin-left: 400px;
+    margin-top: 230px;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio1 {
-    margin: auto;
-    text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: auto;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 110px;
+    margin-left: 400px;
+    margin-top: -108px;
     position: relative;
     font-weight: bold;
 }
 
 .dataAnuncio3 {
  
-    text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-left: 400px;
     margin-top: -35px;
     position: relative;
     font-weight: bold;
-    margin-right: 5px;
    
 }
 
 .dataAnuncio4 {
  
-    text-align: right;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-top: auto;
+    text-align: center;
+    margin-bottom: 14px;
+    margin-left: 400px;
+    margin-top: -135px;
     position: relative;
     font-weight: bold;
    
@@ -473,8 +470,7 @@ a:active {
   border-radius: 10px; }
 
 .scrollbar-deep-purple::-webkit-scrollbar {
-  width: 10px;
-  height: 3px;
+  width: 12px;
   background-color: #F5F5F5; }
 
 .scrollbar-deep-purple::-webkit-scrollbar-thumb {
@@ -489,7 +485,6 @@ a:active {
 
 .scrollbar-cyan::-webkit-scrollbar {
   width: 8px;
-  height: 3px;
   background-color: #F5F5F5; }
 
 .scrollbar-cyan::-webkit-scrollbar-thumb {
@@ -504,7 +499,6 @@ a:active {
 
 .scrollbar-dusty-grass::-webkit-scrollbar {
   width: 8px;
-  height: 3px;
   background-color: #F5F5F5; }
 
 .scrollbar-dusty-grass::-webkit-scrollbar-thumb {
@@ -519,19 +513,14 @@ a:active {
   border-radius: 10px; }
 
 .scrollbar-ripe-malinka::-webkit-scrollbar {
-  width: 0;
-  height: 10px;
-  
+  width: 8px;
   background-color: #F5F5F5; }
 
 .scrollbar-ripe-malinka::-webkit-scrollbar-thumb {
   border-radius: 10px;
   -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
   background-image: -webkit-linear-gradient(330deg, #f093fb 0%, #f5576c 100%);
-  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); 
-  
-
-}
+  background-image: linear-gradient(120deg, #f093fb 0%, #f5576c 100%); }
 
 .bordered-deep-purple::-webkit-scrollbar-track {
   -webkit-box-shadow: none;
@@ -559,151 +548,31 @@ a:active {
 .example-1 {
   position: relative;
   overflow-y: scroll;
-  height: 895px; 
-  margin-right: auto;
-  
- 
+  height: 895px; }
+
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
 }
 
-
-
-/*Remove that CSS*/
-.col-md-3 {
-    margin-left:5%;
-    }
-/*Remove that CSS*/
-
-
-
-button {
-  margin: 20px 0;
-  line-height: 34px;
-  position: relative;
-  cursor: pointer;
-  user-select: none;
-  outline:none !important;
- 
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: #ccc;
 }
 
-button:active {
-
-  outline:none;
-}
-
-button.ribbon {
-  
-  outline:none;
-  outline-color: transparent;
-}
-button.ribbon:before, button.ribbon:after {
-  top: 5px;
-  z-index: -10;
-}
-button.ribbon:before {
-  border-color: #53dab6 #53dab6 #53dab6 transparent;
-  left: -25px;
-  border-width: 17px;
-}
-button.ribbon:after {
-  border-color: #53dab6 transparent #53dab6 #53dab6;
-  right: -25px;
-  border-width: 17px;
-}
-
-button:before, button:after {
-  content: '';
-  position: absolute;
-  height: 0;
-  width: 0;
-  border-style: solid;
-  border-width: 0;
-  outline:none;
-}
-
-button.btn-default:before {
-  border-color: #757575 #757575 #757575 transparent;
-    }
-    button.btn-default:after {
-  border-color: #757575 transparent #757575 #757575;
-    }
-    
-    
-    
-    button.btn-primary:before {
-  border-color: #2e6da4 #2e6da4 #2e6da4 transparent;
-    }
-    button.btn-primary:after {
-  border-color: #2e6da4 transparent #2e6da4 #2e6da4;
-    }
-    
-    
-    button.btn-success:before {
-  border-color: #398439 #398439 #398439 transparent;
-    }
-    button.btn-success:after {
-  border-color: #398439 transparent #398439 #398439;
-    }
-    
-    
-    button.btn-info:before {
-  border-color: #269abc #269abc #269abc transparent;
-    }
-    button.btn-info:after {
-  border-color: #269abc transparent #269abc #269abc;
-    }
-    
-    
-    button.btn-warning:before {
-  border-color: #d58512 #d58512 #d58512 transparent;
-    }
-    button.btn-warning:after {
-  border-color: #d58512 transparent #d58512 #d58512;
-    }
-    
-    
-    button.btn-danger:before {
-  border-color: #ac2925 #ac2925 #ac2925 transparent;
-    }
-    button.btn-danger:after {
-  border-color: #ac2925 transparent #ac2925 #ac2925;
-    }
-    
-    
-
-    
-    
-
-/* If the screen size is 601px wide or more, set the font-size of <div> to 80px */
-@media screen and (min-width: 601px) {
-  div.example {
-    font-size: 100px;
-  }
-}
-
-/* If the screen size is 600px wide or less, set the font-size of <div> to 30px */
-@media screen and (max-width: 600px) {
-  div.example {
-    font-size: 50px;
-  }
-}
-
-
-.checked {
-    color: orange;
-}
-
-
-
-.btn:focus, .btn:active, button:focus, button:active {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-#image-gallery .modal-footer{
-  display: block;
-}
-
-.thumb{
-  margin-top: 15px;
-  margin-bottom: 15px;
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
 }

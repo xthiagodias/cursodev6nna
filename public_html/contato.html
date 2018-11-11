@@ -15,8 +15,8 @@ and open the template in the editor.
         <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/>
         <!--  <script src="libs/bootstrap/bootstrap.min.js" type="text/javascript"></script> -->
 
-        <script src="javascript/page.js" type="text/javascript"></script>
-        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        <script src="javascript/contato.js" type="text/javascript"></script>
+        <link href="css/estilocontato.css" rel="stylesheet" type="text/css"/>
         <!--    <script src="css2/ajax.googleapis.com_ajax_libs_jquery_3.3.1_jquery.min.js" type="text/javascript"></script> -->
         <link href="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_css_bootstrap.min.css" rel="stylesheet" type="text/css" media="screen"/> 
         <!--    <script src="css2/maxcdn.bootstrapcdn.com_bootstrap_3.3.7_js_bootstrap.min.js" type="text/javascript"></script>
@@ -47,16 +47,22 @@ and open the template in the editor.
 
             #contato {
                 display: block;
+                
+                margin: 0 auto !important;
+                  text-align: left;
+                /* inline-block space fix */
+                margin-right: -4px;
                 height: auto;
-                width: auto;
-                margin-top: auto;
+                width: 100%;
+                
+               position: inherit;
+               
                 background-color: #fafafa;
                 color: white;
-               
+               float:  none;
                 border: solid 2px red;
-                position: relative;
+            
                 border-radius: 1% 1% 1% 1%;
-                margin-left: auto;
 
 
 
@@ -143,8 +149,8 @@ and open the template in the editor.
 
     <body>
 
- <div class="container" id='contato'>
-<div class='col'>
+ <div class="container col-sm-pull-5 col-md-4" id='contato'>
+<div class='col-12'>
 
 
                     <div class="imagemLogo">
@@ -186,8 +192,7 @@ and open the template in the editor.
 
             </div>
         
-
-
+        
     </body>
 
 

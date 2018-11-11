@@ -46,17 +46,23 @@ and open the template in the editor.
         <style>
 
             #sobre {
-                display: block;
+               display: block;
+                
+                margin: 0 auto !important;
+                  text-align: left;
+                /* inline-block space fix */
+                margin-right: -4px;
                 height: auto;
-                width: auto;
-                margin-top: auto;
+                width: 100%;
+                
+               position: inherit;
+               
                 background-color: #fafafa;
                 color: white;
-               
+               float:  none;
                 border: solid 2px red;
-                position: relative;
+            
                 border-radius: 1% 1% 1% 1%;
-                margin-left: auto;
 
 
 
@@ -145,18 +151,18 @@ and open the template in the editor.
     <body>
 
 
-        <div class="container" id='sobre'>
-<div class='col'>
+   <div class="container col-sm-pull-5 col-6 col-md-4" id='sobre'>
+
 
   
 
-                    <div class="imagemLogo">
+                    <div class="imagemLogo col-12">
                         <img src="imagens/logotipo.png" alt="" width="170" height="130"/>
 
 
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group col-12">
                         <label for="exampleFormControlSelect1">Sobre o Projeto XipBook!</label>
 
                     </div>
@@ -178,16 +184,16 @@ and open the template in the editor.
 
                     </form>
                <br>
-                    <div class="row">
+                   
                         <div class="col-10" style="margin-top: auto; margin-left: auto;">
-                            <span style="margin-left: -60px; font-size: 10pt; font-family: monospace">XipBook 1.0</span>
+                            <span style="float: right; font-size: 10pt; font-family: monospace">XipBook 1.0</span>
                         </div>
-                    </div>
+                    
                     <br>
                 </div>
 
 
-            </div>
+        
         
 
    
