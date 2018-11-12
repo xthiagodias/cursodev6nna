@@ -1,8 +1,13 @@
+<?php
+include("conexao/conexao.php");
+?>
+
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang=""> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -152,7 +157,7 @@
             }   
 
             #sidebar {
-                margin: auto;
+                margin: 0auto;
                 display: block;
                 border: solid 2px yellow;
                 height: auto;
@@ -276,7 +281,7 @@
 
                                 <nav id="navBuscar" class="navbar navbar-light bg-light">
                                     <form class="form-inline">
-                                        <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                                        <input style='width: 172px;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
                                         <BR>
                                         <br>
                                         <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>

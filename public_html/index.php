@@ -1,14 +1,29 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<html>
+<?php
+include("conexao/conexao.php");
+?>
+
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> 
+<html class="no-js" lang=""> <!--<![endif]-->
     <head>
-        <title>XipBook, Compartilhamento de Livros =)</title>
-        <meta charset="UTF-8">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
 
         <!-- Arquivos de configuracao, bootstrap, css -->
         <!--     <script src="libs/JQuery-3.3.1/jquery-3.3.1.min.js" type="text/javascript"></script>
@@ -22,7 +37,8 @@ and open the template in the editor.
 
         <link href="css/estilo6.css" rel="stylesheet" type="text/css"/>
 
-
+        <script src="javascript/page.js" type="text/javascript"></script>
+        <script src="javascript/materialize.js" type="text/javascript"></script>
 
         <script src="css4.1/js/bootstrap.min.js" type="text/javascript"></script>
         <script src="css4.1/js/bootstrap.js" type="text/javascript"></script>
@@ -48,6 +64,12 @@ and open the template in the editor.
                 opacity: 0.9;
                 filter: alpha(opacity=20);
             }
+
+            body .tipoAnuncio {
+
+                opacity: 0.9;
+                filter: alpha(opacity=20);
+            }            
 
         </style>
 
@@ -81,6 +103,8 @@ and open the template in the editor.
                 .sidenav {
                     height: auto;
                     padding: 15px;
+
+
                 }
                 .row.content {height:auto;} 
             }
@@ -102,7 +126,7 @@ and open the template in the editor.
                 display: block;
                 border: solid 2px green;
                 height: auto;
-                width: auto;
+
 
 
                 margin-top: 2px;
@@ -129,10 +153,11 @@ and open the template in the editor.
                 margin-right: auto;
 
                 margin-bottom: 2px;
+                border-radius: 1% 1% 1% 1%;
             }   
 
             #sidebar {
-                margin: auto;
+                margin: 0auto;
                 display: block;
                 border: solid 2px yellow;
                 height: auto;
@@ -152,18 +177,34 @@ and open the template in the editor.
                 margin-bottom: auto;
                 margin-top: 2px;
 
-                height: auto;
-                width: auto;
+
 
                 background-color: #fafafa;
 
-                border-radius: 1% 1% 1% 1%;
+
             }  
 
             a:hover {
                 text-decoration: none;
             }
         </style>
+
+
+
+        <style>
+
+
+            .navbar {
+
+
+
+            }
+
+        </style>
+
+
+
+
     </head>
     <body>
 
@@ -196,8 +237,8 @@ and open the template in the editor.
 
 
 
-                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button">Pagina Inicial</button></a>
-                                                    <a href='cadUsuario2.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Cadastro</button></a>
+                                                    <a href='index.html'><button style="margin-top: 0; margin-left: 20px;" class="btn btn-primary btn-sm" type="button"><i class="fa fa-fw fa-home"></i>Pagina Inicial</button></a>
+                                                    <a href='cadUsuario.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Cadastro</button></a>
 
 
                                                     <a href='contato.html'><button style="margin-top: 0;" class="btn btn-primary btn-sm" type="button">Contato</button></a>
@@ -226,114 +267,125 @@ and open the template in the editor.
             </div>
             <div class="container">    
                 <div class="row">
-                    <div class="col-sm-3 sidenav" id='sidebar'>
-                        <div class="campoBuscar1" >
 
 
-                            <nav id="navBuscar" class="navbar navbar-light bg-light">
-                                <form class="form-inline">
-                                    <input style='width: auto;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
-                                    <BR>
-                                    <br>
-                                    <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
+                    <div style="height: auto; border: solid 2px yellow;" id='sidebar' class="col-sm-3 ">
+                        <center> <button type='button' style='width: 252px;' id='btMenu' class="glyphicon glyphicon-align-justify btn btn-primary btn-sm my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar2"> <span style="font-weight: bold; font-family: Tahoma; font-size: 10pt; color: white; margin-left: 15px;">Categorias</span></button></center> 
+                        <p>
+
+                        <div class="collapse" id="myNavbar2">
+
+
+                            <div class="campoBuscar1" >
+
+
+                                <nav id="navBuscar" class="navbar navbar-light bg-light">
+                                    <form class="form-inline">
+                                        <input style='width: 172px;' class="form-control mr-sm-1" type="search" placeholder="O que voce procura?" aria-label="Search"> <button id="btBuscar" class="btn btn-success my-2 my-sm-0" type="submit">Buscar</button>
+                                        <BR>
+                                        <br>
+                                        <p>  <button type='button' style='margin-left: 0px;' id='btFiltrar' class="btn btn-success my-2 my-sm-0" data-toggle="collapse" data-target="#myNavbar1">Filtrar</button> </p>
 
 
 
-                                    <div class="collapse" id="myNavbar1">
-                                        <ul class="nav nav-tabs-justified">
-                                            
-                                            <li><input type="checkbox"> Filtro 1</li>
-                                            
-                                            <li><input type="checkbox"> Filtro 2</li>
-                                            
-                                            <li><input type="checkbox"> Filtro 3</li>
-                                            
-                                            <li><input type="checkbox"> Filtro 4</li>
-                                            
-                                            <li><input type="checkbox"> Filtro 5</li>
-                                            
-                                            <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
+                                        <div class="collapse" id="myNavbar1">
+                                            <ul class="nav nav-tabs-justified">
+
+                                                <li><input type="checkbox"> Filtro 1</li>
+
+                                                <li><input type="checkbox"> Filtro 2</li>
+
+                                                <li><input type="checkbox"> Filtro 3</li>
+
+                                                <li><input type="checkbox"> Filtro 4</li>
+
+                                                <li><input type="checkbox"> Filtro 5</li>
+
+                                                <li><input type="button" value='Salvar' name='Salvar' data-toggle="collapse" data-target="#myNavbar1"></li>
 
 
-                                        </ul>
+                                            </ul>
 
+                                        </div>
+
+
+                                    </form>
+                                </nav>
+
+
+                                <div class="campoCategorias">
+
+                                    <p>  <span id="cat">Categorias</span> </p>
+                                    <p> <hr style="border: solid 1px black; width: auto;">
+
+                                    <span>Academicos</span>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                        <label class="custom-control-label" for="customCheck1">Informatica</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                        <label class="custom-control-label" for="customCheck2">Direito</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                        <label class="custom-control-label" for="customCheck3">Administracao</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                        <label class="custom-control-label" for="customCheck4">Medicina</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                        <label class="custom-control-label" for="customCheck5">Portugues</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck6">
+                                        <label class="custom-control-label" for="customCheck6">Ingles</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck7">
+                                        <label class="custom-control-label" for="customCheck7">Contabilidade</label>
+                                    </div>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8">
+                                        <label class="custom-control-label" for="customCheck8">Enfermagem</label>
+                                    </div>
+                                    <span>Literatura</span>
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck9">
+                                        <label class="custom-control-label" for="customCheck9">Nacional</label>
                                     </div>
 
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck10">
+                                        <label class="custom-control-label" for="customCheck10">Internacional</label>
+                                    </div>
 
-                                </form>
-                            </nav>
-
-
-                            <div class="campoCategorias">
-
-                                <p>  <span id="cat">Categorias</span> </p>
-                                <p> <hr style="border: solid 1px black; width: auto;">
-
-                                <span>Academicos</span>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck1">
-                                    <label class="custom-control-label" for="customCheck1">Informatica</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck2">
-                                    <label class="custom-control-label" for="customCheck2">Direito</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck3">
-                                    <label class="custom-control-label" for="customCheck3">Administracao</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck4">
-                                    <label class="custom-control-label" for="customCheck4">Medicina</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck5">
-                                    <label class="custom-control-label" for="customCheck5">Portugues</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck6">
-                                    <label class="custom-control-label" for="customCheck6">Ingles</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck7">
-                                    <label class="custom-control-label" for="customCheck7">Contabilidade</label>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck8">
-                                    <label class="custom-control-label" for="customCheck8">Enfermagem</label>
-                                </div>
-                                <span>Literatura</span>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck9">
-                                    <label class="custom-control-label" for="customCheck9">Nacional</label>
-                                </div>
-
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheck10">
-                                    <label class="custom-control-label" for="customCheck10">Internacional</label>
                                 </div>
 
                             </div>
 
                         </div>
 
-                    </div>
+                    </div>    
 
-                    <div class="col-sm-7 ml-auto text-left" id="conteudoCentral"> 
+                    <div class="col-sm-6 well ml-auto" id="conteudoCentral"> 
+
 
 
                         <div class="row">
-
                             <!-- Grid column -->
                             <div class="col-md-12 mb-4">
 
                                 <!-- Exaple 1 -->
-                                <div class="card example-1 scrollbar-ripe-malinka">
+                                <div style="width: auto;" class="card example-1 scrollbar-ripe-malinka">
                                     <div class="card-body">
                                         <!--      <h4 style='text-align: center; align-content: center; font-family: Verdana; color:blue;' id="section1"><span style='text-align: center; align-content: center; color: green;'>Lista de Anuncios</span></h4>
                                         -->
+                                        <div class="card-text">
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/direitoadm.png" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/direitoadm.png" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Manual Direito Administrativo 2018</b><br>
@@ -343,16 +395,19 @@ and open the template in the editor.
                                                     ISBN: 9788535928198TT<br>
                                                     Ano: 2018
                                                 </div>
+
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/doaLivro.png" alt="" width="100" height="100" title="Anuncio de Doacao"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/doaLivro.png" alt="" width="100" height="100" title="Anuncio de Doacao"/>
+                                                    <div class="dataAnuncio">05/10/18 - 11:43</div>
                                                 </div>
 
                                             </div>
 
-                                            <div class="dataAnuncio3">07/10/18 - 15:12</div>
                                         </a>
+</div>
+                                        
                                         <a href="mostraAnuncio.html"><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -363,21 +418,22 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
+
 
                                         </a>
 
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -388,20 +444,19 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
                                                 <div class="dataAnuncio">05/10/18 - 11:43</div>
 
                                             </div>
 
                                         </a>
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -412,13 +467,13 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+
                                                 <div class="dataAnuncio">05/10/18 - 11:43</div>
 
                                             </div>
@@ -428,7 +483,7 @@ and open the template in the editor.
 
                                         <a href=""><div class="anuncios">
 
-                                                <img src="imagens/capaJava.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaJava.jpeg" alt="" width="120" height="149"/>                          
                                                 <div class="conteudoLivro"> 
                                                     <b>Java para Iniciantes by Adalberto!</b><br>
                                                     <!--       <img src="imagens/vendeLivro.png" alt="" width="70" height="70"/>  -->
@@ -438,7 +493,7 @@ and open the template in the editor.
                                                     Ano: 2010
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/aceitaDoacao.png" alt="" width="100" height="100" title="Anuncio de Aceita Doacao"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/aceitaDoacao.png" alt="" width="100" height="100" title="Anuncio de Aceita Doacao"/>
                                                 </div>
                                                 <div class="valor">
 
@@ -451,7 +506,7 @@ and open the template in the editor.
 
                                         <a href=""><div class="anuncios">
 
-                                                <img src="imagens/capaArtedaGuerra.jpg" alt="" width="120" height="149"/>                         
+                                                <img id="imganuncio" src="imagens/capaArtedaGuerra.jpg" alt="" width="120" height="149"/>                         
                                                 <div class="conteudoLivro"> 
                                                     <b>A Arte da Guerra</b><br>
                                                     <!--  <img src="imagens/vendeLivro.png" alt="" width="70" height="70"/> -->
@@ -462,10 +517,8 @@ and open the template in the editor.
                                                 </div>
                                                 <div class="tipoAnuncio">
 
-                                                    <img src="imagens/trocaLivro.png" alt="" width="100" height="100" title="Anuncio de Troca"/>
-                                                </div>
-                                                <div class="valor"></div>
-                                                <div class="data"></div>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/trocaLivro.png" alt="" width="100" height="100" title="Anuncio de Troca"/>
+                                                </div>     
                                                 <div class="dataAnuncio">06/10/18 - 07:43</div>
 
 
@@ -478,7 +531,7 @@ and open the template in the editor.
 
 
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/delphi7.jpg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/delphi7.jpg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Aprenda a programar com Borland Delphi 7</b><br>
@@ -489,11 +542,11 @@ and open the template in the editor.
                                                     Ano: 2005
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/buscaLivro.png" alt="" width="100" height="100" title="Anuncio de Busca"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/buscaLivro.png" alt="" width="100" height="100" title="Anuncio de Busca"/>
                                                 </div>
 
-                                                <div class="data"></div>
-                                                <div class="dataAnuncio1">07/10/18 - 19:43</div>
+
+                                                <div class="dataAnuncio">07/10/18 - 19:43</div>
 
 
                                             </div>
@@ -501,7 +554,7 @@ and open the template in the editor.
                                         </a>
 
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/direitoadm.png" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/direitoadm.png" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Manual Direito Administrativo 2018</b><br>
@@ -511,20 +564,18 @@ and open the template in the editor.
                                                     ISBN: 9788535928198TT<br>
                                                     Ano: 2018
                                                 </div>
+
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/doaLivro.png" alt="" width="100" height="100" title="Anuncio de Doacao"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/doaLivro.png" alt="" width="100" height="100" title="Anuncio de Doacao"/>
+                                                    <div class="dataAnuncio">05/10/18 - 11:43</div>
                                                 </div>
 
                                             </div>
-                                            <div class="data"></div>
-                                            <div class="dataAnuncio4">07/10/18 - 15:12</div>
-
-
 
                                         </a>
 
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -535,13 +586,13 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
@@ -549,7 +600,7 @@ and open the template in the editor.
                                         </a>
 
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -560,20 +611,20 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
 
                                         </a>
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -584,20 +635,20 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
 
                                         </a>
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -608,20 +659,20 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
 
                                         </a>
                                         <a href=""><div class="anuncios"> 
-                                                <img src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
+                                                <img id="imganuncio" src="imagens/capaLivro.jpeg" alt="" width="120" height="149"/>                          
 
                                                 <div class="conteudoLivro"> 
                                                     <b>Redes de computadores e a internet</b><br>
@@ -632,13 +683,13 @@ and open the template in the editor.
                                                     Ano: 2013
                                                 </div>
                                                 <div class="tipoAnuncio">
-                                                    <img src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
+                                                    <img style="float: right; position: relative; margin-right: auto; margin-top: -110px;" src="imagens/vendeLivro.png" alt="" width="100" height="100" title="Anuncio de Venda"/>
                                                 </div>
                                                 <div class="valor">
                                                     <b>R$ 100,00</b>
 
                                                 </div>
-                                                <div class="data">05/10/18 - 11:43</div>
+                                                <div class="dataAnuncio">05/10/18 - 11:43</div>
 
 
                                             </div>
@@ -680,20 +731,20 @@ and open the template in the editor.
                     </div>
 
 
-                    <div class="col-sm-2 sidenav ml-auto" id='ads'>
-                        <div class="well">
+                    <div class="col-sm-3 ml-auto" id='ads'>
+                        <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
                             <p>ADS1</p>
-                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 150px;' src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F03%2F29%2F07%2FWDL-Logo-2700_11465_035003743_1869315452.jpg"  alt="Responsive image">
+                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="https://s3-sa-east-1.amazonaws.com/projetos-artes/fullsize%2F2011%2F03%2F29%2F07%2FWDL-Logo-2700_11465_035003743_1869315452.jpg"  alt="Responsive image">
                         </div>    
 
-                        <div class="well">
-                            <p>ADS1</p>
-                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 150px;' src="http://www.logotipos.ind.br/conteudo/logos/trilha_letras_logotipo_editoras_infantis.jpg"  alt="Responsive image">
+                        <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
+                            <p>ADS2</p>
+                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="http://www.logotipos.ind.br/conteudo/logos/trilha_letras_logotipo_editoras_infantis.jpg"  alt="Responsive image">
                         </div>
 
-                        <div class="well">
-                            <p>ADS1</p>
-                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 150px;' src="https://png.pngtree.com/templates/md/20180310/md_5aa3bf3bc3a89.jpg" alt="Responsive image">
+                        <div style='margin-left: auto; margin-right: auto; height: auto; width: auto;' class="well">
+                            <p>ADS3</p>
+                            <img style='margin-left: -10px; margin-right: auto; height: 200px; width: 225px;' src="https://png.pngtree.com/templates/md/20180310/md_5aa3bf3bc3a89.jpg" alt="Responsive image">
                         </div>
                     </div>
 
@@ -718,16 +769,17 @@ and open the template in the editor.
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                 </ol>   
+
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img style='height: auto; width: auto;' src="imagens/unama2.png"  alt="First Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/unama2.png"  alt="First Slide"> </center>
                                     </div>
                                     <div class="item">
-                                        <img style='height: auto; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/capaLivro.jpeg" alt="Second Slide"> </center>
                                     </div>
                                     <div class="item">
-                                        <img style='height: auto; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide">
+                                        <center> <img style='height: 150px; width: auto;' src="imagens/delphi7.jpg" alt="Third Slide"> </center>
                                     </div>
                                 </div>
                                 <!-- Carousel controls -->
@@ -741,9 +793,38 @@ and open the template in the editor.
                         </div>
                     </div>
                 </div>
+
             </footer>
 
         </div>
+
+
+
+        <!-- /container -->        
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+
+        <script src="js/main.js"></script>
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            (function (b, o, i, l, e, r) {
+                b.GoogleAnalyticsObject = l;
+                b[l] || (b[l] =
+                        function () {
+                            (b[l].q = b[l].q || []).push(arguments)
+                        });
+                b[l].l = +new Date;
+                e = o.createElement(i);
+                r = o.getElementsByTagName(i)[0];
+                e.src = '//www.google-analytics.com/analytics.js';
+                r.parentNode.insertBefore(e, r)
+            }(window, document, 'script', 'ga'));
+            ga('create', 'UA-XXXXX-X', 'auto');
+            ga('send', 'pageview');
+        </script>
 
     </body>
 </html>
